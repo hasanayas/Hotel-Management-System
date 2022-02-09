@@ -6,4 +6,5 @@
 
 MSSQL based application was developed as the Database Systems course  project in Fall . Hotel reservation system is one that allows for secretary to reserve rooms on hotel. 
   
-# Database 
+# Database Diagram
+![image](https://user-images.githubusercontent.com/86951716/153279996-e03afdfa-533a-4281-9796-fbb6fc2614e6.png)
