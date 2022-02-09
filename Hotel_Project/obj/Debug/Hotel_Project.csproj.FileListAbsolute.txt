@@ -1,0 +1,684 @@
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\Hotel_Project.exe.config
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\Hotel_Project.exe
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\Hotel_Project.pdb
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\AMRConnector.dll
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\obj\Debug\Hotel_Project.csproj.SuggestedBindingRedirects.cache
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\obj\Debug\Hotel_Project.FormLogIn.resources
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\obj\Debug\Hotel_Project.Properties.Resources.resources
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\obj\Debug\Hotel_Project.csproj.GenerateResource.cache
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\obj\Debug\Hotel_Project.csproj.CoreCompileInputs.cache
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\obj\Debug\Hotel_Project.csproj.CopyComplete
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\obj\Debug\Hotel_Project.exe
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\obj\Debug\Hotel_Project.pdb
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\obj\Debug\Hotel_Project.User_Control.UserControlSettings.resources
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\itextsharp.dll
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\itextsharp.xml
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\ExcelDataReader.DataSet.dll
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\ExcelDataReader.dll
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\ExcelDataReader.pdb
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\ExcelDataReader.xml
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\ExcelDataReader.DataSet.pdb
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\ExcelDataReader.DataSet.xml
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\obj\Debug\Hotel_Project.csproj.AssemblyReference.cache
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\obj\Debug\Hotel_Project.MainPage.resources
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\obj\Debug\Hotel_Project.MüsteriSayfasi.resources
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\Azure.Core.dll
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\Azure.Identity.dll
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\Microsoft.Data.SqlClient.dll
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\Microsoft.Data.Tools.Sql.BatchParser.dll
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\Microsoft.Identity.Client.dll
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\Microsoft.IdentityModel.Logging.dll
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\Microsoft.IdentityModel.Protocols.dll
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\Microsoft.IdentityModel.Tokens.dll
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.Assessment.dll
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.Assessment.Types.dll
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.ConnectionInfo.dll
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.Dmf.Common.dll
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.Dmf.dll
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.Assessment.dll
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.Collector.dll
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.CollectorEnum.dll
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.HadrData.dll
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.HadrModel.dll
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.RegisteredServers.dll
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.Sdk.Sfc.dll
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.SqlScriptPublish.dll
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.XEvent.dll
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.XEventDbScoped.dll
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.XEventDbScopedEnum.dll
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.XEventEnum.dll
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.PolicyEnum.dll
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.RegSvrEnum.dll
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.ServiceBrokerEnum.dll
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.Smo.dll
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.Smo.Notebook.dll
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.SmoExtended.dll
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.SqlClrProvider.dll
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.SqlEnum.dll
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.SqlWmiManagement.dll
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.WmiEnum.dll
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\Newtonsoft.Json.dll
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\System.Buffers.dll
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\System.Configuration.ConfigurationManager.dll
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\System.Memory.dll
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\System.Security.AccessControl.dll
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\System.Security.Cryptography.ProtectedData.dll
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\System.Security.Permissions.dll
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\System.Security.Principal.Windows.dll
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\System.Text.Json.dll
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\System.ValueTuple.dll
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\Azure.Core.xml
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\Azure.Identity.xml
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\Microsoft.Data.SqlClient.pdb
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\Microsoft.Data.SqlClient.xml
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\Microsoft.Data.Tools.Sql.BatchParser.pdb
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\Microsoft.Data.Tools.Sql.BatchParser.xml
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\Microsoft.Identity.Client.xml
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\Microsoft.Identity.Client.Extensions.Msal.xml
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.xml
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\Microsoft.IdentityModel.Logging.xml
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\Microsoft.IdentityModel.Protocols.xml
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\Microsoft.IdentityModel.Protocols.OpenIdConnect.xml
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\Microsoft.IdentityModel.Tokens.xml
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.Assessment.xml
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.Assessment.Types.xml
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.ConnectionInfo.pdb
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.ConnectionInfo.xml
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.Dmf.pdb
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.Dmf.xml
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.Dmf.Common.pdb
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.Dmf.Common.xml
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.Assessment.pdb
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.Assessment.xml
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.Collector.pdb
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.Collector.xml
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.CollectorEnum.pdb
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.CollectorEnum.xml
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.HadrData.pdb
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.HadrData.xml
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.HadrModel.pdb
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.HadrModel.xml
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.RegisteredServers.pdb
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.RegisteredServers.xml
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.Sdk.Sfc.pdb
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.Sdk.Sfc.xml
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.SqlScriptPublish.pdb
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.SqlScriptPublish.xml
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.XEvent.pdb
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.XEvent.xml
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.XEventDbScoped.pdb
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.XEventDbScoped.xml
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.XEventDbScopedEnum.pdb
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.XEventDbScopedEnum.xml
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.XEventEnum.pdb
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.XEventEnum.xml
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.PolicyEnum.pdb
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.PolicyEnum.xml
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.RegSvrEnum.pdb
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.RegSvrEnum.xml
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.ServiceBrokerEnum.pdb
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.ServiceBrokerEnum.xml
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.Smo.pdb
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.Smo.xml
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.Smo.Notebook.pdb
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.Smo.Notebook.xml
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.SmoExtended.pdb
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.SmoExtended.xml
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.SqlClrProvider.pdb
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.SqlEnum.pdb
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.SqlEnum.xml
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.SqlWmiManagement.pdb
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.SqlWmiManagement.xml
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.WmiEnum.pdb
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.WmiEnum.xml
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\Newtonsoft.Json.xml
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\System.Buffers.xml
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\System.Configuration.ConfigurationManager.xml
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\System.IdentityModel.Tokens.Jwt.xml
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\System.Memory.xml
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\System.Security.AccessControl.xml
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\System.Security.Permissions.xml
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\System.Security.Principal.Windows.xml
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\System.Text.Encodings.Web.xml
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\System.Text.Json.xml
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\System.ValueTuple.xml
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\de\Microsoft.Data.SqlClient.resources.dll
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\es\Microsoft.Data.SqlClient.resources.dll
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\fr\Microsoft.Data.SqlClient.resources.dll
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\it\Microsoft.Data.SqlClient.resources.dll
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\ja\Microsoft.Data.SqlClient.resources.dll
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\ko\Microsoft.Data.SqlClient.resources.dll
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\pt-BR\Microsoft.Data.SqlClient.resources.dll
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\ru\Microsoft.Data.SqlClient.resources.dll
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\zh-Hans\Microsoft.Data.SqlClient.resources.dll
+C:\Users\theno\source\repos\Hotel_Project\Hotel_Project\bin\Debug\zh-Hant\Microsoft.Data.SqlClient.resources.dll
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\obj\Debug\Hotel_Project.csproj.SuggestedBindingRedirects.cache
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\obj\Debug\Hotel_Project.MüsteriSayfasi.resources
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\obj\Debug\Hotel_Project.FormLogIn.resources
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\obj\Debug\Hotel_Project.MainPage.resources
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\obj\Debug\Hotel_Project.Properties.Resources.resources
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\obj\Debug\Hotel_Project.User_Control.UserControlSettings.resources
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\obj\Debug\Hotel_Project.csproj.GenerateResource.cache
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\obj\Debug\Hotel_Project.csproj.CoreCompileInputs.cache
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\obj\Debug\Hotel_Project.csproj.AssemblyReference.cache
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\Hotel_Project.exe.config
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\Hotel_Project.exe
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\Hotel_Project.pdb
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\AMRConnector.dll
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\Azure.Core.dll
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\Azure.Identity.dll
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\ExcelDataReader.DataSet.dll
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\ExcelDataReader.dll
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\itextsharp.dll
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.Data.SqlClient.dll
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.Data.Tools.Sql.BatchParser.dll
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.Identity.Client.dll
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.IdentityModel.Logging.dll
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.IdentityModel.Protocols.dll
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.IdentityModel.Tokens.dll
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.Assessment.dll
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.Assessment.Types.dll
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.ConnectionInfo.dll
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.Dmf.Common.dll
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.Dmf.dll
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.Assessment.dll
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.Collector.dll
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.CollectorEnum.dll
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.HadrData.dll
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.HadrModel.dll
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.RegisteredServers.dll
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.Sdk.Sfc.dll
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.SqlScriptPublish.dll
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.XEvent.dll
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.XEventDbScoped.dll
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.XEventDbScopedEnum.dll
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.XEventEnum.dll
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.PolicyEnum.dll
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.RegSvrEnum.dll
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.ServiceBrokerEnum.dll
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.Smo.Notebook.dll
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.SqlClrProvider.dll
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.SqlEnum.dll
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.SqlWmiManagement.dll
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.WmiEnum.dll
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\Newtonsoft.Json.dll
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\System.Buffers.dll
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\System.Configuration.ConfigurationManager.dll
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\System.Data.SqlClient.dll
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\System.Memory.Data.dll
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\System.Memory.dll
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\System.Security.AccessControl.dll
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\System.Security.Cryptography.ProtectedData.dll
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\System.Security.Permissions.dll
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\System.Security.Principal.Windows.dll
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\System.Text.Json.dll
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\System.ValueTuple.dll
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.Smo.dll
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.SmoExtended.dll
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\Azure.Core.xml
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\Azure.Identity.xml
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\ExcelDataReader.pdb
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\ExcelDataReader.xml
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\ExcelDataReader.DataSet.pdb
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\ExcelDataReader.DataSet.xml
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\itextsharp.xml
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.Data.SqlClient.pdb
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.Data.SqlClient.xml
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.Identity.Client.xml
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.Identity.Client.Extensions.Msal.xml
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.xml
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.IdentityModel.Logging.xml
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.IdentityModel.Protocols.xml
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.IdentityModel.Protocols.OpenIdConnect.xml
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.IdentityModel.Tokens.xml
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.Assessment.xml
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.Assessment.Types.xml
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.Dmf.pdb
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.Dmf.xml
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.Dmf.Common.pdb
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.Dmf.Common.xml
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.Assessment.pdb
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.Assessment.xml
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.Collector.pdb
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.Collector.xml
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.CollectorEnum.pdb
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.CollectorEnum.xml
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.HadrData.pdb
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.HadrData.xml
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.HadrModel.pdb
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.HadrModel.xml
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.RegisteredServers.pdb
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.RegisteredServers.xml
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.Sdk.Sfc.pdb
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.Sdk.Sfc.xml
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.SqlScriptPublish.pdb
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.SqlScriptPublish.xml
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.XEvent.pdb
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.XEvent.xml
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.XEventDbScoped.pdb
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.XEventDbScoped.xml
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.XEventDbScopedEnum.pdb
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.XEventDbScopedEnum.xml
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.XEventEnum.pdb
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.XEventEnum.xml
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.PolicyEnum.pdb
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.PolicyEnum.xml
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.RegSvrEnum.pdb
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.RegSvrEnum.xml
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.ServiceBrokerEnum.pdb
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.ServiceBrokerEnum.xml
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.Smo.Notebook.pdb
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.Smo.Notebook.xml
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.SqlClrProvider.pdb
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.SqlEnum.pdb
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.SqlEnum.xml
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.SqlWmiManagement.pdb
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.SqlWmiManagement.xml
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.WmiEnum.pdb
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.WmiEnum.xml
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\Newtonsoft.Json.xml
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\System.Buffers.xml
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\System.Configuration.ConfigurationManager.xml
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\System.Data.SqlClient.xml
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\System.IdentityModel.Tokens.Jwt.xml
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\System.Memory.xml
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\System.Memory.Data.xml
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\System.Security.AccessControl.xml
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\System.Security.Cryptography.ProtectedData.xml
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\System.Security.Permissions.xml
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\System.Security.Principal.Windows.xml
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\System.Text.Encodings.Web.xml
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\System.Text.Json.xml
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\System.ValueTuple.xml
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\de\Microsoft.Data.SqlClient.resources.dll
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\es\Microsoft.Data.SqlClient.resources.dll
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\fr\Microsoft.Data.SqlClient.resources.dll
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\it\Microsoft.Data.SqlClient.resources.dll
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\ja\Microsoft.Data.SqlClient.resources.dll
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\ko\Microsoft.Data.SqlClient.resources.dll
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\pt-BR\Microsoft.Data.SqlClient.resources.dll
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\ru\Microsoft.Data.SqlClient.resources.dll
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\zh-Hans\Microsoft.Data.SqlClient.resources.dll
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\bin\Debug\zh-Hant\Microsoft.Data.SqlClient.resources.dll
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\obj\Debug\Hotel_Project.csproj.CopyComplete
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\obj\Debug\Hotel_Project.exe
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\obj\Debug\Hotel_Project.pdb
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\obj\Debug\Hotel_Project.Form1.resources
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\obj\Debug\Hotel_Project.Form2.resources
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\obj\Debug\Hotel_Project.Form3.resources
+C:\Users\theno\source\repos\Hotel_Project3\Hotel_Project\obj\Debug\Hotel_Project.Form5.resources
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\Hotel_Project.exe.config
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\Hotel_Project.exe
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\Hotel_Project.pdb
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\Azure.Core.dll
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\Azure.Identity.dll
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\ExcelDataReader.DataSet.dll
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\ExcelDataReader.dll
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\itextsharp.dll
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.Data.SqlClient.dll
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.Data.Tools.Sql.BatchParser.dll
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.Identity.Client.dll
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.IdentityModel.Logging.dll
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.IdentityModel.Protocols.dll
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.IdentityModel.Tokens.dll
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.Assessment.dll
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.Assessment.Types.dll
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.ConnectionInfo.dll
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.Dmf.Common.dll
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.Dmf.dll
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.Assessment.dll
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.Collector.dll
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.CollectorEnum.dll
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.HadrData.dll
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.HadrModel.dll
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.RegisteredServers.dll
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.Sdk.Sfc.dll
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.SqlScriptPublish.dll
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.XEvent.dll
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.XEventDbScoped.dll
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.XEventDbScopedEnum.dll
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.XEventEnum.dll
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.PolicyEnum.dll
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.RegSvrEnum.dll
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.ServiceBrokerEnum.dll
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.Smo.dll
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.Smo.Notebook.dll
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.SmoExtended.dll
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.SqlClrProvider.dll
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.SqlEnum.dll
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.SqlWmiManagement.dll
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.WmiEnum.dll
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\Newtonsoft.Json.dll
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\System.Buffers.dll
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\System.Configuration.ConfigurationManager.dll
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\System.Data.SqlClient.dll
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\System.Memory.Data.dll
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\System.Memory.dll
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\System.Security.AccessControl.dll
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\System.Security.Cryptography.ProtectedData.dll
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\System.Security.Permissions.dll
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\System.Security.Principal.Windows.dll
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\System.Text.Json.dll
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\System.ValueTuple.dll
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\Azure.Core.xml
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\Azure.Identity.xml
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\ExcelDataReader.pdb
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\ExcelDataReader.xml
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\ExcelDataReader.DataSet.pdb
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\ExcelDataReader.DataSet.xml
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\itextsharp.xml
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.Data.SqlClient.pdb
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.Data.SqlClient.xml
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.Identity.Client.xml
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.Identity.Client.Extensions.Msal.xml
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.xml
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.IdentityModel.Logging.xml
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.IdentityModel.Protocols.xml
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.IdentityModel.Protocols.OpenIdConnect.xml
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.IdentityModel.Tokens.xml
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.Assessment.xml
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.Assessment.Types.xml
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.Dmf.pdb
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.Dmf.xml
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.Dmf.Common.pdb
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.Dmf.Common.xml
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.Assessment.pdb
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.Assessment.xml
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.Collector.pdb
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.Collector.xml
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.CollectorEnum.pdb
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.CollectorEnum.xml
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.HadrData.pdb
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.HadrData.xml
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.HadrModel.pdb
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.HadrModel.xml
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.RegisteredServers.pdb
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.RegisteredServers.xml
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.Sdk.Sfc.pdb
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.Sdk.Sfc.xml
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.SqlScriptPublish.pdb
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.SqlScriptPublish.xml
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.XEvent.pdb
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.XEvent.xml
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.XEventDbScoped.pdb
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.XEventDbScoped.xml
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.XEventDbScopedEnum.pdb
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.XEventDbScopedEnum.xml
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.XEventEnum.pdb
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.XEventEnum.xml
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.PolicyEnum.pdb
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.PolicyEnum.xml
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.RegSvrEnum.pdb
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.RegSvrEnum.xml
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.ServiceBrokerEnum.pdb
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.ServiceBrokerEnum.xml
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.Smo.Notebook.pdb
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.Smo.Notebook.xml
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.SqlClrProvider.pdb
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.SqlEnum.pdb
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.SqlEnum.xml
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.SqlWmiManagement.pdb
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.SqlWmiManagement.xml
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.WmiEnum.pdb
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\Microsoft.SqlServer.WmiEnum.xml
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\Newtonsoft.Json.xml
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\System.Buffers.xml
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\System.Configuration.ConfigurationManager.xml
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\System.Data.SqlClient.xml
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\System.IdentityModel.Tokens.Jwt.xml
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\System.Memory.xml
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\System.Memory.Data.xml
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\System.Security.AccessControl.xml
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\System.Security.Cryptography.ProtectedData.xml
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\System.Security.Permissions.xml
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\System.Security.Principal.Windows.xml
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\System.Text.Encodings.Web.xml
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\System.Text.Json.xml
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\System.ValueTuple.xml
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\de\Microsoft.Data.SqlClient.resources.dll
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\es\Microsoft.Data.SqlClient.resources.dll
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\fr\Microsoft.Data.SqlClient.resources.dll
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\it\Microsoft.Data.SqlClient.resources.dll
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\ja\Microsoft.Data.SqlClient.resources.dll
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\ko\Microsoft.Data.SqlClient.resources.dll
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\pt-BR\Microsoft.Data.SqlClient.resources.dll
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\ru\Microsoft.Data.SqlClient.resources.dll
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\zh-Hans\Microsoft.Data.SqlClient.resources.dll
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\bin\Debug\zh-Hant\Microsoft.Data.SqlClient.resources.dll
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\obj\Debug\Hotel_Project.csproj.AssemblyReference.cache
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\obj\Debug\Hotel_Project.csproj.SuggestedBindingRedirects.cache
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\obj\Debug\Hotel_Project.Form1.resources
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\obj\Debug\Hotel_Project.Form2.resources
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\obj\Debug\Hotel_Project.Form3.resources
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\obj\Debug\Hotel_Project.Form5.resources
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\obj\Debug\Hotel_Project.MüsteriSayfasi.resources
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\obj\Debug\Hotel_Project.FormLogIn.resources
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\obj\Debug\Hotel_Project.MainPage.resources
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\obj\Debug\Hotel_Project.Properties.Resources.resources
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\obj\Debug\Hotel_Project.User_Control.UserControlSettings.resources
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\obj\Debug\Hotel_Project.csproj.GenerateResource.cache
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\obj\Debug\Hotel_Project.csproj.CoreCompileInputs.cache
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\obj\Debug\Hotel_Project.csproj.CopyComplete
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\obj\Debug\Hotel_Project.exe
+C:\Users\theno\Desktop\VTYS HOTEL PROJESİ\Hotel_Project3\Hotel_Project\obj\Debug\Hotel_Project.pdb
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\Hotel_Project.exe.config
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\Hotel_Project.exe
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\Hotel_Project.pdb
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\Azure.Core.dll
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\Azure.Identity.dll
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\ExcelDataReader.DataSet.dll
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\ExcelDataReader.dll
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\itextsharp.dll
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\Microsoft.Data.SqlClient.dll
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\Microsoft.Data.Tools.Sql.BatchParser.dll
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\Microsoft.Identity.Client.dll
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\Microsoft.IdentityModel.Logging.dll
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\Microsoft.IdentityModel.Protocols.dll
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\Microsoft.IdentityModel.Tokens.dll
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.Assessment.dll
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.Assessment.Types.dll
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.ConnectionInfo.dll
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.Dmf.Common.dll
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.Dmf.dll
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.Assessment.dll
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.Collector.dll
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.CollectorEnum.dll
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.HadrData.dll
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.HadrModel.dll
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.RegisteredServers.dll
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.Sdk.Sfc.dll
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.SqlScriptPublish.dll
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.XEvent.dll
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.XEventDbScoped.dll
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.XEventDbScopedEnum.dll
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.XEventEnum.dll
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.PolicyEnum.dll
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.RegSvrEnum.dll
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.ServiceBrokerEnum.dll
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.Smo.dll
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.Smo.Notebook.dll
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.SmoExtended.dll
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.SqlClrProvider.dll
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.SqlEnum.dll
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.SqlWmiManagement.dll
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.WmiEnum.dll
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\Newtonsoft.Json.dll
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\System.Buffers.dll
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\System.Configuration.ConfigurationManager.dll
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\System.Data.SqlClient.dll
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\System.Memory.Data.dll
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\System.Memory.dll
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\System.Security.AccessControl.dll
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\System.Security.Cryptography.ProtectedData.dll
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\System.Security.Permissions.dll
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\System.Security.Principal.Windows.dll
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\System.Text.Json.dll
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\System.ValueTuple.dll
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\Azure.Core.xml
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\Azure.Identity.xml
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\ExcelDataReader.pdb
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\ExcelDataReader.xml
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\ExcelDataReader.DataSet.pdb
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\ExcelDataReader.DataSet.xml
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\itextsharp.xml
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\Microsoft.Data.SqlClient.pdb
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\Microsoft.Data.SqlClient.xml
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\Microsoft.Identity.Client.xml
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\Microsoft.Identity.Client.Extensions.Msal.xml
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.xml
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\Microsoft.IdentityModel.Logging.xml
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\Microsoft.IdentityModel.Protocols.xml
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\Microsoft.IdentityModel.Protocols.OpenIdConnect.xml
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\Microsoft.IdentityModel.Tokens.xml
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.Assessment.xml
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.Assessment.Types.xml
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.Dmf.pdb
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.Dmf.xml
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.Dmf.Common.pdb
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.Dmf.Common.xml
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.Assessment.pdb
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.Assessment.xml
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.Collector.pdb
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.Collector.xml
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.CollectorEnum.pdb
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.CollectorEnum.xml
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.HadrData.pdb
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.HadrData.xml
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.HadrModel.pdb
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.HadrModel.xml
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.RegisteredServers.pdb
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.RegisteredServers.xml
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.Sdk.Sfc.pdb
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.Sdk.Sfc.xml
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.SqlScriptPublish.pdb
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.SqlScriptPublish.xml
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.XEvent.pdb
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.XEvent.xml
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.XEventDbScoped.pdb
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.XEventDbScoped.xml
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.XEventDbScopedEnum.pdb
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.XEventDbScopedEnum.xml
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.XEventEnum.pdb
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.Management.XEventEnum.xml
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.PolicyEnum.pdb
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.PolicyEnum.xml
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.RegSvrEnum.pdb
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.RegSvrEnum.xml
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.ServiceBrokerEnum.pdb
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.ServiceBrokerEnum.xml
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.Smo.Notebook.pdb
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.Smo.Notebook.xml
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.SqlClrProvider.pdb
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.SqlEnum.pdb
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.SqlEnum.xml
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.SqlWmiManagement.pdb
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.SqlWmiManagement.xml
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.WmiEnum.pdb
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.WmiEnum.xml
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\Newtonsoft.Json.xml
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\System.Buffers.xml
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\System.Configuration.ConfigurationManager.xml
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\System.Data.SqlClient.xml
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\System.IdentityModel.Tokens.Jwt.xml
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\System.Memory.xml
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\System.Memory.Data.xml
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\System.Security.AccessControl.xml
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\System.Security.Cryptography.ProtectedData.xml
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\System.Security.Permissions.xml
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\System.Security.Principal.Windows.xml
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\System.Text.Encodings.Web.xml
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\System.Text.Json.xml
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\System.ValueTuple.xml
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\de\Microsoft.Data.SqlClient.resources.dll
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\es\Microsoft.Data.SqlClient.resources.dll
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\fr\Microsoft.Data.SqlClient.resources.dll
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\it\Microsoft.Data.SqlClient.resources.dll
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\ja\Microsoft.Data.SqlClient.resources.dll
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\ko\Microsoft.Data.SqlClient.resources.dll
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\pt-BR\Microsoft.Data.SqlClient.resources.dll
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\ru\Microsoft.Data.SqlClient.resources.dll
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\zh-Hans\Microsoft.Data.SqlClient.resources.dll
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\zh-Hant\Microsoft.Data.SqlClient.resources.dll
+C:\Users\theno\Desktop\Project\Hotel_Project\obj\Debug\Hotel_Project.csproj.AssemblyReference.cache
+C:\Users\theno\Desktop\Project\Hotel_Project\obj\Debug\Hotel_Project.csproj.SuggestedBindingRedirects.cache
+C:\Users\theno\Desktop\Project\Hotel_Project\obj\Debug\Hotel_Project.Form1.resources
+C:\Users\theno\Desktop\Project\Hotel_Project\obj\Debug\Hotel_Project.Form3.resources
+C:\Users\theno\Desktop\Project\Hotel_Project\obj\Debug\Hotel_Project.MüsteriSayfasi.resources
+C:\Users\theno\Desktop\Project\Hotel_Project\obj\Debug\Hotel_Project.MainPage.resources
+C:\Users\theno\Desktop\Project\Hotel_Project\obj\Debug\Hotel_Project.Properties.Resources.resources
+C:\Users\theno\Desktop\Project\Hotel_Project\obj\Debug\Hotel_Project.User_Control.UserControlSettings.resources
+C:\Users\theno\Desktop\Project\Hotel_Project\obj\Debug\Hotel_Project.csproj.GenerateResource.cache
+C:\Users\theno\Desktop\Project\Hotel_Project\obj\Debug\Hotel_Project.csproj.CoreCompileInputs.cache
+C:\Users\theno\Desktop\Project\Hotel_Project\obj\Debug\Hotel_Project.csproj.CopyComplete
+C:\Users\theno\Desktop\Project\Hotel_Project\obj\Debug\Hotel_Project.exe
+C:\Users\theno\Desktop\Project\Hotel_Project\obj\Debug\Hotel_Project.pdb
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.Smo.pdb
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.Smo.xml
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.ConnectionInfo.pdb
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.ConnectionInfo.xml
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.SmoExtended.pdb
+C:\Users\theno\Desktop\Project\Hotel_Project\bin\Debug\Microsoft.SqlServer.SmoExtended.xml

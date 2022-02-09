@@ -1,0 +1,290 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.SqlServer.Assessment.Types</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.SqlServer.Management.Assessment.IDataMorph">
+            <summary>
+            Classes implementing this interface transform data represented by an <see cref="T:Microsoft.SqlServer.Management.Assessment.IDataView"/>.
+            For example, an <see cref="T:Microsoft.SqlServer.Management.Assessment.IDataMorph"/> can aggregate multiple rows into a single row of totals.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.Assessment.IDataMorph.BenefitsFromCache">
+            <summary>
+            Gets a value indicating if this object implement a cache.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Assessment.IDataMorph.ApplyTo(Microsoft.SqlServer.Management.Assessment.IDataView,System.Boolean)">
+            <summary>
+            Applies the transformation to the <paramref name="source"/> data.
+            Result caching may be disabled with <paramref name="useCache"/> = <c>false</c>.
+            </summary>
+            <param name="source">An <see cref="T:Microsoft.SqlServer.Management.Assessment.IDataView"/> of the data to be transformed.</param>
+            <param name="useCache">Indicates if cache should be created and used.
+            <c>true</c> saves time for some <see cref="T:Microsoft.SqlServer.Management.Assessment.IDataMorph"/>s,
+            while <c>false</c> saves memory.</param>
+            <returns>Returns a new <see cref="T:Microsoft.SqlServer.Management.Assessment.IDataView"/> of transformed data.</returns>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.Assessment.IDataRow">
+            <summary>
+            A class derived from <see cref="T:Microsoft.SqlServer.Management.Assessment.IDataRow"/> holds data used in check expressions.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Assessment.IDataRow.TryGetData(System.String,System.Object@)">
+            <summary>
+            Obtains data from this <see cref="T:Microsoft.SqlServer.Management.Assessment.IDataRow"/> by name.
+            Returns <c>true</c> if data was registered for this <paramref name="column"/>, and <c>false</c> otherwise.
+            </summary>
+            <param name="column">Column name.</param>
+            <param name="value">Data if any. Initialized with null otherwise.</param>
+            <returns>
+            Returns <c>true</c> if data was registered for this <paramref name="column"/>, and <c>false</c> otherwise.
+            </returns>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.Assessment.IDataView">
+            <summary>
+            Classes derived from this interface provide access to data obtained by probes or other variables.
+            </summary>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.Assessment.IProbeImplementation">
+            <summary>
+            The minimal interface implemented by every probe.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.Assessment.IProbeImplementation.ServerName">
+            <summary>
+            Gets or sets the name of the target server.
+            </summary>
+            <value>
+            The name of the target server.
+            </value>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.Assessment.IProbeImplementation.TargetName">
+            <summary>
+            Gets or sets the name of the target object.
+            </summary>
+            <value>
+            The name of the target object.
+            </value>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.Assessment.IProbeImplementation.Urn">
+            <summary>
+            Gets or sets the target's URN.
+            </summary>
+            <value>
+            The target's URN.
+            </value>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.Assessment.IProbeImplementation.Parameters">
+            <summary>
+            Gets or sets the parameters.
+            </summary>
+            <value>
+            The parameters.
+            </value>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Assessment.IProbeImplementation.GetDataAsync">
+            <summary>
+            Implements the main probe logic obtaining information on specified target object.
+            </summary>
+            <returns>
+            Returns zero or more <see cref="T:Microsoft.SqlServer.Management.Assessment.Measurement"/>s containing annotated data about the target.
+            </returns>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.Assessment.Measurement">
+            <summary>
+            Measurement holds data obtained by a probe.
+            The data is associated to a Column name.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Assessment.Measurement.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.SqlServer.Management.Assessment.Measurement"/> class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Assessment.Measurement.#ctor(System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.SqlServer.Management.Assessment.Measurement" /> class that is empty,
+            has the specified initial capacity, and uses the default equality comparer for the key type.
+            </summary>
+            <param name="capacity">The initial number of elements that the <see cref="T:Microsoft.SqlServer.Management.Assessment.Measurement" /> can contain.</param>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            <paramref name="capacity" /> is less than 0.</exception>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Assessment.Measurement.#ctor(System.Collections.Generic.IDictionary{System.String,System.Object})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.SqlServer.Management.Assessment.Measurement" /> class that contains elements copied from the specified
+            <see cref="T:System.Collections.Generic.IDictionary`2" /> and uses the default equality comparer for the key type.
+            </summary>
+            <param name="dictionary">
+            The <see cref="T:System.Collections.Generic.IDictionary`2" /> whose elements
+            are copied to the new <see cref="T:Microsoft.SqlServer.Management.Assessment.Measurement" />.
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="dictionary" /> is <see langword="null" />.
+            </exception>
+            <exception cref="T:System.ArgumentException">
+            <paramref name="dictionary" /> contains one or more duplicate keys.
+            </exception>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.Assessment.Measurement.Count">
+            <summary>Gets the number of elements contained in the <see cref="T:Microsoft.SqlServer.Management.Assessment.Measurement" />.</summary>
+            <returns>The number of elements contained in the <see cref="T:Microsoft.SqlServer.Management.Assessment.Measurement" />.</returns>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.Assessment.Measurement.IsReadOnly">
+            <summary>Gets a value indicating whether the <see cref="T:Microsoft.SqlServer.Management.Assessment.Measurement" /> is read-only.</summary>
+            <returns><c>true</c> if the <see cref="T:Microsoft.SqlServer.Management.Assessment.Measurement" /> is read-only; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.Assessment.Measurement.Keys">
+            <summary>Gets an <see cref="T:System.Collections.Generic.ICollection`1" />
+            containing the keys of the <see cref="T:Microsoft.SqlServer.Management.Assessment.Measurement" />.</summary>
+            <returns>
+            An <see cref="T:System.Collections.Generic.ICollection`1" /> containing the keys
+            of the object that implements <see cref="T:Microsoft.SqlServer.Management.Assessment.Measurement" />.
+            </returns>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.Assessment.Measurement.Values">
+            <summary>Gets an <see cref="T:System.Collections.Generic.ICollection`1" /> containing the values in the <see cref="T:Microsoft.SqlServer.Management.Assessment.Measurement" />.</summary>
+            <returns>An <see cref="T:System.Collections.Generic.ICollection`1" /> containing the values in the object that implements <see cref="T:Microsoft.SqlServer.Management.Assessment.Measurement" />.</returns>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.Assessment.Measurement.Item(System.String)">
+            <summary>Gets or sets the element with the specified key.</summary>
+            <returns>The element with the specified key.</returns>
+            <param name="key">The key of the element to get or set.</param>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="key" /> is null.</exception>
+            <exception cref="T:System.Collections.Generic.KeyNotFoundException">The property is retrieved and <paramref name="key" /> is not found.</exception>
+            <exception cref="T:System.NotSupportedException">The property is set and the <see cref="T:Microsoft.SqlServer.Management.Assessment.Measurement" /> is read-only.</exception>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Assessment.Measurement.GetEnumerator">
+            <summary>
+            Returns an enumerator that iterates through the <see cref="T:Microsoft.SqlServer.Management.Assessment.Measurement" />.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Assessment.Measurement.Add(System.Collections.Generic.KeyValuePair{System.String,System.Object})">
+            <summary>Adds an item to the <see cref="T:Microsoft.SqlServer.Management.Assessment.Measurement" />.</summary>
+            <param name="item">The object to add to the <see cref="T:Microsoft.SqlServer.Management.Assessment.Measurement" />.</param>
+            <exception cref="T:System.NotSupportedException">The <see cref="T:Microsoft.SqlServer.Management.Assessment.Measurement" /> is read-only.</exception>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Assessment.Measurement.Add(System.String,System.Object)">
+            <summary>Adds an element with the provided key and value to the <see cref="T:Microsoft.SqlServer.Management.Assessment.Measurement" />.</summary>
+            <param name="key">The object to use as the key of the element to add.</param>
+            <param name="value">The object to use as the value of the element to add.</param>
+            <exception cref="T:System.ArgumentNullException"><paramref name="key" /> is null.</exception>
+            <exception cref="T:System.ArgumentException">An element with the same key already exists in the <see cref="T:Microsoft.SqlServer.Management.Assessment.Measurement" />.</exception>
+            <exception cref="T:System.NotSupportedException">The <see cref="T:Microsoft.SqlServer.Management.Assessment.Measurement" /> is read-only.</exception>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Assessment.Measurement.Clear">
+            <summary>Removes all items from the <see cref="T:Microsoft.SqlServer.Management.Assessment.Measurement" />.</summary>
+            <exception cref="T:System.NotSupportedException">The <see cref="T:Microsoft.SqlServer.Management.Assessment.Measurement" /> is read-only. </exception>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Assessment.Measurement.Contains(System.Collections.Generic.KeyValuePair{System.String,System.Object})">
+            <summary>Determines whether the <see cref="T:Microsoft.SqlServer.Management.Assessment.Measurement" /> contains a specific value.</summary>
+            <returns>
+            Returns <c>true</c> if <paramref name="item" /> is found in the <see cref="T:Microsoft.SqlServer.Management.Assessment.Measurement" />;
+            otherwise, returns <c>false</c>.
+            </returns>
+            <param name="item">The object to locate in the <see cref="T:Microsoft.SqlServer.Management.Assessment.Measurement" />.</param>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Assessment.Measurement.CopyTo(System.Collections.Generic.KeyValuePair{System.String,System.Object}[],System.Int32)">
+            <summary>
+            Copies the elements of the <see cref="T:Microsoft.SqlServer.Management.Assessment.Measurement" /> to an <see cref="T:System.Array" />,
+            starting at a particular <see cref="T:System.Array" /> index.
+            </summary>
+            <param name="array">
+            The one-dimensional <see cref="T:System.Array" /> that is the destination of the elements
+            copied from <see cref="T:Microsoft.SqlServer.Management.Assessment.Measurement" />. The <see cref="T:System.Array" /> must have zero-based indexing.
+            </param>
+            <param name="arrayIndex">The zero-based index in <paramref name="array" /> at which copying begins.</param>
+            <exception cref="T:System.ArgumentNullException"><paramref name="array" /> is null.</exception>
+            <exception cref="T:System.ArgumentOutOfRangeException"><paramref name="arrayIndex" /> is less than 0.</exception>
+            <exception cref="T:System.ArgumentException">
+            The number of elements in the source <see cref="T:Microsoft.SqlServer.Management.Assessment.Measurement" /> is greater than the available space
+            from <paramref name="arrayIndex" /> to the end of the destination <paramref name="array" />.
+            </exception>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Assessment.Measurement.Remove(System.Collections.Generic.KeyValuePair{System.String,System.Object})">
+            <summary>Removes the first occurrence of a specific object from the <see cref="T:Microsoft.SqlServer.Management.Assessment.Measurement" />.</summary>
+            <returns>
+            <c>true</c> if <paramref name="item" /> was successfully removed from the <see cref="T:Microsoft.SqlServer.Management.Assessment.Measurement" />;
+            otherwise, returns <c>false</c>. This method also returns <c>false</c> if <paramref name="item" />
+            is not found in the original <see cref="T:Microsoft.SqlServer.Management.Assessment.Measurement" />.</returns>
+            <param name="item">The object to remove from the <see cref="T:Microsoft.SqlServer.Management.Assessment.Measurement" />.</param>
+            <exception cref="T:System.NotSupportedException">The <see cref="T:Microsoft.SqlServer.Management.Assessment.Measurement" /> is read-only.</exception>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Assessment.Measurement.ContainsKey(System.String)">
+            <summary>Determines whether the <see cref="T:Microsoft.SqlServer.Management.Assessment.Measurement" /> contains an element with the specified key.</summary>
+            <returns>
+            Returns <c>true</c> if the <see cref="T:Microsoft.SqlServer.Management.Assessment.Measurement" /> contains an element with the key;
+            otherwise, returns <c>false</c>.
+            </returns>
+            <param name="key">The key to locate in the <see cref="T:Microsoft.SqlServer.Management.Assessment.Measurement" />.</param>
+            <exception cref="T:System.ArgumentNullException"><paramref name="key" /> is null.</exception>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Assessment.Measurement.Remove(System.String)">
+            <summary>Removes the element with the specified key from the <see cref="T:Microsoft.SqlServer.Management.Assessment.Measurement" />.</summary>
+            <returns>
+            Returns <c>true</c> if the element is successfully removed;
+            otherwise, <c>false</c>.  This method also returns <c>false</c> if <paramref name="key" />
+            was not found in the original <see cref="T:Microsoft.SqlServer.Management.Assessment.Measurement" />.
+            </returns>
+            <param name="key">The key of the element to remove.</param>
+            <exception cref="T:System.ArgumentNullException"><paramref name="key" /> is null.</exception>
+            <exception cref="T:System.NotSupportedException">The <see cref="T:Microsoft.SqlServer.Management.Assessment.Measurement" /> is read-only.</exception>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Assessment.Measurement.TryGetValue(System.String,System.Object@)">
+            <summary>Gets the value associated with the specified key.</summary>
+            <returns>
+            Returns <c>true</c> if the object that implements <see cref="T:Microsoft.SqlServer.Management.Assessment.Measurement" /> contains an element with the specified key;
+            otherwise, <c>false</c>.
+            </returns>
+            <param name="key">The key whose value to get.</param>
+            <param name="value">
+            When this method returns, the value associated with the specified key, if the key is found;
+            otherwise, the default value for the type of the <paramref name="value" /> parameter.
+            This parameter is passed uninitialized.
+            </param>
+            <exception cref="T:System.ArgumentNullException"><paramref name="key" /> is null.</exception>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Assessment.Measurement.TryGetData(System.String,System.Object@)">
+            <summary>
+            Obtains data from this <see cref="T:Microsoft.SqlServer.Management.Assessment.Measurement"/> by name.
+            Returns <c>true</c> if data was registered for this <paramref name="column"/>, and <c>false</c> otherwise.
+            </summary>
+            <param name="column">Column name.</param>
+            <param name="value">
+            When this method returns, the value associated with the specified key, if the key is found;
+            otherwise, the default value for the type of the <paramref name="value" /> parameter.
+            This parameter is passed uninitialized.
+            </param>
+            <returns>
+            Returns <c>true</c> if data was registered for this <paramref name="column"/>, and <c>false</c> otherwise.
+            </returns>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.Assessment.MeasurementCollection">
+            <summary>
+            A <see cref="T:Microsoft.SqlServer.Management.Assessment.IDataView"/> implemented as a simple collection of <see cref="T:Microsoft.SqlServer.Management.Assessment.Measurement"/>s.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Assessment.MeasurementCollection.#ctor">
+            <summary>
+            Initializes a new empty instance of the <see cref="T:Microsoft.SqlServer.Management.Assessment.MeasurementCollection"/> class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Assessment.MeasurementCollection.#ctor(System.Collections.Generic.IEnumerable{Microsoft.SqlServer.Management.Assessment.Measurement})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.SqlServer.Management.Assessment.MeasurementCollection"/> class
+            with given <paramref name="rows"/>.
+            </summary>
+            <param name="rows">The collection whose elements are copied to the new list.</param>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Assessment.MeasurementCollection.#ctor(Microsoft.SqlServer.Management.Assessment.Measurement[])">
+            <summary>
+            Initializes a new instance with an existing collection.
+            </summary>
+            <param name="rep">The <see cref="T:System.Array"/> whose elements are copied to the new list.</param>
+        </member>
+    </members>
+</doc>

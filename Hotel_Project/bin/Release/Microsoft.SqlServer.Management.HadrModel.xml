@@ -1,0 +1,3422 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.SqlServer.Management.HadrModel</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.SqlServer.Management.HadrModel.AddDatabaseToExistingAgScenarioProvider">
+            <summary>
+            Add a database to an existing Availability Group scenario provider
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.AddDatabaseToExistingAgScenarioProvider.#ctor(Microsoft.SqlServer.Management.HadrData.AvailabilityGroupData)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="data">AvailabilityGroupData</param>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.AddDatabaseToExistingAgScenarioProvider.AvailabilityGroupData">
+            <summary>
+            The availability group data with which the class was
+            initialized
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.AddDatabaseToExistingAgScenarioProvider.Validators">
+            <summary>
+            Scenario validators
+            </summary>
+            <returns>validationt tasks</returns>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.AddDatabaseToExistingAgScenarioProvider.Tasks">
+            <summary>
+            Get the list of tasks the provider supports
+            </summary>
+            <returns>List of tasks for this scenario</returns>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.AddDatabaseToExistingAgScenarioProvider.RollbackTasks">
+            <summary>
+            Scenario rollback task
+            </summary>
+            <returns>List of rollback tasks</returns>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.HadrModel.AddDatabaseToExistingAvailabilityGroupTask">
+            <summary>
+            Task that adds a database to an existing availability group.
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrModel.AddDatabaseToExistingAvailabilityGroupTask.availabilityGroupData">
+            <summary>
+            AvailabilityGroupData object contains the whole ag group
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.AddDatabaseToExistingAvailabilityGroupTask.ScriptingConnections">
+            <summary>
+            Connections to use for scripting
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.AddDatabaseToExistingAvailabilityGroupTask.#ctor(Microsoft.SqlServer.Management.HadrData.AvailabilityGroupData)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="availabilityGroupData">The availability group data</param>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.AddDatabaseToExistingAvailabilityGroupTask.Perform(Microsoft.SqlServer.Management.HadrModel.IExecutionPolicy)">
+            <summary>
+            Adds a database to the AvailabilityGroup object
+            </summary>
+            <param name="policy">The execution policy</param>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.AddDatabaseToExistingAvailabilityGroupTask.Rollback(Microsoft.SqlServer.Management.HadrModel.IExecutionPolicy)">
+            <summary>
+            Rollback is not supported
+            </summary>
+            <param name="policy"></param>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.HadrModel.AddDBCredentialTask">
+            <summary>
+            Prevision the password for database master key on a Secondary server.
+            Depends on the succesful backup of the log on the primary.
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrModel.AddDBCredentialTask.useExistingAvailabilityDatabases">
+            <summary>
+            The value of whether add database credential for existing availability databases with default value "false"
+            If not, add database credential for new availability databases
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrModel.AddDBCredentialTask.availabilityGroupData">
+            <summary>
+            AvailabilityGroupData object contains the whole ag group
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrModel.AddDBCredentialTask.databaseName">
+            <summary>
+            Target Database Name
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrModel.AddDBCredentialTask.replica">
+            <summary>
+            The secondary replica in which to restore the logs
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.AddDBCredentialTask.#ctor(System.String,Microsoft.SqlServer.Management.HadrData.AvailabilityGroupData,Microsoft.SqlServer.Management.HadrData.AvailabilityGroupReplica)">
+            <summary>
+            ctor
+            </summary>
+            <param name="databaseName">target database name</param>
+            <param name="availabilityGroupData">agData</param>
+            <param name="replica">the secondary replica in which to restore the logs</param>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.AddDBCredentialTask.AvailabilityGroupData">
+            <summary>
+            The availability group data
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.AddDBCredentialTask.ReplicaData">
+            <summary>
+            The replica data for the replica on which need to add credential
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.AddDBCredentialTask.UseExistingAvailabilityDatabases">
+            <summary>
+            The value of whether add database credential for existing availability databases 
+            If not, add database credential for new availability databases
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.AddDBCredentialTask.Perform(Microsoft.SqlServer.Management.HadrModel.IExecutionPolicy)">
+            <summary>
+            Method to performing restore Log
+            </summary>
+            <param name="policy"></param>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.AddDBCredentialTask.Rollback(Microsoft.SqlServer.Management.HadrModel.IExecutionPolicy)">
+            <summary>
+            Not Support for rolling back this task
+            </summary>
+            <param name="policy"></param>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.HadrModel.AddNewAvailabilityGroupListenerTask">
+            <summary>
+             The Task for creating a new availability group listener
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrModel.AddNewAvailabilityGroupListenerTask.availabilityGroup">
+            <summary>
+            AvailabilityGroup object from smo for the existing target AG
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrModel.AddNewAvailabilityGroupListenerTask.availabilityGroupListenerConfiguration">
+            <summary>
+            AvailabilityGroupListenerConfiguration object to be add to the AG
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.AddNewAvailabilityGroupListenerTask.#ctor(System.String,Microsoft.SqlServer.Management.Smo.AvailabilityGroup,Microsoft.SqlServer.Management.HadrData.AvailabilityGroupListenerConfiguration)">
+            <summary>
+            ctor
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.AddNewAvailabilityGroupListenerTask.Perform(Microsoft.SqlServer.Management.HadrModel.IExecutionPolicy)">
+            <summary>
+            method to perform adding a new listener to existing AG
+            </summary>
+            <param name="policy"></param>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.AddNewAvailabilityGroupListenerTask.Rollback(Microsoft.SqlServer.Management.HadrModel.IExecutionPolicy)">
+            <summary>
+            Rollback not support in this task
+            </summary>
+            <param name="policy"></param>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.HadrModel.AddReplicaDatabaseExistenceValidator">
+            <summary>
+            Validates that databases existing in an
+            AvailabilityGroup when adding a replica to an AvailabiltyGroup 
+            do not exist on the secondary replica
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.AddReplicaDatabaseExistenceValidator.#ctor(Microsoft.SqlServer.Management.HadrData.AvailabilityGroupData,Microsoft.SqlServer.Management.HadrData.AvailabilityGroupReplica)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="availabilityGroupData">The availability group data</param>
+            <param name="replica">The replica data</param>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.HadrModel.AddReplicaDatabaseFileCompatibilityValidator">
+            <summary>
+            Validates that the folders needed for database-files of the databases 
+            that exist in the AvailabilityGroup when adding a replica to AvailabiltyGroup 
+            exist on the secondary.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.AddReplicaDatabaseFileCompatibilityValidator.#ctor(Microsoft.SqlServer.Management.HadrData.AvailabilityGroupData,Microsoft.SqlServer.Management.HadrData.AvailabilityGroupReplica)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="availabilityGroupData">The availability group data</param>
+            <param name="replica">The replica data</param>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.HadrModel.AddReplicaDatabaseFileExistenceValidator">
+            <summary>
+            Validates that the database-files that will be created on secondary
+            as part of Add Replica Scenario
+            does not already exist on the secondary.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.AddReplicaDatabaseFileExistenceValidator.#ctor(Microsoft.SqlServer.Management.HadrData.AvailabilityGroupData,Microsoft.SqlServer.Management.HadrData.AvailabilityGroupReplica)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="availabilityGroupData">The availability group data</param>
+            <param name="replica">The replica data</param>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.HadrModel.AddReplicasToExistingAvailabilityGroupScenarioProvider">
+            <summary>
+            This class implements the add database to existing availability group scenario provider
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.AddReplicasToExistingAvailabilityGroupScenarioProvider.AvailabilityGroupData">
+            <summary>
+            The availability group data with which the class was
+            initialized
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.AddReplicasToExistingAvailabilityGroupScenarioProvider.#ctor(Microsoft.SqlServer.Management.HadrData.AvailabilityGroupData)">
+            <summary>
+            Ctor
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.AddReplicasToExistingAvailabilityGroupScenarioProvider.Validators">
+            <summary>
+            Scenario validators
+            </summary>
+            <returns>validationt tasks</returns>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.AddReplicasToExistingAvailabilityGroupScenarioProvider.RollbackTasks">
+            <summary>
+            Scenario rollback task
+            </summary>
+            <returns>list of rollback task</returns>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.AddReplicasToExistingAvailabilityGroupScenarioProvider.Tasks">
+            <summary>
+            Get the list of tasks the provider supports
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.HadrModel.AddReplicaTask">
+            <summary>
+            Task to Add replicas to the existing availability group
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrModel.AddReplicaTask.availabilityGroupData">
+            <summary>
+            The availability group data
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.AddReplicaTask.#ctor(Microsoft.SqlServer.Management.HadrData.AvailabilityGroupData)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="availabilityGroupData">The availability group data</param>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.AddReplicaTask.ScriptingConnections">
+            <summary>
+            Connections to use for scripting
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.AddReplicaTask.Perform(Microsoft.SqlServer.Management.HadrModel.IExecutionPolicy)">
+            <summary>
+            Add an availability group
+            </summary>
+            <param name="policy">The execution policy</param>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.AddReplicaTask.Rollback(Microsoft.SqlServer.Management.HadrModel.IExecutionPolicy)">
+            <summary>
+            Rollback is not supported for this task
+            </summary>
+            <param name="policy">The execution policy</param>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.HadrModel.AvailabilityGroupNotJoinedOnReplicaException">
+            <summary>
+            This exception is thrown when Availability Group is not joined on the secondary replica
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.AvailabilityGroupNotJoinedOnReplicaException.#ctor(System.String,System.String)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="availabilityGroupName">The availability group name</param>
+            <param name="replicaServerName">The replica server name</param>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.HadrModel.AvailabilityGroupQuorumValidationTask">
+            <summary>
+            Validates the quorum vote configuration of the given availability group.
+            Nodes participating in an AG should only have a quroum vote if they 
+            can host the primary replica or if the can host a automatic secondary
+            partnered with the primary. Note the use of 'can' is due to the potential
+            presence of FCIs.
+            Although this task is like a validator but it must be derived from task to fit into the task provider
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrModel.AvailabilityGroupQuorumValidationTask.availabilityGroupData">
+            <summary>
+            AvailabilityGroupData object contains the whole ag group
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.AvailabilityGroupQuorumValidationTask.#ctor(Microsoft.SqlServer.Management.HadrData.AvailabilityGroupData)">
+            <summary>
+            ctor
+            </summary>
+            <param name="availabilityGroupData"></param>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.AvailabilityGroupQuorumValidationTask.Perform(Microsoft.SqlServer.Management.HadrModel.IExecutionPolicy)">
+            <summary>
+            Validates the quorum vote configuration of the given availability group.
+            </summary>
+            <param name="policy"></param>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.AvailabilityGroupQuorumValidationTask.Rollback(Microsoft.SqlServer.Management.HadrModel.IExecutionPolicy)">
+            <summary>
+            No support for rolling back in this task
+            </summary>
+            <param name="policy"></param>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.HadrModel.AvailabilityGroupQuorumValidationTaskException">
+            <summary>
+            This exception is thrown when AvailabilityGroupQuorumValidator fail
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.AvailabilityGroupQuorumValidationTaskException.#ctor(System.String)">
+            <summary>
+            Standard Exception with AGName
+            </summary>
+            <param name="availabilityGroupName"></param>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.AvailabilityGroupQuorumValidationTaskException.#ctor(System.String,System.Exception)">
+            <summary>
+            Exception with AGNAme and Inner Exception
+            </summary>
+            <param name="availabilityGroupName"></param>
+            <param name="inner"></param>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.HadrModel.AvailabilityModeIncompatibleException">
+            <summary>
+            This exception is thrown when one of the secondary replicas
+            has an availabilitymode of Synchronous Commit, when the primary's
+            availabilitymode is not Synchronous.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.AvailabilityModeIncompatibleException.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.HadrModel.AvailabilityModeValidator">
+            <summary>
+            Validates that the folders needed for database-files of the databases 
+            being added to the  AvailabilityGroup when creating an AvailabiltyGroup 
+            exist on the secondary.
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrModel.AvailabilityModeValidator.availabilityGroupData">
+            <summary>
+            The availability group data.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.AvailabilityModeValidator.#ctor(Microsoft.SqlServer.Management.HadrData.AvailabilityGroupData)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="availabilityGroupData">The availability group data</param>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.AvailabilityModeValidator.Validate(Microsoft.SqlServer.Management.HadrModel.IExecutionPolicy)">
+            <summary>
+            Validates if a folder necessary for creating the database
+            exists on the secondary.
+            </summary>
+            <param name="policy">The policy</param>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.HadrModel.BackupDatabaseTask">
+            <summary>
+            Task to back up a database
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrModel.BackupDatabaseTask._availabilityGroupData">
+            <summary>
+            AvailabilityGroupData object contains the whole ag group
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrModel.BackupDatabaseTask._databaseName">
+            <summary>
+            Target Database Name
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrModel.BackupDatabaseTask._backup">
+            <summary>
+            Backup object from Smo
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.BackupDatabaseTask.#ctor(System.String,Microsoft.SqlServer.Management.HadrData.AvailabilityGroupData)">
+            <summary>
+            ctor
+            </summary>
+            <param name="databaseName">backup database name</param>
+            <param name="availabilityGroupData">AGdata</param>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.BackupDatabaseTask.ScriptingConnections">
+            <summary>
+            Connections to use for scripting
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.BackupDatabaseTask.AvailabilityGroupData">
+            <summary>
+            The availability group data
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.BackupDatabaseTask.Abort">
+            <summary>
+            Used by caller to abort the backup
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.BackupDatabaseTask.Perform(Microsoft.SqlServer.Management.HadrModel.IExecutionPolicy)">
+            <summary>
+            Method to back up target Database
+            </summary>
+            <param name="policy"></param>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.BackupDatabaseTask.Rollback(Microsoft.SqlServer.Management.HadrModel.IExecutionPolicy)">
+            <summary>
+            Not Support For roll back this task
+            </summary>
+            <param name="policy"></param>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.BackupDatabaseTask.GetSqlException(System.Exception)">
+            <summary>
+            Get the inner SQL exception if any
+            </summary>
+            <param name="ex"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.HadrModel.BackupDatabaseTaskException">
+            <summary>
+            This exception is thrown when BackupDatabaseTask fail
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.BackupDatabaseTaskException.#ctor(System.String,System.Exception)">
+            <summary>
+            Exception with Database Name and inner Exception
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.BackupDatabaseTaskException.#ctor(System.String)">
+            <summary>
+            Exception with Database Name 
+            </summary>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.HadrModel.BackupLocationValidator">
+            <summary>
+            This class validates that the backup location provided can be used 
+            by the wizard to take backups and restore on the secondaries.
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrModel.BackupLocationValidator.primaryServer">
+            <summary>
+            The primary-server where the temporary database is created
+            and backup is taken to the backuplocation.
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrModel.BackupLocationValidator.onPremiseSecondaryServers">
+            <summary>
+            The list of secondary servers where the backup of the
+            temporary database is restored
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrModel.BackupLocationValidator.DatabaseNameFormat">
+            <summary>
+            The format of the database-name
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrModel.BackupLocationValidator.testDatabaseName">
+            <summary>
+            The name of the temporary database that will be created, backed-up from primary
+            and read from the secondary.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.BackupLocationValidator.AvailabilityGroupData">
+            <summary>
+            The availability group data
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.BackupLocationValidator.#ctor(Microsoft.SqlServer.Management.HadrData.AvailabilityGroupData)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="data">AvailabilityGroupData</param>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.BackupLocationValidator.Initialize(Microsoft.SqlServer.Management.HadrData.AvailabilityGroupData)">
+            <summary>
+            Initializes the class structures (PrimaryServer, OnPremiseSecondaryServers, BackupLocation)
+            from the data.
+            </summary>
+            <param name="data">The Availability Group Data</param>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.BackupLocationValidator.Validate(Microsoft.SqlServer.Management.HadrModel.IExecutionPolicy)">
+            <summary>
+            Validates that the primary server can write to a share location, and that all of the secondaries can read from the location.
+            It does this by creating an empty database on the primary and attempting to back this up to the share.
+            On each secondary we will attempt to read the header of this backup to verify it exist.
+            </summary>
+            <param name="policy">execution policy</param>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.BackupLocationValidator.CreateTemporaryDatabaseOnPrimary">
+            <summary>
+            Creates a temporary database on the primary server
+            </summary>
+            <returns>Smo database object corresponding to the database just created</returns>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.BackupLocationValidator.BackupTemporaryDatabase(Microsoft.SqlServer.Management.Smo.Database,System.String)">
+            <summary>
+            Backs up the temporary database to the device path specified
+            </summary>
+            <param name="database">The smo database object of database to backup</param>
+            <param name="backupFileName">The backup file name</param>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.BackupLocationValidator.ValidateBackupOnSecondaries(System.String)">
+            <summary>
+            Attempts to read the database backup in the file specified by backupDevicePath
+            </summary>
+            <param name="backupFileName">The backup file name</param>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.HadrModel.BackupLogTask">
+            <summary>
+            Backup the log on the primary server.
+            Requires that the backup database was successful.
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrModel.BackupLogTask._availabilityGroupData">
+            <summary>
+            AvailabilityGroupData object contains the whole ag group
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrModel.BackupLogTask._databaseName">
+            <summary>
+            Target Database Name
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrModel.BackupLogTask._backup">
+            <summary>
+            Backup object from smo
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.BackupLogTask.#ctor(System.String,Microsoft.SqlServer.Management.HadrData.AvailabilityGroupData)">
+            <summary>
+            ctor
+            </summary>
+            <param name="databaseName">database name</param>
+            <param name="availabilityGroupData">agData</param>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.BackupLogTask.ScriptingConnections">
+            <summary>
+            Connections to use for scripting
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.BackupLogTask.AvailabilityGroupData">
+            <summary>
+            The availability group data
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.BackupLogTask.Abort">
+            <summary>
+            Used by caller to abort the backup
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.BackupLogTask.Perform(Microsoft.SqlServer.Management.HadrModel.IExecutionPolicy)">
+            <summary>
+            method to backup target database log
+            </summary>
+            <param name="policy"></param>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.BackupLogTask.Rollback(Microsoft.SqlServer.Management.HadrModel.IExecutionPolicy)">
+            <summary>
+            No Rollback Support for Backup
+            </summary>
+            <param name="policy"></param>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.HadrModel.BackupLogTaskException">
+            <summary>
+            This exception is thrown when BackupLogTask fail
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.BackupLogTaskException.#ctor(System.String,System.Exception)">
+            <summary>
+            Exception with Database Name and inner Exception
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.BackupLogTaskException.#ctor(System.String)">
+            <summary>
+            Exception with Database Name 
+            </summary>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.HadrModel.BasicAvailabilityGroupIncompatibleException">
+            <summary>
+            Class for generating a <see cref="T:Microsoft.SqlServer.Management.HadrModel.HadrValidationErrorException"/> related to an invalid set of configuration options 
+            for creating or altering a BASIC Availability Group.  
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.BasicAvailabilityGroupIncompatibleException.#ctor(System.String)">
+            <summary>
+            Standard <see cref="T:Microsoft.SqlServer.Management.HadrModel.HadrValidationErrorException"/> cause by an invalid set of configuration options 
+            related to creating or altering a BASIC Availability Group.  
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrModel.BasicAvailabilityGroupValidator.DefaultBackupPriority">
+            <summary>
+            Basic AGs only allow the DefaultBackupPriority.
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrModel.BasicAvailabilityGroupValidator.availabilityGroupData">
+            <summary>
+            availabilityGroupData object contains information for the Availability Group
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.BasicAvailabilityGroupValidator.#ctor(Microsoft.SqlServer.Management.HadrData.AvailabilityGroupData)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="availabilityGroupData">Availability Group Data</param>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.BasicAvailabilityGroupValidator.Validate(Microsoft.SqlServer.Management.HadrModel.IExecutionPolicy)">
+            <summary>
+            Validates the compatibility of the configuration options for BASIC Availability Groups.
+            </summary>
+            <param name="policy"></param>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.HadrModel.ClusterNodeState">
+            <summary>
+            Matching MSCluster_Node definition
+            http://msdn.microsoft.com/en-us/library/aa371446(v=vs.85).aspx
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrModel.ClusterNodeState.Unknown">
+            <summary>
+            unknown state
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrModel.ClusterNodeState.Up">
+            <summary>
+            node is up
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrModel.ClusterNodeState.Down">
+            <summary>
+            node is down
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrModel.ClusterNodeState.Paused">
+            <summary>
+            node paused
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrModel.ClusterNodeState.Joining">
+            <summary>
+            node joining
+            </summary>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.HadrModel.CompatibleEncryptionValidator">
+            <summary>
+            This class implements a validator for ensuring that the 
+            encryption (includes encryption algorithms) for all the replicas are compatible.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.CompatibleEncryptionValidator.AvailabilityGroupData">
+            <summary>
+            The availability group data with which the class was
+            initialized
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.CompatibleEncryptionValidator.#ctor(Microsoft.SqlServer.Management.HadrData.AvailabilityGroupData)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="data">The availability group data</param>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.CompatibleEncryptionValidator.Validate(Microsoft.SqlServer.Management.HadrModel.IExecutionPolicy)">
+            <summary>
+            The validator validates that the encryption algorithm for
+            all replicas are compatible.
+            
+            This task is tried once
+            </summary>
+            <param name="policy"></param>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.CompatibleEncryptionValidator.ValidateReplicaEndpointEncryptionAlgorithm(Microsoft.SqlServer.Management.HadrData.AvailabilityGroupReplica,Microsoft.SqlServer.Management.Smo.EndpointEncryptionAlgorithm)">
+            <summary>
+            Check if the encryption of the replica is compatible with the one that is passed in
+            </summary>
+            <param name="replica">replica data</param>
+            <param name="encryptionAlgorithm">the encryption algorithm to match</param>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.CompatibleEncryptionValidator.ValidateReplicaEndpointEncryption(Microsoft.SqlServer.Management.HadrData.AvailabilityGroupReplica,Microsoft.SqlServer.Management.Smo.EndpointEncryption)">
+            <summary>
+            Check if the required/disabled property of the endpoint encryption matches
+            </summary>
+            <param name="replica">replica data</param>
+            <param name="encryption">encryption</param>
+            <returns>The replica encryption in the case where encryption passed in is supported, whereas the replica encryption is not supported</returns>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.CompatibleEncryptionValidator.GetReplicasString">
+            <summary>
+            Returns a string that lists endpoints, endpointEncryption and EndpointEncryptionAlgorithm
+            for replicas in the availabilityGroupData
+            </summary>
+            <returns>A string that lists endpoints, endpointEncryption and EndpointEncryptionAlgorithm</returns>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.HadrModel.ConfigureEndpointsTask">
+            <summary>
+            Task to configure endpoints on a replica
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrModel.ConfigureEndpointsTask.replica">
+            <summary>
+            The replica data
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrModel.ConfigureEndpointsTask.loginNames">
+            <summary>
+            The login names to grant connect rights to
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.ConfigureEndpointsTask.#ctor(Microsoft.SqlServer.Management.HadrData.AvailabilityGroupReplica,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Constructor
+            </summary>
+            <param name="replica">The replica data</param>
+            <param name="loginNames">The logins to grant connect rights to</param>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.ConfigureEndpointsTask.ScriptingConnections">
+            <summary>
+            Connections to use for scripting
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.ConfigureEndpointsTask.Perform(Microsoft.SqlServer.Management.HadrModel.IExecutionPolicy)">
+            <summary>
+            Creates the endpoint and grants access to the logins
+            </summary>
+            <param name="policy"></param>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.ConfigureEndpointsTask.Rollback(Microsoft.SqlServer.Management.HadrModel.IExecutionPolicy)">
+            <summary>
+            Rollback is not supported for this task
+            </summary>
+            <param name="policy"></param>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.HadrModel.CreateAvailabilityGroupDatabaseExistenceValidator">
+            <summary>
+            Validates that databases being added to the
+            AvailabilityGroup when creating an AvailabiltyGroup 
+            do not exist on the secondary replica
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.CreateAvailabilityGroupDatabaseExistenceValidator.#ctor(Microsoft.SqlServer.Management.HadrData.AvailabilityGroupData,Microsoft.SqlServer.Management.HadrData.AvailabilityGroupReplica)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="availabilityGroupData">The availability group data</param>
+            <param name="replica">The replica data</param>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.HadrModel.CreateAvailabilityGroupDatabaseFileCompatibilityValidator">
+            <summary>
+            Validates that the folders needed for database-files of the databases 
+            being added to the  AvailabilityGroup when creating an AvailabiltyGroup 
+            exist on the secondary.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.CreateAvailabilityGroupDatabaseFileCompatibilityValidator.#ctor(Microsoft.SqlServer.Management.HadrData.AvailabilityGroupData,Microsoft.SqlServer.Management.HadrData.AvailabilityGroupReplica)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="availabilityGroupData">The availability group data</param>
+            <param name="replica">The replica data</param>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.HadrModel.CreateAvailabilityGroupDatabaseFileExistenceValidator">
+            <summary>
+            Validates that the database-files that will be created on secondary
+            as part of Create Availability Group Scenario
+            does not already exist on the secondary.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.CreateAvailabilityGroupDatabaseFileExistenceValidator.#ctor(Microsoft.SqlServer.Management.HadrData.AvailabilityGroupData,Microsoft.SqlServer.Management.HadrData.AvailabilityGroupReplica)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="availabilityGroupData">The availability group data</param>
+            <param name="replica">The replica data</param>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.HadrModel.CreateAvailabilityGroupListenerTask">
+            <summary>
+            Task to add Availability Group Listener to an Availability Group
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrModel.CreateAvailabilityGroupListenerTask.availabilityGroupData">
+            <summary>
+            The availability group data
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.CreateAvailabilityGroupListenerTask.#ctor(Microsoft.SqlServer.Management.HadrData.AvailabilityGroupData)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="availabilityGroupData">The availability group data</param>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.CreateAvailabilityGroupListenerTask.ScriptingConnections">
+            <summary>
+            Connections to use for scripting
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.CreateAvailabilityGroupListenerTask.Perform(Microsoft.SqlServer.Management.HadrModel.IExecutionPolicy)">
+            <summary>
+            Adds an availability group listener to the availability group
+            </summary>
+            <param name="policy">The execution policy</param>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.CreateAvailabilityGroupListenerTask.Rollback(Microsoft.SqlServer.Management.HadrModel.IExecutionPolicy)">
+            <summary>
+            Rollback is not supported for this task
+            </summary>
+            <param name="policy">The execution policy</param>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.HadrModel.CreateAvailabilityGroupScenarioProvider">
+            <summary>
+            Create a new availability group scenario provider
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.CreateAvailabilityGroupScenarioProvider.AvailabilityGroupData">
+            <summary>
+            The availability group data with which the class was
+            initialized
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.CreateAvailabilityGroupScenarioProvider.#ctor(Microsoft.SqlServer.Management.HadrData.AvailabilityGroupData)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="data">AvailabilityGroupData</param>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.CreateAvailabilityGroupScenarioProvider.Validators">
+            <summary>
+            Scenario validators
+            </summary>
+            <returns>validationt tasks</returns>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.CreateAvailabilityGroupScenarioProvider.RollbackTasks">
+            <summary>
+            Scenario rollback task
+            </summary>
+            <returns>list of rollback task</returns>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.CreateAvailabilityGroupScenarioProvider.Tasks">
+            <summary>
+            Get the list of tasks the provider supports
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.HadrModel.CreateAvailabilityGroupTask">
+            <summary>
+            Task to create an Availability Group
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrModel.CreateAvailabilityGroupTask.availabilityGroupData">
+            <summary>
+            The availability group data
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.CreateAvailabilityGroupTask.#ctor(Microsoft.SqlServer.Management.HadrData.AvailabilityGroupData)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="availabilityGroupData">The availability group data</param>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.CreateAvailabilityGroupTask.ScriptingConnections">
+            <summary>
+            Connections to use for scripting
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.CreateAvailabilityGroupTask.Perform(Microsoft.SqlServer.Management.HadrModel.IExecutionPolicy)">
+            <summary>
+            Creates an availability group
+            </summary>
+            <param name="policy">The execution policy</param>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.CreateAvailabilityGroupTask.Rollback(Microsoft.SqlServer.Management.HadrModel.IExecutionPolicy)">
+            <summary>
+            Rollback is not supported for this task
+            </summary>
+            <param name="policy">The execution policy</param>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.HadrModel.CreateLoginTask">
+            <summary>
+            Task to create a login on the sql-server secondary
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrModel.CreateLoginTask.windowsLogins">
+            <summary>
+            logins to create on the replica
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrModel.CreateLoginTask.replica">
+            <summary>
+            The replica on which the logins will be created.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.CreateLoginTask.#ctor(Microsoft.SqlServer.Management.HadrData.AvailabilityGroupReplica,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Constructor
+            </summary>
+            <param name="replica">Replica data</param>
+            <param name="windowsLogins">Logins to create</param>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.CreateLoginTask.Perform(Microsoft.SqlServer.Management.HadrModel.IExecutionPolicy)">
+            <summary>
+            Create logins for the service accounts of other replicas, which do not exist.
+            </summary>
+            <param name="policy">The execution policy</param>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.CreateLoginTask.Rollback(Microsoft.SqlServer.Management.HadrModel.IExecutionPolicy)">
+            <summary>
+            Rollback is not supported for this task
+            </summary>
+            <param name="policy">The execution policy</param>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.HadrModel.DatabaseAlreadyExistsException">
+            <summary>
+            This exception is thrown when a database being 
+            added to the AG already exists on one of the 
+            replicas.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.DatabaseAlreadyExistsException.#ctor(System.String,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Standard Exception with replica Name, and databases that 
+            already exist on the replica.
+            </summary>
+            <param name="replicaName">The replica name</param>
+            <param name="existingDatabases">The names of databases that already exist</param>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.HadrModel.DatabaseExistenceValidator">
+            <summary>
+            Validates that databases being added to the
+            AvailabilityGroup do not exist on the secondary replica
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.DatabaseExistenceValidator.AvailabilityGroupData">
+            <summary>
+            The availability group data.
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrModel.DatabaseExistenceValidator.replica">
+            <summary>
+            The replica data
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.DatabaseExistenceValidator.#ctor(System.String,Microsoft.SqlServer.Management.HadrData.AvailabilityGroupData,Microsoft.SqlServer.Management.HadrData.AvailabilityGroupReplica)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="name">The name of the validator</param>
+            <param name="availabilityGroupData">The availability group data</param>
+            <param name="replica">The replica data</param>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.DatabaseExistenceValidator.DatabasesToValidate">
+            <summary>
+            List of databases to validate
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.DatabaseExistenceValidator.Validate(Microsoft.SqlServer.Management.HadrModel.IExecutionPolicy)">
+            <summary>
+            Validates if a selecteddatabase already exists on the 
+            secondary replica.
+            </summary>
+            <param name="policy">The policy</param>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.HadrModel.DatabaseFileAlreadyExistsOnReplicaException">
+            <summary>
+            This exception is thrown when a database-file that is necessary
+            to create a database already exists on the secondary.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.DatabaseFileAlreadyExistsOnReplicaException.#ctor(System.String,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Constructor
+            </summary>
+            <param name="replicaName">replicaName</param>
+            <param name="existingFiles">conflicting files</param>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.HadrModel.DatabaseFileCompatibilityValidator">
+            <summary>
+            Validates that the folders needed for database-files of the databases 
+            exist on the secondary.
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrModel.DatabaseFileCompatibilityValidator.availabilityGroupData">
+            <summary>
+            The availability group data.
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrModel.DatabaseFileCompatibilityValidator.replica">
+            <summary>
+            The replica data
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.DatabaseFileCompatibilityValidator.#ctor(System.String,Microsoft.SqlServer.Management.HadrData.AvailabilityGroupData,Microsoft.SqlServer.Management.HadrData.AvailabilityGroupReplica)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="name">The name of the validator</param>
+            <param name="availabilityGroupData">The availability group data</param>
+            <param name="replica">The replica data</param>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.DatabaseFileCompatibilityValidator.AvailabilityGroupData">
+            <summary>
+            The availability group data
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.DatabaseFileCompatibilityValidator.DatabasesToValidate">
+            <summary>
+            List of databases to validate
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.DatabaseFileCompatibilityValidator.Validate(Microsoft.SqlServer.Management.HadrModel.IExecutionPolicy)">
+            <summary>
+            Validates if a folder necessary for creating the database
+            exists on the secondary.
+            </summary>
+            <param name="policy">The policy</param>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.HadrModel.DatabaseFileExistenceValidator">
+            Validates that the database-files that will be created on secondary
+            does not already exist on the secondary.
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrModel.DatabaseFileExistenceValidator.availabilityGroupData">
+            <summary>
+            The availability group data.
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrModel.DatabaseFileExistenceValidator.replica">
+            <summary>
+            The replica data
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.DatabaseFileExistenceValidator.#ctor(System.String,Microsoft.SqlServer.Management.HadrData.AvailabilityGroupData,Microsoft.SqlServer.Management.HadrData.AvailabilityGroupReplica)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="name">The name of the validator</param>
+            <param name="availabilityGroupData">The availability group data</param>
+            <param name="replica">The replica data</param>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.DatabaseFileExistenceValidator.AvailabilityGroupData">
+            <summary>
+            The availability group data
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.DatabaseFileExistenceValidator.DatabasesToValidate">
+            <summary>
+            List of databases to validate
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.DatabaseFileExistenceValidator.Validate(Microsoft.SqlServer.Management.HadrModel.IExecutionPolicy)">
+            <summary>
+            Validates if the database files does not already exist on the secondary.
+            </summary>
+            <param name="policy">The policy</param>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.HadrModel.DatabaseFileLocationMissingOnReplicaException">
+            <summary>
+            This exception is thrown when a folder that is necessary
+            to create a database on the secondary is missing.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.DatabaseFileLocationMissingOnReplicaException.#ctor(System.String,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Constructor
+            </summary>
+            <param name="replicaName">Name of the replica</param>
+            <param name="missingFolders">Missing folders</param>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.HadrModel.DatabaseFileNotInDefaultDirectoryException">
+            <summary>
+            This exception is thrown when any of the source databases' files is not in the default directory
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.DatabaseFileNotInDefaultDirectoryException.#ctor(System.String,System.String,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Constructor
+            </summary>
+            <param name="defaultDataFolder">Default data folder</param>
+            <param name="defaultLogFolder">Default log folder</param>
+            <param name="filesNotInDefaultDirectory">List of files not in default directory</param>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.HadrModel.DatabaseMasterKeyValidator">
+            <summary>
+            Class for validating the password of database master key
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.DatabaseMasterKeyValidator.AvailabilityGroupData">
+            <summary>
+            The availability group data
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.DatabaseMasterKeyValidator.ValidateExistingDbMode">
+            <summary>
+            The validate mode with default value "false"
+            If true, validate the existing database in AG instead of the new added database
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.DatabaseMasterKeyValidator.Validate(Microsoft.SqlServer.Management.HadrModel.IExecutionPolicy)">
+            <summary>
+            The validate method
+            </summary>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.HadrModel.DriveNotFoundOnReplicaException">
+            <summary>
+            This exception is thrown when a drive in which
+            one of the database files are stored on primary is not
+            found in the secondary replica
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.DriveNotFoundOnReplicaException.#ctor(System.Char,System.String)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="driveLetter">Drive Letter</param>
+            <param name="replicaName">Replica Name</param>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.HadrModel.EditExistingAvailabilityGroupListenerTask">
+            <summary>
+             The Task for editing a existing availability group listener
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrModel.EditExistingAvailabilityGroupListenerTask.availabilityGroup">
+            <summary>
+            AvailabilityGroup object from smo for the existing target AG
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrModel.EditExistingAvailabilityGroupListenerTask.availabilityGroupListenerConfiguration">
+            <summary>
+            AvailabilityGroupListenerConfiguration object to be altered to the AG
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.EditExistingAvailabilityGroupListenerTask.#ctor(System.String,Microsoft.SqlServer.Management.Smo.AvailabilityGroup,Microsoft.SqlServer.Management.HadrData.AvailabilityGroupListenerConfiguration)">
+            <summary>
+            ctor
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.EditExistingAvailabilityGroupListenerTask.Perform(Microsoft.SqlServer.Management.HadrModel.IExecutionPolicy)">
+            <summary>
+            method to perform edit an existing listener from AG
+            </summary>
+            <param name="policy"></param>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.EditExistingAvailabilityGroupListenerTask.Rollback(Microsoft.SqlServer.Management.HadrModel.IExecutionPolicy)">
+            <summary>
+            Rollback not support in this task
+            </summary>
+            <param name="policy"></param>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.HadrModel.EncryptionAlgorithmMismatchException">
+            <summary>
+            EncryptionAlgorithmMismatchException is thrown if the encryption algorithm of any replica is does not match the others in the Availability Group
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.EncryptionAlgorithmMismatchException.#ctor(System.String)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="replicasString">The replicas</param>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.HadrModel.EncryptionMismatchException">
+            <summary>
+            EncryptionMismatchException is thrown if the encryption of any replica is does not match the others in the Availability Group
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.EncryptionMismatchException.#ctor(System.String)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="replicasString">The replicas</param>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.EndpointAuthenticationValidationException.#ctor(System.String,System.String)">
+            <summary>
+            Standard Exception with endpointName and authenticationType
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.EndpointAuthenticationValidationException.#ctor(System.String,System.String,System.Exception)">
+            <summary>
+            Exception with endpointName and authenticationType and inner exception
+            </summary>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.HadrModel.EndpointAuthenticationValidator">
+            <summary>
+            Validate whether the on-premise endpoints use Certificate authentication.
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrModel.EndpointAuthenticationValidator.availabilityGroupData">
+            <summary>
+            availabilityGroupData object contains information for the Availability Group
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.EndpointAuthenticationValidator.#ctor(Microsoft.SqlServer.Management.HadrData.AvailabilityGroupData)">
+            <summary>
+            ctor
+            </summary>
+            <param name="agData">Availability Group Data</param>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.EndpointAuthenticationValidator.Validate(Microsoft.SqlServer.Management.HadrModel.IExecutionPolicy)">
+            <summary>
+            The validate method
+            </summary>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.HadrModel.FailoverQuorumVoteConfigurationValidator">
+            <summary>
+            Task to Validater Quorum Vote Configuration
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrModel.FailoverQuorumVoteConfigurationValidator.failoverData">
+            <summary>
+            FailoverData for executing failover task
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.FailoverQuorumVoteConfigurationValidator.#ctor(Microsoft.SqlServer.Management.HadrData.FailoverData)">
+            <summary>
+            ctor
+            </summary>
+            <param name="failoverData"></param>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.FailoverQuorumVoteConfigurationValidator.Validate(Microsoft.SqlServer.Management.HadrModel.IExecutionPolicy)">
+            <summary>
+            Validation
+            </summary>
+            <param name="policy"></param>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.HadrModel.FailoverScenarioProvider">
+            <summary>
+            Failover from secondary scenario provider
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrModel.FailoverScenarioProvider.failoverData">
+            <summary>
+            Failover Data Object
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.FailoverScenarioProvider.#ctor(Microsoft.SqlServer.Management.HadrData.FailoverData)">
+            <summary>
+            ctor
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.FailoverScenarioProvider.Validators">
+            <summary>
+            Scenario validators
+            </summary>
+            <returns>validationt tasks</returns>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.FailoverScenarioProvider.RollbackTasks">
+            <summary>
+            Scenario rollback task
+            </summary>
+            <returns>list of rollback task</returns>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.FailoverScenarioProvider.Tasks">
+            <summary>
+            Get the list of tasks the provider supports
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.HadrModel.FailoverTask">
+            <summary>
+            Task to Execute Failover Action
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrModel.FailoverTask.failoverData">
+            <summary>
+            FailoverData for executing failover task
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.FailoverTask.#ctor(Microsoft.SqlServer.Management.HadrData.FailoverData)">
+            <summary>
+            ctor
+            </summary>
+            <param name="failoverData"></param>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.FailoverTask.Perform(Microsoft.SqlServer.Management.HadrModel.IExecutionPolicy)">
+            <summary>
+            Perform the failover action
+            </summary>
+            <param name="policy"></param>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.FailoverTask.Rollback(Microsoft.SqlServer.Management.HadrModel.IExecutionPolicy)">
+            <summary>
+            No Support for fail over in rolling back
+            </summary>
+            <param name="policy"></param>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.FailoverValidationException.#ctor(System.String,System.String)">
+            <summary>
+            Standard Exception With Replica Name and Replica Role
+            FailoverTask Exception When the TargetReplica Is A primary Replica
+            </summary>
+            <param name="replicaName"></param>
+            <param name="replicaRole"></param>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.FailoverValidationException.#ctor(System.String,System.String,System.Exception)">
+            <summary>
+            Exception With Replica Name and Replica Role and Inner Exception
+            FailoverTask Exception When the TargetReplica Is A primary Replica
+            </summary>
+            <param name="replicaName"></param>
+            <param name="replicaRole"></param>
+            <param name="inner"></param>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.HadrModel.FailoverValidator">
+            <summary>
+            Task to Execute Failover Action
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrModel.FailoverValidator.failoverData">
+            <summary>
+            FailoverData for executing failover task
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.FailoverValidator.#ctor(Microsoft.SqlServer.Management.HadrData.FailoverData)">
+            <summary>
+            ctor
+            </summary>
+            <param name="failoverData"></param>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.FailoverValidator.Validate(Microsoft.SqlServer.Management.HadrModel.IExecutionPolicy)">
+            <summary>
+            Perform the failover primary server validation
+            </summary>
+            <param name="policy"></param>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.HadrModel.FailoverWaitRoleChangeValidator">
+            <summary>
+            Task to Validater Role Change After Failing Over 
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrModel.FailoverWaitRoleChangeValidator.failoverData">
+            <summary>
+            FailoverData for executing failover task
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.FailoverWaitRoleChangeValidator.#ctor(Microsoft.SqlServer.Management.HadrData.FailoverData)">
+            <summary>
+            ctor
+            </summary>
+            <param name="failoverData"></param>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.FailoverWaitRoleChangeValidator.Validate(Microsoft.SqlServer.Management.HadrModel.IExecutionPolicy)">
+            <summary>
+            Validate Role Change 
+            </summary>
+            <param name="policy"></param>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.HadrModel.FeatureInstallationState">
+            <summary>
+            Used by WHIHelper for the Feature Installation State
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrModel.FeatureInstallationState.Unknown">
+            <summary>
+            unkown state
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrModel.FeatureInstallationState.Installed">
+            <summary>
+            feature installed
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrModel.FeatureInstallationState.NotInstalled">
+            <summary>
+            not installed
+            </summary>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.HadrModel.FixedRetryCountPolicy">
+            <summary>
+            The class implements a retry execution policy with a fixed retry backoff interval
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrModel.FixedRetryCountPolicy.retryCount">
+            <summary>
+            track number of retries
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrModel.FixedRetryCountPolicy.maxRetry">
+            <summary>
+            maximum number of retries
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrModel.FixedRetryCountPolicy.interval">
+            <summary>
+            backoff interval between retries
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.FixedRetryCountPolicy.#ctor(System.TimeSpan,System.Int32)">
+            <summary>
+            Create an instance class
+            </summary>
+            <param name="interval">wait between retries time interval</param>
+            <param name="maxRetry">maximum number of retries</param>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.FixedRetryCountPolicy.ResumeExecution">
+            <summary>
+            The function increments the execution count and until the maximum is reached. 
+            Execution is allowed until the maximum retry count is reached. 
+            </summary>
+            <returns>returns true if execution should resume and false otherwise</returns>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.FixedRetryCountPolicy.Expired">
+            <summary>
+            Expires when all retris are exhusted
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.FixedRetryCountPolicy.BackoffInterval">
+            <summary>
+            Backoff interval between retries
+            </summary>
+            <returns>time interval timespan</returns>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.HadrModel.FixedTimeoutRetryPolicy">
+            <summary>
+            Fixed retry timeout is an execution policy that allow task execution
+            and retry based on a timeout rather a retry count. 
+            A fixed wait interval is used beteween retries. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrModel.FixedTimeoutRetryPolicy.timeout">
+            <summary>
+            total time to execute the task for
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrModel.FixedTimeoutRetryPolicy.interval">
+            <summary>
+            wait interval between retires
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrModel.FixedTimeoutRetryPolicy.startTime">
+            <summary>
+            a start time to track when the actual execution is started
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.FixedTimeoutRetryPolicy.#ctor(System.TimeSpan,System.TimeSpan)">
+            <summary>
+            ctor create an instance of the polict
+            </summary>
+            <param name="timeout">execution timeout</param>
+            <param name="interval">wait interval between retires</param>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.FixedTimeoutRetryPolicy.ResumeExecution">
+            <summary>
+            Resume execution function is called to check if the policy allows the execution to resume. 
+            It also setup the internal state and updates on subsequent calls.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.FixedTimeoutRetryPolicy.Expired">
+            <summary>
+            Policy expired
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.FixedTimeoutRetryPolicy.BackoffInterval">
+            <summary>
+            Wait time between retries
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.HadrModel.FreeDiskSpaceValidator">
+            <summary>
+            This class validates if the availabe disk-space in the replica
+            can accomodate the data and log files of the databases present
+            in the primary server.
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrModel.FreeDiskSpaceValidator.availabilityGroupData">
+            <summary>
+            The availability group data.
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrModel.FreeDiskSpaceValidator.replica">
+            <summary>
+            The replica data
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.FreeDiskSpaceValidator.#ctor(Microsoft.SqlServer.Management.HadrData.AvailabilityGroupData,Microsoft.SqlServer.Management.HadrData.AvailabilityGroupReplica)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="availabilityGroupData">The availability group data</param>
+            <param name="replica">The replica data</param>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.FreeDiskSpaceValidator.AvailabilityGroupData">
+            <summary>
+            The availability group data
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.FreeDiskSpaceValidator.Validate(Microsoft.SqlServer.Management.HadrModel.IExecutionPolicy)">
+            <summary>
+            Validates if the disks in the replica have enough free-space to
+            accomodate the databases selected to participate in the AG
+            </summary>
+            <param name="policy">The execution policy</param>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.FreeDiskSpaceValidator.GetDataDriveLetterOfReplica">
+            <summary>
+            Gets the drive letter corresponding to the data-drive
+            </summary>
+            <returns>the drive letter</returns>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.FreeDiskSpaceValidator.GetLogDriveLetterOfReplica">
+            <summary>
+            Gets the drive letter corresponding to the log-drive
+            </summary>
+            <returns>the drive letter</returns>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.FreeDiskSpaceValidator.GetFreeSpaceOnReplicaDrive(System.Char)">
+            <summary>
+            Computes the available disk space on the drive corresponding to the drive-letter of the replica
+            </summary>
+            <param name="driveLetter">The firve letter</param>
+            <returns>available disk space in Mb</returns>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.HadrModel.GroupUserMembership">
+            <summary>
+            Used by WHIHelper for the Group User Membership
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrModel.GroupUserMembership.Unknown">
+            <summary>
+            unkownn membership
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrModel.GroupUserMembership.Member">
+            <summary>
+            is a member
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrModel.GroupUserMembership.NonMember">
+            <summary>
+            not a member
+            </summary>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.HadrModel.HadrModelUtilities">
+            <summary>
+            This static class provides utilities for all HadrModel
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrModel.HadrModelUtilities.diskpartLogFileSuffix">
+            <summary>
+            disk part Log File Suffix
+            a change in this source of context would require testing. 
+            Therefore, we don't allow the user to configure the values.
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrModel.HadrModelUtilities.wizardAlwaysonStr">
+            <summary>
+            Alwayson String
+            a change in this source of context would require testing. 
+            Therefore, we don't allow the user to configure the values.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.HadrModelUtilities.SanitizeFileName(System.String)">
+            <summary>
+            used to replace characters that are illegal for file names with underscores
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.HadrModelUtilities.GetNewSmoServerObject(Microsoft.SqlServer.Management.Common.ServerConnection)">
+            <summary>
+            Returns a new SMO Server object everytime it's called
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.HadrModel.HadrTaskBaseException">
+            <summary>
+            The Base Validation Exception For HADRTask Model
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.HadrTaskBaseException.#ctor(System.String)">
+            <summary>
+            Standard Exception with Message
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.HadrTaskBaseException.#ctor(System.String,System.Exception)">
+            <summary>
+            Exception with Message and Inner Exception
+            </summary>
+            <param name="message"></param>
+            <param name="inner"></param>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.HadrModel.HadrTaskErrorException">
+            <summary>
+            The Base Task Error Exception For HADRTask Model
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.HadrTaskErrorException.#ctor(System.String)">
+            <summary>
+            Standard Exception with Message
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.HadrTaskErrorException.#ctor(System.String,System.Exception)">
+            <summary>
+            Exception with Message and Inner Exception
+            </summary>
+            <param name="message"></param>
+            <param name="inner"></param>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.HadrModel.HadrValidationBaseException">
+            <summary>
+            The Base Validation Exception For HADRTask Model
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.HadrValidationBaseException.#ctor(System.String)">
+            <summary>
+            Standard Exception with Message
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.HadrValidationBaseException.#ctor(System.String,System.Exception)">
+            <summary>
+            Exception with Message and Inner Exception
+            </summary>
+            <param name="message"></param>
+            <param name="inner"></param>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.HadrModel.HadrValidationErrorException">
+            <summary>
+            The Validation Error Exception For HADRTask Model
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.HadrValidationErrorException.#ctor(System.String)">
+            <summary>
+            Standard Exception with Message
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.HadrValidationErrorException.#ctor(System.String,System.Exception)">
+            <summary>
+            Exception with Message and Inner Exception
+            </summary>
+            <param name="message"></param>
+            <param name="inner"></param>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.HadrModel.HadrValidationWarningException">
+            <summary>
+            The Validation Warning Exception For HADRTask Model
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.HadrValidationWarningException.#ctor(System.String)">
+            <summary>
+            Standard Exception with Message
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.HadrValidationWarningException.#ctor(System.String,System.Exception)">
+            <summary>
+            Exception with Message and Inner Exception
+            </summary>
+            <param name="message"></param>
+            <param name="inner"></param>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.HadrModel.IExecutionPolicy">
+            <summary>
+            An interface for task execution policy basic function.
+            An exection policy mainly dictates if execution should resume
+            if how long to wait before retries. 
+            The implemetnation of this interface may have different flavors:
+            time based policy, count baed, never expires execution etc...
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.IExecutionPolicy.Expired">
+            <summary>
+            Task execution expired
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.IExecutionPolicy.ResumeExecution">
+            <summary>
+            This function is called by the task that owns the policy to determine
+            if the execution should resume or not.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.IExecutionPolicy.BackoffInterval">
+            <summary>
+            Calculates a time interval to wait between execution
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.HadrModel.InSufficientFreeSpaceForDatabaseFilesException">
+            <summary>
+            This exception is thrown when <see cref="T:Microsoft.SqlServer.Management.HadrModel.FreeDiskSpaceValidator"/> determines
+            that there is not sufficient space to accomodate the database data files
+            in the data-drive of the replica
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.InSufficientFreeSpaceForDatabaseFilesException.#ctor(System.String)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="replicaName">The replica name</param>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.HadrModel.InvalidAvailabilityGroupException">
+            <summary>
+            This exception is thrown when an availbility group
+            with the specified name is not found on the server.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.InvalidAvailabilityGroupException.#ctor(System.String,System.String)">
+            <summary>
+            Standard Exception with availability group name, and server name
+            </summary>
+            <param name="availabilityGroupName"></param>
+            <param name="serverName"></param>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.HadrModel.IScriptableTask">
+            <summary>
+            Interface to be implemented by tasks that support scripting.
+            
+            Scripting is implemented by changing the ConnectionMode of 
+            the connection to CaptureSql instead of ExecuteSql.
+            
+            For this to be done by the UI, the task needs to expose the 
+            connections on which it does work.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.IScriptableTask.ScriptingConnections">
+            <summary>
+            The connections on which the task will do work
+            </summary>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.HadrModel.ITasksProvider">
+            <summary>
+            Tasks providers interface. A scenario list of tasks to complete
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.ITasksProvider.Tasks">
+            <summary>
+            Get the list of tasks the provider supports
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.HadrModel.IValidatorProvider">
+            <summary>
+            The interface represents the base validator provider class which consists of a list of Validator
+            The provider will provide a sequence of validation rules with certain input parameter, 
+            eg. a list of WAVM validator with WAVM configuration data object or a WA subscription info validator with WA subscription data 
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.IValidatorProvider.Validators">
+            <summary>
+            List of valiatior rules to ensure all requirements for the validator operation(s) are meet. 
+            </summary>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.HadrModel.JoinDatabaseToAvailabilityGroupException">
+            <summary>
+            This exception is thrown when database fails to join the availability group
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.JoinDatabaseToAvailabilityGroupException.#ctor(System.Exception)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="inner">Inner exception</param>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.HadrModel.JoinDatabaseToAvailabilityGroupTask">
+            <summary>
+            Task to join a database in the secondary to the availability group
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrModel.JoinDatabaseToAvailabilityGroupTask.JoinAvailabilityGroupRetryTimes">
+            <summary>
+            Number of retries for the joining the availability group
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrModel.JoinDatabaseToAvailabilityGroupTask.JoinAvailabilityGroupSleepBetweenRetries">
+            <summary>
+            Sleep duration between retries
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrModel.JoinDatabaseToAvailabilityGroupTask.availabilityGroupData">
+            <summary>
+            The availability group data
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrModel.JoinDatabaseToAvailabilityGroupTask.replica">
+            <summary>
+            The replica data
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrModel.JoinDatabaseToAvailabilityGroupTask.databaseName">
+            <summary>
+            The name of the database to join
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.JoinDatabaseToAvailabilityGroupTask.DatabaseName">
+            <summary>
+            Gets the database name
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.JoinDatabaseToAvailabilityGroupTask.ReplicaData">
+            <summary>
+            The replica data for the replica on which the join database happens
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.JoinDatabaseToAvailabilityGroupTask.AvailabilityGroupData">
+            <summary>
+            The availability group data
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.JoinDatabaseToAvailabilityGroupTask.#ctor(System.String,Microsoft.SqlServer.Management.HadrData.AvailabilityGroupData,Microsoft.SqlServer.Management.HadrData.AvailabilityGroupReplica)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="databaseName">Database Name</param>
+            <param name="availabilityGroupData">Availability Group Data</param>
+            <param name="replica">Information about the replica</param>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.JoinDatabaseToAvailabilityGroupTask.Perform(Microsoft.SqlServer.Management.HadrModel.IExecutionPolicy)">
+            <summary>
+            Joins a database on the secondary to the availability group
+            </summary>
+            <param name="policy">the execution policy</param>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.JoinDatabaseToAvailabilityGroupTask.Rollback(Microsoft.SqlServer.Management.HadrModel.IExecutionPolicy)">
+            <summary>
+            Currently rollback is not supported for this task
+            </summary>
+            <param name="policy">The execution policy</param>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.JoinDatabaseToAvailabilityGroupTask.JoinDatabaseToAvailabilityGroup(Microsoft.SqlServer.Management.Smo.AvailabilityDatabase)">
+            <summary>
+            Returns true if the database is joined to the availability group
+            Joins the database to the availability group otherwise
+            </summary>
+            <param name="availabilityDatabase">Database to join to the AG</param>
+            <returns>true if the database is already joined to AG. false otherwise</returns>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.HadrModel.JoinSecondariesTask">
+            <summary>
+            Join secondaries to the availability group
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrModel.JoinSecondariesTask.availabilityGroupData">
+            <summary>
+            AvailabilityGroupData object contains the whole ag group
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.JoinSecondariesTask.#ctor(Microsoft.SqlServer.Management.HadrData.AvailabilityGroupData)">
+            <summary>
+            ctor
+            </summary>
+            <param name="availabilityGroupData">AG data</param>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.JoinSecondariesTask.ScriptingConnections">
+            <summary>
+            Connections to use for scripting
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.JoinSecondariesTask.Perform(Microsoft.SqlServer.Management.HadrModel.IExecutionPolicy)">
+            <summary>
+            Method for joinning all secondaries to AG
+            </summary>
+            <param name="policy"></param>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.JoinSecondariesTask.Rollback(Microsoft.SqlServer.Management.HadrModel.IExecutionPolicy)">
+            <summary>
+            No Support for removing joinned AG
+            </summary>
+            <param name="policy"></param>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.HadrModel.ListenerConfigurationException">
+            <summary>
+            This exception is thrown when there is no Listener defined for the AG.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.ListenerConfigurationException.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.HadrModel.ListenerConfigurationValidator">
+            <summary>
+            Validates that the folders needed for database-files of the databases 
+            being added to the  AvailabilityGroup when creating an AvailabiltyGroup 
+            exist on the secondary.
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrModel.ListenerConfigurationValidator.availabilityGroupData">
+            <summary>
+            The availability group data.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.ListenerConfigurationValidator.#ctor(Microsoft.SqlServer.Management.HadrData.AvailabilityGroupData)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="availabilityGroupData">The availability group data</param>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.ListenerConfigurationValidator.Validate(Microsoft.SqlServer.Management.HadrModel.IExecutionPolicy)">
+            <summary>
+            Validates if a listener has been added to the AG.
+            </summary>
+            <param name="policy">The policy</param>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.HadrModel.MaxHostedServicesException">
+            <summary>
+            This excpetion will be thrown if we reach the max of Hosted Service Count
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.MaxHostedServicesException.#ctor(System.String,System.String)">
+            <summary>
+            Standard Exception with hosted Service Name and Current Hosted Service Count.
+            </summary>
+            <param name="hostedServiceName">Current Hosted Service Name</param>
+            <param name="currentHostedService">Current Hosted Service Count</param>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.MaxHostedServicesException.#ctor(System.String,System.String,System.Exception)">
+            <summary>
+            Exception with hosted Service Name and Current Hosted Service Count and inner exception.
+            </summary>
+            <param name="hostedServiceName">Current Hosted Service Name</param>
+            <param name="currentHostedService">Current Hosted Service Count</param>
+            <param name="inner"></param>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.HadrModel.ScenarioValidatorHandler">
+            <summary>
+            Scenario validator delegate. The delegate is used to override 
+            a validator implementation
+            </summary>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.HadrModel.ScenarioTaskHandler">
+            <summary>
+            Scenario task delete. The delegate is used to override
+            a taks implementation
+            </summary>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.HadrModel.ValidatorUpdateEventHandler">
+            <summary>
+            Validator update event handler. The event is sent during validation
+            for progress update
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.HadrModel.TaskUpdateEventHandler">
+            <summary>
+            Task update event handler. The event is sent during task
+            for progress update
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrModel.PercentCompleteHandler.taskName">
+            <summary>
+            Caller Task Name
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.PercentCompleteHandler.#ctor(System.String)">
+            <summary>
+            ctor
+            </summary>
+            <param name="taskName"></param>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrModel.PercentCompleteHandler.PercentCompleteNotification">
+            <summary>
+            BackUp/Restore PercentCompleteNotification number
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrModel.PercentCompleteHandler.percentComplete">
+            <summary>
+            initial value to indicate the percentage of BackUP/Restore process
+            </summary>
+        </member>
+        <member name="E:Microsoft.SqlServer.Management.HadrModel.PercentCompleteHandler.TaskProgressEventHandler">
+            <summary>
+            Task progress event handler
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.PercentCompleteHandler.UpdateStatus(Microsoft.SqlServer.Management.HadrModel.TaskEventArgs)">
+            <summary>
+            Send tasks execution update event
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.PercentCompleteHandler.percentCompleteHandler(System.Object,Microsoft.SqlServer.Management.Smo.PercentCompleteEventArgs)">
+            <summary>
+            Backup/Restore PercentComplete Event Handler
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.HadrModel.PrimaryCannotWriteToLocationException">
+            <summary>
+            PrimaryCannotWriteToLocationException is thrown when the backup location cannot
+            be written to by the Primary Server.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.PrimaryCannotWriteToLocationException.#ctor(System.String,System.String)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="primaryServerName">Name of the server</param>
+            <param name="backupLocation">The backup location</param>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.PrimaryCannotWriteToLocationException.#ctor(System.String,System.String,System.Exception)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="primaryServerName">Name of the server</param>
+            <param name="backupLocation">The backup location</param>
+            <param name="innerException">The inner exception</param>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.HadrModel.QuorumHelper">
+            <summary>
+            This is a helper class that contains static methods for 
+            validating the quroum configuration of an availability group.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.QuorumHelper.ValidateQuorumVoteConfiguration(Microsoft.SqlServer.Management.Smo.AvailabilityGroup)">
+            <summary>
+            Validates the quorum vote configuration of the given availability group.
+            Nodes participating in an AG should only have a quroum vote if they 
+            can host the primary replica or if the can host a automatic secondary
+            partnered with the primary. Note the use of 'can' is due to the potential
+            presence of FCIs.
+            </summary>
+            <param name="group">The availability group to validate.</param>
+            <returns>True if the quorum vote configuration is valid, false otherwise.</returns>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.QuorumHelper.AllNodesHaveQuorumVote(System.String,System.Data.DataTable)">
+            <summary>
+            Determine if all nodes that can host a given replica have a vote. Note that a replica
+            can have more than one potential owner if its hosted on an FCI.
+            </summary>
+            <param name="replica">Name of the replica.</param>
+            <param name="table">DataTable with vote data.</param>
+            <returns>True if all nodes have a vote, false otherwise.</returns>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.QuorumHelper.AnyNodesHaveQuorumVote(System.String,System.Data.DataTable)">
+            <summary>
+            Determine if any nodes that can host a given replica have a vote. Note that a replica
+            can have more than one potential owner if its hosted on an FCI.
+            </summary>
+            <param name="replica">Name of the replica.</param>
+            <param name="table">DataTable with vote data.</param>
+            <returns>True if any nodes have a vote, false otherwise.</returns>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.QuorumHelper.GetReplicaNodes(System.String,System.Data.DataTable)">
+            <summary>
+            Retrieves all nodes that can host a replica. Note that a replica
+            can have more than one potential owner if its hosted on an FCI.
+            </summary>
+            <param name="targetReplicaName">Name of the replica.</param>
+            <param name="table">DataTable with vote data.</param>
+            <returns>All nodes that can host the given replica.</returns>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.HadrModel.QuorumHelperException">
+            <summary>
+            This exception is thrown from QuorumHelper
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.QuorumHelperException.#ctor(System.String,System.Exception)">
+            <summary>
+            Exception with Replica Name and inner Exception
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.QuorumHelperException.#ctor(System.String)">
+            <summary>
+            Exception with Replica Name
+            </summary>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.HadrModel.Resource">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.AddDatabaseCredentialText">
+            <summary>
+              Looks up a localized string similar to Adding database credential for &apos;{0}&apos; on &apos;{1}&apos;..
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.AddDatabaseToExistingAvailabilityGroupText">
+            <summary>
+              Looks up a localized string similar to Adding databases to availability group &apos;{0}&apos;..
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.AddDomainUserInAdminGroupTaskException">
+            <summary>
+              Looks up a localized string similar to Add Domain User In Admin Group Fail, Domain User Name {0}.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.AddDomainUserInAdminGroupText">
+            <summary>
+              Looks up a localized string similar to Adding the domain user &apos;{0}&apos; to Windows administrators group..
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.AddDomainUserInSQLAdminTaskAddDomainAccountToServiceAccountException">
+            <summary>
+              Looks up a localized string similar to Add Domain To Service Account Fail, Domain User Name {0} Domain User Password {1}.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.AddDomainUserInSQLAdminTaskAddUserToSqlAdminException">
+            <summary>
+              Looks up a localized string similar to Add User To Sql Admin Fail, User Name: {0}.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.AddDomainUserInSQLAdminText">
+            <summary>
+              Looks up a localized string similar to Adding the domain user &apos;{0}&apos; to SQL Server administrators group..
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.AddNodeInClusterTaskClusterNotOnlineException">
+            <summary>
+              Looks up a localized string similar to Cluster {0} is Not Online, Domain User Name {1}, Domain User Password{2}.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.AddNodeInClusterText">
+            <summary>
+              Looks up a localized string similar to Adding node &apos;{0}&apos; in cluster &apos;{1}&apos;..
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.AddNodeInClusterVerificationError">
+            <summary>
+              Looks up a localized string similar to AddNodeInClusterVerificationError Machie Name {0}.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.AddReplicaText">
+            <summary>
+              Looks up a localized string similar to Adding replica to availability group &apos;{0}&apos;..
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.AvailabilityGroupNotExists">
+            <summary>
+              Looks up a localized string similar to Availability Group Does Not Exist :Group Name:{0}, Server Name {1}.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.AvailabilityGroupNotJoined">
+            <summary>
+              Looks up a localized string similar to Availability group {0} is not joined on the secondary replica {1}..
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.AvailabilityGroupQuorumValidatorException">
+            <summary>
+              Looks up a localized string similar to Quorum vote configuration fails, AG Name{0}.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.AvailabilityModeCompatibilityWarning">
+            <summary>
+              Looks up a localized string similar to None of the secondary replicas can be in synchronous commit mode when the primary replica is in asynchronous commit mode..
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.BackupDatabaseTaskException">
+            <summary>
+              Looks up a localized string similar to Backup Database {0} fail.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.BackupDatabaseText">
+            <summary>
+              Looks up a localized string similar to Creating a full backup for &apos;{0}&apos;..
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.BackupLocationNotProvidedErrorMessage">
+            <summary>
+              Looks up a localized string similar to Backup location is not provided.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.BackupLogTaskException">
+            <summary>
+              Looks up a localized string similar to Backup Database {0} Log fail.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.BackupLogText">
+            <summary>
+              Looks up a localized string similar to Backing up log for &apos;{0}&apos;..
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.BasicAvailabilityGroupIncompatibleException">
+            <summary>
+              Looks up a localized string similar to Current configuration is not compatible with BASIC Availability Groups: {0}..
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.BasicBackupPriorityReason">
+            <summary>
+              Looks up a localized string similar to BASIC Availability Groups only support a Backup Priority of 50..
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.BasicListenerReason">
+            <summary>
+              Looks up a localized string similar to BASIC Availability Groups do not support Listeners..
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.BasicSecondaryRoleReason">
+            <summary>
+              Looks up a localized string similar to BASIC Availability Groups do not support readable secondary replicas..
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.BasicTooManyDatabasesReason">
+            <summary>
+              Looks up a localized string similar to BASIC Availability Groups only support up to one database per availability group..
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.BasicTooManyReplicasReason">
+            <summary>
+              Looks up a localized string similar to BASIC Availability Groups only support up to two replicas (one primary and one secondary) per availability group..
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.CheckingListenerConfiguration">
+            <summary>
+              Looks up a localized string similar to Checking the listener configuration.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.ClusterNameOnlineValidatorException">
+            <summary>
+              Looks up a localized string similar to Primary Server {0} is offline.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.ConfigureEndpointsText">
+            <summary>
+              Looks up a localized string similar to Configuring endpoints..
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.ConfigureSQLForAlwaysonTaskException">
+            <summary>
+              Looks up a localized string similar to Fail To Enable Always On for Instance {0}.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.ConnectRemotePowersehllError">
+            <summary>
+              Looks up a localized string similar to ConnectRemotePowersehllError.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.CreateAvailabilityGroupListenerText">
+            <summary>
+              Looks up a localized string similar to Creating Availability Group Listener &apos;{0}&apos;..
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.CreateAvailabilityGroupText">
+            <summary>
+              Looks up a localized string similar to Creating availability group &apos;{0}&apos;..
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.CreateLoginText">
+            <summary>
+              Looks up a localized string similar to Creating Login on replica &apos;{0}&apos;..
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.CreateStorageServiceNoStatusException">
+            <summary>
+              Looks up a localized string similar to Setup task failed to execute create &apos;{0}&apos; storage service..
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.CreateStorageServiceStatusFailException">
+            <summary>
+              Looks up a localized string similar to Create storage service {0} failed with following error {1}..
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.CreateVirtualDisk2">
+            <summary>
+              Looks up a localized string similar to {0}-{1}.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.CreatingAvailabilityGroup">
+            <summary>
+              Looks up a localized string similar to Creating Availability Group with name {0}..
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.CreatingLoginsOnReplica">
+            <summary>
+              Looks up a localized string similar to Creating logins {0} on replica {1}..
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.DataBaseDiskSizeValidationException">
+            <summary>
+              Looks up a localized string similar to Data Disk size upper limit reached: Replica Name {0}, Replica Database key {1} Limit {2}.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.DatabaseFileLocationMissingOnReplicaException">
+            <summary>
+              Looks up a localized string similar to The following required directories do not exist on replica {0} : {1}..
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.DatabaseFileNotInDefaultDirectoryException">
+            <summary>
+              Looks up a localized string similar to Some database files are not in the default directories. Default data directory: &apos;{0}&apos;. Default log directory: &apos;{1}&apos;. Files not in default directories: &apos;{2}&apos;..
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.DatabasesExistingOnReplica">
+            <summary>
+              Looks up a localized string similar to The databases {1} already exist on secondary {0}..
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.DBMKPasswordIncorrect">
+            <summary>
+              Looks up a localized string similar to The password for the database master key is incorrect..
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.DeleteDeploymentNoStatusException">
+            <summary>
+              Looks up a localized string similar to Delete Deployment {1} failed . Hosted Service Name {0}.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.DeleteDeploymentStatusFailException">
+            <summary>
+              Looks up a localized string similar to Delete Deployment {1} failed . Hosted Service Name {0}, detail: {2}.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.DeleteHostedServiceNoStatusException">
+            <summary>
+              Looks up a localized string similar to Delete hosted service {0} failed ..
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.DeleteHostedServiceStatusFailException">
+            <summary>
+              Looks up a localized string similar to Delete hosted service {0} failed with following error {1}..
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.DeleteStorageServiceNoStatusException">
+            <summary>
+              Looks up a localized string similar to Delete storage service {0} failed ..
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.DeleteStorageServiceStatusFailException">
+            <summary>
+              Looks up a localized string similar to Delete storage service {0} failed with following error {1}..
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.DeleteVirtualMachineNoStatusException">
+            <summary>
+              Looks up a localized string similar to Delete Virtual Machine Failed{2}, Hosted Service Name :{0}, Deployment Name: {1}.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.DeleteVirtualMachineStatusException">
+            <summary>
+              Looks up a localized string similar to Delete Virtual Machine Failed{2}, Hosted Service Name :{0}, Deployment Name: {1},Detail :{3}.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.DeploymentHealthyValidationDeploymentNotAvailableException">
+            <summary>
+              Looks up a localized string similar to HostedService:{0} ,Deployment Counts:{1}.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.DeploymentNotExistException">
+            <summary>
+              Looks up a localized string similar to Deployment {0} does not exist..
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.DeploymentVirtualNetworkConfigurationVirtualNetworkNotMatchException">
+            <summary>
+              Looks up a localized string similar to Configuration Virtual Network: {0},Deployment Virtual Network:{1}.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.DriveNotFoundOnReplica">
+            <summary>
+              Looks up a localized string similar to Could not find drive letter &apos;{0}&apos; on replica &apos;{1}&apos;..
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.EnableWindowsFailoverClusterTaskException">
+            <summary>
+              Looks up a localized string similar to Enable Windows Server Failover Cluster failed, OS Version {0}.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.EnablingXeventOnReplica">
+            <summary>
+              Looks up a localized string similar to Enabling {0} Xevent to autostart on replica {1}..
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.EncryptionMismatchException">
+            <summary>
+              Looks up a localized string similar to The configuration of endpoint data encryption is incompatible between replicas and the endpoint connection will fail. \r\n {0}.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.EndpointAuthenticationValidatorException">
+            <summary>
+              Looks up a localized string similar to Endpoint {0} uses {1} Authentication, only Negotiate authentication for WA replica is allowed.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.FailoverValidationException">
+            <summary>
+              Looks up a localized string similar to Replica {0} is a {1}, can not failover to this replica..
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.FieldSetUpdate">
+            <summary>
+              Looks up a localized string similar to {0} is updated to {1}..
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.ForcedFailoverTaskText">
+            <summary>
+              Looks up a localized string similar to Performing forced failover to secondary replica &apos;{0}&apos;.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.FormatDataDiskTaskException">
+            <summary>
+              Looks up a localized string similar to Format Data Disk Error: ResFile {0}, Disk Label{1} .
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.FreeSpaceUnavailableForDataFileDrive">
+            <summary>
+              Looks up a localized string similar to Could not find the free space in the drive corresponding to the data-file {0} on replica {1}..
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.FreeSpaceUnavailableForLogFileDrive">
+            <summary>
+              Looks up a localized string similar to Could not find the free space in the drive corresponding to the log-file {0} on replica {1}..
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.HostedServiceAffinityGroupConfigurationAffinityGroupNotMatchException">
+            <summary>
+              Looks up a localized string similar to Configuration Affinity Group: {0},Hosted Service Affinity Group:{1}.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.ImageArgumentNullException">
+            <summary>
+              Looks up a localized string similar to image.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.ImageNameArgumentNullException">
+            <summary>
+              Looks up a localized string similar to image name.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.InSufficientFreeSpaceForDataFiles">
+            <summary>
+              Looks up a localized string similar to Insufficient free space for data and log files on the server instance that hosts secondary replica {0}.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.InSufficientFreeSpaceForLogFiles">
+            <summary>
+              Looks up a localized string similar to Insufficient free space for log files on the server instance that hosts secondary replica {0}..
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.InvalidAvailabilityGroupException">
+            <summary>
+              Looks up a localized string similar to Availability Group with name {0} not found on server {1}..
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.InvalidShare">
+            <summary>
+              Looks up a localized string similar to &apos;{0}&apos; is not a valid shared network location..
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.JoinAvailabilityGroupError">
+            <summary>
+              Looks up a localized string similar to Attempting to join availability group resulted in an error..
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.JoinDatabaseToAvailabilityGroupText">
+            <summary>
+              Looks up a localized string similar to Joining &apos;{0}&apos; to availability group &apos;{1}&apos; on &apos;{2}&apos;..
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.JoinSecondariesText">
+            <summary>
+              Looks up a localized string similar to Joining secondaries to availability group &apos;{0}&apos;..
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.ListenerConfigurationWarning">
+            <summary>
+              Looks up a localized string similar to The listener is not configured for the availability group. Either configure the listener now on the Specify Replicas page, or use the Add Availability Group Listener dialog after the wizard has completed..
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.ManualFailoverTaskText">
+            <summary>
+              Looks up a localized string similar to Performing manual failover to secondary replica &apos;{0}&apos;.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.MaxHostedServicesException">
+            <summary>
+              Looks up a localized string similar to {0} has {1} Hosted Service, reaches the Max Hosted Service.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.NoAGSupportImageException">
+            <summary>
+              Looks up a localized string similar to {0} does not support AG.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.NoStorageServiceWithServiceNameAndAffinityGroupNameException">
+            <summary>
+              Looks up a localized string similar to No Storage Service is found for {0}  with Virtual Network Location Hash ID {1}.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.NoStorageServiceWithServiceNameException">
+            <summary>
+              Looks up a localized string similar to No Storage Service is found for {0}.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.NotSqlServerImageException">
+            <summary>
+              Looks up a localized string similar to {0} is not a Sql Server Image.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.OpenFireWallPortsException">
+            <summary>
+              Looks up a localized string similar to Open Port {0} fail.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.PrimaryCannotWriteToLocation">
+            <summary>
+              Looks up a localized string similar to The primary server &apos;{0}&apos; cannot write to &apos;{1}&apos;..
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.PrimaryServerNotHadrEnabled">
+            <summary>
+              Looks up a localized string similar to Enabling Always On Availability Groups requires that the server instance is hosted by a Windows Server Failover Cluster (WSFC) node.  The Always On Availability Groups feature must be enabled for server instance &apos;{0}&apos; before you can create an availability group on this instance. To enable this feature, open the SQL Server Configuration Manager, select SQL Server Services, right-click on the SQL Server service name, select Properties, and use the Always On High Availability tab of the Server Properties dialo [rest of string was truncated]&quot;;.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.QuorumHelperException">
+            <summary>
+              Looks up a localized string similar to Replica {0} does not have a quorum vote.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.QuorumValidationTaskText">
+            <summary>
+              Looks up a localized string similar to Validating Windows Server Failover Cluster quorum vote configuration..
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.ReplicaEndpointStringOutputFormat">
+            <summary>
+              Looks up a localized string similar to {0}, {1}, {2}, {3}\r\n.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.RestartSqlServerException">
+            <summary>
+              Looks up a localized string similar to Fail to restart Sql Server {0}.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.RestoreDatabaseTaskExcption">
+            <summary>
+              Looks up a localized string similar to Restore Database {0} fail.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.RestoreDatabaseText">
+            <summary>
+              Looks up a localized string similar to Restoring &apos;{0}&apos; on &apos;{1}&apos;..
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.RestoreLogTaskException">
+            <summary>
+              Looks up a localized string similar to Restore Database {0} log Fail.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.RestoreLogText">
+            <summary>
+              Looks up a localized string similar to Restoring &apos;{0}&apos; log on &apos;{1}&apos;..
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.SecondaryCannotReadLocation">
+            <summary>
+              Looks up a localized string similar to The secondary server &apos;{0}&apos; cannot read from &apos;{1}&apos;..
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.ServiceOperationStateFailedMsg3">
+            <summary>
+              Looks up a localized string similar to OperationId={0}, Status={1}, Code={2}.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.ServiceOperationStateFailedMsg4">
+            <summary>
+              Looks up a localized string similar to OperationId={0}, Status={1}, Code={2}, Details={3}.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.ServiceOperationStatusArgumentNullException">
+            <summary>
+              Looks up a localized string similar to null statu.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.StartAlwaysOnXeventSessionText">
+            <summary>
+              Looks up a localized string similar to Starting the &apos;{0}&apos; extended events session on &apos;{1}&apos;..
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.SubscriptionArgumentNullException">
+            <summary>
+              Looks up a localized string similar to subscription.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.TaskEventArgsTaskComplete">
+            <summary>
+              Looks up a localized string similar to Validation task completed.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.TaskEventArgsTaskExecutionCancelled">
+            <summary>
+              Looks up a localized string similar to Task Cancelled by User.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.TaskEventArgsTaskExecutionFailed">
+            <summary>
+              Looks up a localized string similar to Task failed due to following error: {0}.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.TaskEventArgsTaskExecutionFailedWithRetry">
+            <summary>
+              Looks up a localized string similar to Task failed due to following error: {0}, retrying .....
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.TaskEventArgsTaskStarted">
+            <summary>
+              Looks up a localized string similar to Task started .....
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.TotalPrimaryDatabaseSizeValidationException">
+            <summary>
+              Looks up a localized string similar to Total databases size upper limit reached: Limit:{0} GB, Total:{1} MB.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.UpdateAvailabilityGroupListenerText">
+            <summary>
+              Looks up a localized string similar to Updating availability group listener &apos;{0}&apos;..
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.UserDoesNotHaveViewServerStatePermission">
+            <summary>
+              Looks up a localized string similar to You do not have permission to perform this action..
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.ValidatingAvailabilityMode">
+            <summary>
+              Looks up a localized string similar to Checking replica availability mode.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.ValidatingBackupLocation">
+            <summary>
+              Looks up a localized string similar to Checking shared network location.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.ValidatingBasicAvailabilityGroupOptions">
+            <summary>
+              Looks up a localized string similar to Checking compatibility of basic availability group options.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.ValidatingDatabaseFileExistingError">
+            <summary>
+              Looks up a localized string similar to Checking for the database files on the secondary replica {0} resulted in an error. The following files already exist. {1}.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.ValidatingDatabaseFileLocationCompatibility">
+            <summary>
+              Looks up a localized string similar to Checking for compatibility of the database file locations on the server instance that hosts replica {0}.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.ValidatingDatabaseFilesNotExistsOnSecondary">
+            <summary>
+              Looks up a localized string similar to Checking for the existence of the database files on the server instance that hosts secondary.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.ValidatingDatabaseMasterKey">
+            <summary>
+              Looks up a localized string similar to Checking password of the database master key.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.ValidatingDatabaseNotExistOnSecondary">
+            <summary>
+              Looks up a localized string similar to Checking if the selected databases already exist on the server instance that hosts secondary replica {0}.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.ValidatingDiskSpace">
+            <summary>
+              Looks up a localized string similar to Checking for free disk space on the server instance that hosts secondary replica {0}.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.ValidatingEndpointEncryption">
+            <summary>
+              Looks up a localized string similar to Checking whether the endpoint is encrypted using a compatible algorithm.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.ValidatingFailoverSettings">
+            <summary>
+              Looks up a localized string similar to Validating failover settings for secondary replica &apos;{0}&apos;.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.ValidatingWSFCQuorumConfiguration">
+            <summary>
+              Looks up a localized string similar to Validating WSFC quorum vote configuration.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.ValidatorEventArgsValidationComplete">
+            <summary>
+              Looks up a localized string similar to Validation task completed.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.ValidatorEventArgsValidationFailed">
+            <summary>
+              Looks up a localized string similar to Validation failed due to following error: {0}.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.ValidatorEventArgsValidationFailedWithRetry">
+            <summary>
+              Looks up a localized string similar to Validation failed due to following error: {0}, retrying .....
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.ValidatorEventArgsValidationStarted">
+            <summary>
+              Looks up a localized string similar to Validation started .....
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.VirtualNetworkLocationHashIDNullException">
+            <summary>
+              Looks up a localized string similar to VirtualNetworkLocationHashID.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.WaitForAvailabilityGroupOnline">
+            <summary>
+              Looks up a localized string similar to Waiting for Availability Group with name {0} to be created..
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.WaitForAvailabilityGroupOnlineText">
+            <summary>
+              Looks up a localized string similar to Waiting for availability group &apos;{0}&apos; to come online..
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.WaitForRoleChange">
+            <summary>
+              Looks up a localized string similar to Completing the role change for secondary replica &apos;{0}&apos;.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Resource.WizardLaunchFailureQuorumLoss">
+            <summary>
+              Looks up a localized string similar to The local node is not part of quorum and is therefore unable to process this operation. This may be due to one of the following reasons:\r\n\r\n•   The local node is not able to communicate with the WSFC cluster.\r\n\r\n•   No quorum set across the WSFC cluster.\r\n\r\n For more information on recovering from quorum loss, refer to SQL Server Books Online.\r\n\r\n.
+            </summary>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.HadrModel.RestartSqlServerException">
+            <summary>
+            Restart SQL Server Exception
+            Thrown from AddDomainUserInSQLAdminTask.RestartSqlServer method
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.RestartSqlServerException.#ctor(System.String)">
+            <summary>
+            Standard RestartSqlServerException with Instance Name
+            </summary>
+            <param name="InstanceName"> target Sql Instance Name</param>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.HadrModel.RestoreDatabaseTask">
+            <summary>
+            Restore a database on the secondary server.
+            Requires that the backup was successful. Will not move database device files, and so requires that the
+            the directory layout on the secondary is compatible with the primary.
+            Will not run if the database already exists on the secondary
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrModel.RestoreDatabaseTask.restore">
+            <summary>
+            Restore Object from smo
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrModel.RestoreDatabaseTask.availabilityGroupData">
+            <summary>
+            AvailabilityGroupData object contains the whole ag group
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrModel.RestoreDatabaseTask.secondaryConnection">
+            <summary>
+            PrimaryReplica ServerConnection
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrModel.RestoreDatabaseTask.databaseName">
+            <summary>
+            Target Database Name
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrModel.RestoreDatabaseTask.availabilityGroupReplica">
+            <summary>
+            AvailabilityGroupReplica for restoring database
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.RestoreDatabaseTask.#ctor(System.String,Microsoft.SqlServer.Management.HadrData.AvailabilityGroupData,Microsoft.SqlServer.Management.HadrData.AvailabilityGroupReplica)">
+            <summary>
+            ctor
+            </summary>
+            <param name="databaseName">database Name</param>
+            <param name="availabilityGroupData">AGdata</param>
+            <param name="availabilityGroupReplica">Replica object for restoring</param>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.RestoreDatabaseTask.ScriptingConnections">
+            <summary>
+            Connections to use for scripting
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.RestoreDatabaseTask.AvailabilityGroupData">
+            <summary>
+            The availability group data
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.RestoreDatabaseTask.ReplicaData">
+            <summary>
+            The replica data for the replica on which the restore happens
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.RestoreDatabaseTask.Abort">
+            <summary>
+            Used by caller to abort the restore
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.RestoreDatabaseTask.Perform(Microsoft.SqlServer.Management.HadrModel.IExecutionPolicy)">
+            <summary>
+            Method to restoring a database
+            </summary>
+            <param name="policy"></param>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.RestoreDatabaseTask.Rollback(Microsoft.SqlServer.Management.HadrModel.IExecutionPolicy)">
+            <summary>
+            Not support for rolling back this task
+            </summary>
+            <param name="policy"></param>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.HadrModel.RestoreDatabaseTaskException">
+            <summary>
+            This exception is thrown when RestoreDatabaseTask.perform fail
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.RestoreDatabaseTaskException.#ctor(System.String,System.Exception)">
+            <summary>
+            Exception with DatabaseName and inner exception
+            </summary>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.HadrModel.RestoreLogTask">
+            <summary>
+            Restore the log on a Secondary server.
+            Depends on the succesful backup of the log on the primary.
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrModel.RestoreLogTask.restore">
+            <summary>
+            Restore object from Smo
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrModel.RestoreLogTask.availabilityGroupData">
+            <summary>
+            AvailabilityGroupData object contains the whole ag group
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrModel.RestoreLogTask.databaseName">
+            <summary>
+            Target Database Name
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrModel.RestoreLogTask.replica">
+            <summary>
+            The secondary replica in which to restore the logs
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.RestoreLogTask.#ctor(System.String,Microsoft.SqlServer.Management.HadrData.AvailabilityGroupData,Microsoft.SqlServer.Management.HadrData.AvailabilityGroupReplica)">
+            <summary>
+            ctor
+            </summary>
+            <param name="databaseName">target database name</param>
+            <param name="availabilityGroupData">agData</param>
+            <param name="replica">the secondary replica in which to restore the logs</param>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.RestoreLogTask.ScriptingConnections">
+            <summary>
+            Connections to use for scripting
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.RestoreLogTask.AvailabilityGroupData">
+            <summary>
+            The availability group data
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.RestoreLogTask.ReplicaData">
+            <summary>
+            The replica data for the replica on which the restore happens
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.RestoreLogTask.Abort">
+            <summary>
+            Used by caller to abort the restore
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.RestoreLogTask.Perform(Microsoft.SqlServer.Management.HadrModel.IExecutionPolicy)">
+            <summary>
+            Method to performing restore Log
+            </summary>
+            <param name="policy"></param>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.RestoreLogTask.Rollback(Microsoft.SqlServer.Management.HadrModel.IExecutionPolicy)">
+            <summary>
+            Not Support for rolling back this task
+            </summary>
+            <param name="policy"></param>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.HadrModel.RestoreLogTaskException">
+            <summary>
+            This exception is thrown when RestoreLogTask.perform fail
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.RestoreLogTaskException.#ctor(System.String,System.Exception)">
+            <summary>
+            Exception with DatabaseName and inner exception
+            </summary>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.HadrModel.RunOncePolicy">
+            <summary>
+            Execution policy for running a task once
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrModel.RunOncePolicy.runCount">
+            <summary>
+            Track number of times task has run
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrModel.RunOncePolicy.DefaultBackoffIntervalInSeconds">
+            <summary>
+            The default backoff interval.
+            
+            This interval is required to implement the IExecutionPolicy interface's
+            BackoffInterval() function.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.RunOncePolicy.Expired">
+            <summary>
+            Expires after one run
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.RunOncePolicy.ResumeExecution">
+            <summary>
+            The function increases the runCount by one
+            each time its called. 
+            
+            It returns false if the policy is Expired.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.RunOncePolicy.BackoffInterval">
+            <summary>
+            Backoff interval between retries.
+            
+            Returns the <see cref="F:Microsoft.SqlServer.Management.HadrModel.RunOncePolicy.DefaultBackoffIntervalInSeconds"/>
+            </summary>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.HadrModel.ScenarioProvider`2">
+            <summary>
+            Every HADR scenarion e.g. Add Replica to existing AG
+            must provide a list of sceanrio tasks and validators. 
+            
+            The list of validator ensure all required state is present to
+            complete the scenario
+            
+            THe list of tasks ensure the scenario is completed
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.ScenarioProvider`2.#ctor">
+            <summary>
+            Ctor
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.ScenarioProvider`2.TaskTokenSource">
+            <summary>
+            Tasks token source provider
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.ScenarioProvider`2.Validators">
+            <summary>
+            Scenario validators
+            </summary>
+            <returns>validationt tasks</returns>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.ScenarioProvider`2.Tasks">
+            <summary>
+            Scenario implementation tasks
+            </summary>
+            <returns>list of implementation task</returns>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.ScenarioProvider`2.RollbackTasks">
+            <summary>
+            Scenario rollback task
+            </summary>
+            <returns>list of rollback task</returns>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.HadrModel.SecondaryCannotReadLocationException">
+            <summary>
+            SecondaryCannotReadLocationException is thrown when the backup location cannot
+            be ready by the Secondary Server.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.SecondaryCannotReadLocationException.#ctor(System.String,System.String)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="secondaryServerName">The name of the secondaryServer</param>
+            <param name="backupLocation">The backup location</param>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.SecondaryCannotReadLocationException.#ctor(System.String,System.String,System.Exception)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="secondaryServerName">The name of the secondary server</param>
+            <param name="backupLocation">The backup location</param>
+            <param name="innerException">The inner exception</param>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.HadrModel.ServiceOperationStatusException">
+            <summary>
+            Service Operation Status Exception For CheckServiceOperationStatus operation in many validators
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.ServiceOperationStatusException.#ctor(System.String)">
+            <summary>
+            Standard Exception with Message
+            </summary>
+            <param name="message">Service Operation Details with Status</param>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.ServiceOperationStatusException.#ctor(System.String,System.Exception)">
+            <summary>
+            Standard Exception with Message
+            </summary>
+            <param name="message">Service Operation Details with Status</param>
+            <param name="inner">the inner Exception</param>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.HadrModel.ShareValidationException">
+            <summary>
+            ShareValidationException is thrown when the backup location cannot
+            be accessed by the user.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.ShareValidationException.#ctor(System.String)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="backupLocation">BackupLocation</param>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.ShareValidationException.#ctor(System.String,System.Exception)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="backupLocation">Backup Location</param>
+            <param name="innerException">Inner Exception</param>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.HadrModel.SqlServerConnectionException">
+            <summary>
+            Add Domain User In AdminGroup Task Exception
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.SqlServerConnectionException.#ctor(System.String)">
+            <summary>
+            Standard SqlServerConnectionException with domain user name
+            </summary>
+            <param name="VMIPAddress"></param>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.HadrModel.StartAlwaysOnXeventSessionTask">
+            <summary>
+            Task that configures AlwaysOn_health Xevent session to autostart
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrModel.StartAlwaysOnXeventSessionTask.AlwaysOnHealthSessionName">
+            <summary>
+            Server side XEvent session name
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrModel.StartAlwaysOnXeventSessionTask.store">
+            <summary>
+            The XEvent store
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrModel.StartAlwaysOnXeventSessionTask.storeConnection">
+            <summary>
+            The connection to the XEvent store
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.StartAlwaysOnXeventSessionTask.#ctor(Microsoft.SqlServer.Management.HadrData.AvailabilityGroupReplica)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="replica">The replica data</param>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.StartAlwaysOnXeventSessionTask.Replica">
+            <summary>
+            Gets the replica data
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.StartAlwaysOnXeventSessionTask.Perform(Microsoft.SqlServer.Management.HadrModel.IExecutionPolicy)">
+            <summary>
+            Configures AlwaysOn_health XEvent session to autostart
+            </summary>
+            <param name="policy"></param>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.StartAlwaysOnXeventSessionTask.Rollback(Microsoft.SqlServer.Management.HadrModel.IExecutionPolicy)">
+            <summary>
+            Rollback is not supported for this task
+            </summary>
+            <param name="policy"></param>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.StringExtensionMethods.SecureStringToString(System.Security.SecureString)">
+            <summary>
+            Converts a secure string to a string
+            </summary>
+            <param name="secureString">Secure string</param>
+            <returns>Converted secure string to string object</returns>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.StringExtensionMethods.StringToSecureString(System.String)">
+            <summary>
+            Converts string to a secure string
+            </summary>
+            <param name="unsecureString">Unsecured string</param>
+            <returns>Converted string to secure string</returns>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.StringExtensionMethods.SecureStringToCharArray(System.Security.SecureString)">
+            <summary>
+            Converts secure string to char array
+            </summary>
+            <param name="secureString">Secure string</param>
+            <returns>secure string converted to array of characters</returns>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.StringExtensionMethods.CharArrayToSecureString(System.Char[])">
+            <summary>
+            Converts char array to secure string
+            </summary>
+            <param name="charArray">the array of chars</param>
+            <returns>Array of characters to secure string</returns>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.HadrModel.HadrTask">
+            <summary>
+            HADR task class
+            </summary>
+        </member>
+        <member name="E:Microsoft.SqlServer.Management.HadrModel.HadrTask.TaskProgressEventHandler">
+            <summary>
+            Task progress event handler
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrModel.HadrTask.policy">
+            <summary>
+            ExecutionPolicy for retry or expire the process.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.HadrTask.#ctor(System.String)">
+            <summary>
+            Ctor
+            </summary>
+            <param name="name">task name</param>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.HadrTask.Name">
+            <summary>
+            Task name
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrModel.HadrTask.token">
+            <summary>
+            cancellation token passed during perform stage;
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.HadrTask.IsCancelled">
+            <summary>
+            IsCancelled for derived class to check for long running tasks and termnate early
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.HadrTask.TaskWait(System.Int32)">
+            <summary>
+            For isCancelled Check
+            </summary>
+            <param name="waitTimeInMs"></param>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.HadrTask.Perform(Microsoft.SqlServer.Management.HadrModel.IExecutionPolicy,System.Threading.CancellationToken,Microsoft.SqlServer.Management.HadrModel.ScenarioTaskHandler)">
+            <summary>
+            Execute task steps. If a delegate is passed, then the delegate is executed
+            with a policy. Otherwise, the derived class logic is executed
+            </summary>
+            <param name="policy">execution policy used with default implementation and override delegate</param>
+            <param name="token">a cancellation token controlled by the task provider </param>
+            <param name="taskDelegate">optional delegate used to override the provider implementation</param>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.HadrTask.Rollback(Microsoft.SqlServer.Management.HadrModel.IExecutionPolicy,Microsoft.SqlServer.Management.HadrModel.ScenarioTaskHandler)">
+            <summary>
+            Rollback task completed steps. If a delegate is passed, then the delegate is executed
+            with a policy. Otherwise, the derived class logic is executed
+            </summary>
+            <param name="policy">rollback execution logic</param>
+            <param name="rollbackDelegate">optional delegate used to override the provider implementation</param>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.HadrTask.TaskUpdateEventHandler(System.Object,Microsoft.SqlServer.Management.HadrModel.TaskEventArgs)">
+            <summary>
+            Tasks status event handler
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.HadrTask.Perform(Microsoft.SqlServer.Management.HadrModel.IExecutionPolicy)">
+            <summary>
+            Task implementation
+            </summary>
+            <param name="policy">rollback execution logic</param>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.HadrTask.Rollback(Microsoft.SqlServer.Management.HadrModel.IExecutionPolicy)">
+            <summary>
+            Task rollback logic
+            </summary>
+            <param name="policy">rollback execution logic</param>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.HadrTask.UpdateStatus(Microsoft.SqlServer.Management.HadrModel.TaskEventArgs)">
+            <summary>
+            Send tasks execution update event
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.HadrModel.TaskEventArgs">
+            <summary>
+            This event argument for validator progress status update
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.TaskEventArgs.#ctor(System.String,System.String)">
+            <summary>
+            Ctor
+            </summary>
+            <param name="taskName"></param>
+            <param name="taskDetails"></param>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.TaskEventArgs.#ctor(System.String,System.String,Microsoft.SqlServer.Management.HadrModel.TaskEventStatus)">
+            <summary>
+            Ctor
+            </summary>
+            <param name="taskName">The caller task's Name</param>
+            <param name="taskDetails">Task Details</param>
+            <param name="taskStatus">Task Status</param>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.TaskEventArgs.Name">
+            <summary>
+            Task Name
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.TaskEventArgs.Status">
+            <summary>
+            Task execution status
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.TaskEventArgs.Details">
+            <summary>
+            Task execution details
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrModel.TaskEventStatus.NotStart">
+            <summary>
+            Not Start state
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrModel.TaskEventStatus.Started">
+            <summary>
+            Started  
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrModel.TaskEventStatus.Cancelled">
+            <summary>
+            Cancelled
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrModel.TaskEventStatus.Running">
+            <summary>
+            Running
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrModel.TaskEventStatus.Failed">
+            <summary>
+            Failed
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrModel.TaskEventStatus.Completed">
+            <summary>
+            Complete
+            </summary>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.HadrModel.UpdateAvailabilityGroupListenerTask">
+            <summary>
+            Task to add Availability Group Listener to an Availability Group
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrModel.UpdateAvailabilityGroupListenerTask.availabilityGroupData">
+            <summary>
+            The availability group data
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.UpdateAvailabilityGroupListenerTask.#ctor(Microsoft.SqlServer.Management.HadrData.AvailabilityGroupData)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="availabilityGroupData">The availability group data</param>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.UpdateAvailabilityGroupListenerTask.ScriptingConnections">
+            <summary>
+            Connections to use for scripting
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.UpdateAvailabilityGroupListenerTask.Perform(Microsoft.SqlServer.Management.HadrModel.IExecutionPolicy)">
+            <summary>
+            Adds an availability group listener to the availability group
+            </summary>
+            <param name="policy">The execution policy</param>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.UpdateAvailabilityGroupListenerTask.Rollback(Microsoft.SqlServer.Management.HadrModel.IExecutionPolicy)">
+            <summary>
+            Rollback is not supported for this task
+            </summary>
+            <param name="policy">The execution policy</param>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.HadrModel.Validator">
+            <summary>
+            The abstract class represents the base validator class later will be inheranted to different validators with different rules 
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.Validator.Name">
+            <summary>
+            validator name
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.Validator.#ctor(System.String)">
+            <summary>
+            the base constructor
+            </summary>
+            <param name="name"></param>
+        </member>
+        <member name="E:Microsoft.SqlServer.Management.HadrModel.Validator.ValidatorProgressEventHandler">
+            <summary>
+            Validator progress event handler
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.Validator.Validate(Microsoft.SqlServer.Management.HadrModel.IExecutionPolicy,Microsoft.SqlServer.Management.HadrModel.ScenarioValidatorHandler)">
+            <summary>
+            If the optional delegate is passed, then it is called with the execution policy. 
+            Otheriwse, the following logic is executed
+            While the policy has not expired, the derived validator will keep doing it validation with a back off interval between every validation
+            The policy will expire due to following reason
+            1.the policy reaches its max times of trying
+            2.the validator set the policy to be expired due to some fatal exception
+            3.the validator set the policy to be exproed due to successful validation
+            </summary>
+            <param name="policy">validation retry policy for both default and override delegate</param>
+            <param name="validationDelegate">optional override delegate</param>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.Validator.Validate(Microsoft.SqlServer.Management.HadrModel.IExecutionPolicy)">
+            <summary>
+            Execute validation logic
+            </summary>
+            <param name="policy">execution policy</param>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.Validator.UpdateStatus(Microsoft.SqlServer.Management.HadrModel.ValidatorEventArgs)">
+            <summary>
+            Send validation progress event
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.HadrModel.ValidatorEventArgs">
+            <summary>
+            This event argument for validator progress status update
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.ValidatorEventArgs.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Ctor
+            </summary>
+            <param name="validatorName">The called validator's Name</param>
+            <param name="validatorDetails">Validation Details</param>
+            <param name="validatorStatus">Validation Status</param>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.ValidatorEventArgs.#ctor(System.String,System.String)">
+            <summary>
+            Ctor
+            </summary>
+            <param name="validatorName">The called validator's Name</param>
+            <param name="validatorDetails">Validation Details</param>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.ValidatorEventArgs.Name">
+            <summary>
+            Current Validator Name
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.ValidatorEventArgs.Status">
+            <summary>
+            Current validation status
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrModel.ValidatorEventArgs.Details">
+            <summary>
+            Validation details
+            </summary>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.HadrModel.WaitForAvailabilityGroupOnlineTask">
+            <summary>
+            Task to wait for an Availability Group to come online
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrModel.WaitForAvailabilityGroupOnlineTask.availabilityGroupData">
+            <summary>
+            The availability group data
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.WaitForAvailabilityGroupOnlineTask.#ctor(Microsoft.SqlServer.Management.HadrData.AvailabilityGroupData)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="availabilityGroupData">The availability group data</param>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.WaitForAvailabilityGroupOnlineTask.Perform(Microsoft.SqlServer.Management.HadrModel.IExecutionPolicy)">
+            <summary>
+            Waits for availability group to come online
+            </summary>
+            <param name="policy">The execution policy</param>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrModel.WaitForAvailabilityGroupOnlineTask.Rollback(Microsoft.SqlServer.Management.HadrModel.IExecutionPolicy)">
+            <summary>
+            Rollback is not supported for this task
+            </summary>
+            <param name="policy">The execution policy</param>
+        </member>
+    </members>
+</doc>

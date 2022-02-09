@@ -1,0 +1,1409 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.SqlServer.Management.HadrData</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.SqlServer.Management.HadrData.AGListenerNetworkMode">
+            <summary>
+            AGListenerNetworkMode
+            </summary>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.HadrData.AvailabilityGroupData">
+            <summary>
+            Availability Group Data
+            this Object contains info for an Availability Group
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrData.AvailabilityGroupData.#ctor">
+            <summary>
+            ctor: the base ctor
+            set replicas = null
+            set listener = new listener
+            set backupreference = default secondary
+            set Sync option = full
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrData.AvailabilityGroupData.#ctor(Microsoft.SqlServer.Management.Common.ServerConnection)">
+            <summary>
+            the ctor for New AG, only Service Connection is passed
+            </summary>
+            <param name="primaryConnection"></param>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrData.AvailabilityGroupData.AvailabilityGroupListener">
+            <summary>
+            AG listener object
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrData.AvailabilityGroupData.PrimaryServer">
+            <summary>
+            Primary Server object property
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrData.AvailabilityGroupData.GroupName">
+            <summary>
+            Availability Group name
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrData.AvailabilityGroupData.ClusterType">
+            <summary>
+            Gets or sets the cluster type
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrData.AvailabilityGroupData.RequiredSynchronizedSecondariesToCommit">
+            <summary>
+            Gets or sets the required copies to commit
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrData.AvailabilityGroupData.BackupLocationInWindowsFormat">
+            <summary>
+            Network share location in Windows format used for storing backup files when user chooses to do backup/restore Data Synchronization
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrData.AvailabilityGroupData.BackupLocationInLinuxFormat">
+            <summary>
+            Network share location in Linux format used for storing backup files when user chooses to do backup/restore Data Synchronization
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrData.AvailabilityGroupData.ExistingAvailabilityDatabases">
+            <summary>
+            Databases that are already part of existing AvailabilityGroup
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrData.AvailabilityGroupData.NewAvailabilityDatabases">
+            <summary>
+            Databases that are being added to AvailabilityGroup
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrData.AvailabilityGroupData.AvailabilityGroupReplicas">
+            <summary>
+            All replicas - including the primary
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrData.AvailabilityGroupData.Secondaries">
+            <summary>
+            Secondary replicas
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrData.AvailabilityGroupData.DataSecondaries">
+            <summary>
+            Secondary replicas excluding the ConfigurationOnly replica
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrData.AvailabilityGroupData.BackupPreference">
+            <summary>
+            Availability Group BackUp Preference
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrData.AvailabilityGroupData.IsBasic">
+            <summary>
+            Gets or sets a flag indicating whether to create a BASIC or ADVANCED Availability Group.  
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrData.AvailabilityGroupData.IsDatabaseHealthTriggerOn">
+            <summary>
+            Gets or sets a flag indicating whether a DB Health event triggers Failover to a auto-failover synchronous replica.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrData.AvailabilityGroupData.IsDtcSupportEnabled">
+            <summary>
+            Gets or sets a flag indicating whether per-database DTC support is enabled.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrData.AvailabilityGroupData.PerformDataSynchronization">
+            <summary>
+            Data Synchronization preference
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrData.AvailabilityGroupData.WillPerformBackupRestore">
+            <summary>
+            Checks to see if DataSyncronization is set to full
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrData.AvailabilityGroupData.WillPerformDatabaseJoin">
+            <summary>
+            Checks to see if DataSynchronizationOption is Full, JoinOnly or AutomaticSeeding
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrData.AvailabilityGroupData.WillPerformDatabaseInitialization">
+            <summary>
+            Checks to see if DataSynchronizationOption is Full or AutomaticSeeding
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrData.AvailabilityGroupData.WillPerformAutomaticSeeding">
+            <summary>
+            Checks to see if DataSynchronizationOption is AutomaticSeeding
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrData.AvailabilityGroupData.ClusterName">
+            <summary>
+            Windows failover cluster DNS name
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrData.AvailabilityGroupData.IsPrimaryInQuorum">
+            <summary>
+            Determines if the primary connection is part of cluster quorum.  Returns true if yes, false otherwise.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrData.AvailabilityGroupData.AvailabilityGroupState">
+            <summary>
+            AG State flag
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrData.AvailabilityGroupData.HasViewServerStatePermission(Microsoft.SqlServer.Management.Smo.Server)">
+            <summary>
+            Helper method for checking View Server State Permissiom
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrData.AvailabilityGroupData.IsConnectedToPrimary">
+            <summary>
+            Determines if PrimaryServer is actually the primary. Returns true if yes, false otherwise.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrData.AvailabilityGroupData.SqlAvailabilityGroup">
+            <summary>
+            This property is used specially for creating a listener. We want the step of creating a AG listener not to include
+            in the step of creating AG. However, The creation of a listener needs such info.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrData.AvailabilityGroupData.IsCrossPlatform">
+            <summary>
+            Gets a boolean value indicating whether the replicas of the availability group are on different OS platforms.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrData.AvailabilityGroupData.GetLoginNames(Microsoft.SqlServer.Management.HadrData.AvailabilityGroupReplica)">
+            <summary>
+            Return the Login Names
+            Method behavior based on the input parameter:
+            1. If the replica is a non-Windows replica, returns an empty collection
+            2. else go through all replicas in Replicas and return
+            KeyValuePair contains a localServiceAccount and a flag for the existance of sid
+            </summary>
+            <param name="replica"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrData.AvailabilityGroupData.GetPrimaryTotalDataFileAndLogSize(System.Double@,System.Double@)">
+            <summary>
+            retrieve the total size of datafiles and logs of the primary server
+            </summary>
+            <param name="totalDataFilesSize"></param>
+            <param name="totalLogFilesSize"></param>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrData.AvailabilityGroupData.AddAvailabilityDatabase(Microsoft.SqlServer.Management.HadrData.PrimaryDatabaseData)">
+            <summary>
+            The method used to add a database to the AvailabilityGroup
+            </summary>
+            <param name="database">The database data to add</param>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrData.AvailabilityGroupData.AddExistingAvailabilityDatabase(Microsoft.SqlServer.Management.HadrData.PrimaryDatabaseData)">
+            <summary>
+            The method used to add a database to the AvailabilityGroup
+            </summary>
+            <param name="database">The database data to add</param>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrData.AvailabilityGroupData.GetBackupPathForServer(Microsoft.SqlServer.Management.Smo.Server)">
+            <summary>
+            Get the backup location for the server
+            </summary>
+            <param name="server">The target server</param>
+            <returns>Backup location in the format that can be used by the server</returns>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrData.AvailabilityGroupData.GetUniqueServiceAccountSids(Microsoft.SqlServer.Management.HadrData.AvailabilityGroupReplica)">
+            <summary>
+            retrive all the SIDs and service accounts in other replicas in an AG
+            </summary>
+            <param name="replica"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.HadrData.AvailabilityGroupListenerConfiguration">
+            <summary>
+            The AG Listener Configuration Data 
+            This object contains information for the Listenner of an AG
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrData.AvailabilityGroupListenerConfiguration.listenerPortNumber">
+            <summary>
+            Default Listener Port Number
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrData.AvailabilityGroupListenerConfiguration.subnetConfigurations">
+            <summary>
+            The subnet data
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrData.AvailabilityGroupListenerConfiguration.#ctor">
+            <summary>
+            the base ctor sets all defualt value for components
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrData.AvailabilityGroupListenerConfiguration.#ctor(Microsoft.SqlServer.Management.Smo.AvailabilityGroupListener)">
+            <summary>
+            Constructor to use in case of existing Availability Group
+            </summary>
+            <param name="ag">The availability group</param>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrData.AvailabilityGroupListenerConfiguration.ListenerPortNumber">
+            <summary>
+            the AG Listener Port Number
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrData.AvailabilityGroupListenerConfiguration.NetworkMode">
+            <summary>
+            the listener Network Mode
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrData.AvailabilityGroupListenerConfiguration.ListenerName">
+            <summary>
+            Listener Name
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrData.AvailabilityGroupListenerConfiguration.SubnetConfigurations">
+            <summary>
+            Gets the list of all subnets
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrData.AvailabilityGroupListenerConfiguration.DhcpSubnetConfigurations">
+            <summary>
+            The DHCP IP Subnet data
+            We can have only one Dhcp subnet data
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrData.AvailabilityGroupListenerConfiguration.StaticIpSubnetConfigurations">
+            <summary>
+            Gets the static ip Subnet data
+            An availability group listener can have more than one static ip-addresses
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrData.AvailabilityGroupListenerConfiguration.AddSubnetConfiguration(Microsoft.SqlServer.Management.HadrData.AvailabilityGroupListenerSubnet)">
+            <summary>
+            Adds a subnet configuration to the data model
+            If there is already one subnet with dhcp, adding 
+            another dhcp subnet configuration is not allowed.
+            </summary>
+            <param name="subnetConfiguration">The subnet to add</param>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.HadrData.AvailabilityGroupListenerSubnet">
+            <summary>
+            Class that stores information about an availability group subnet
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrData.AvailabilityGroupListenerSubnet.IsDHCP">
+            <summary>
+            Checks if subnet is Dhcp
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrData.AvailabilityGroupListenerSubnet.SubnetIP">
+            <summary>
+            The Subnet ip address
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrData.AvailabilityGroupListenerSubnet.SubnetMask">
+            <summary>
+            The subnet mask
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrData.AvailabilityGroupListenerSubnet.IPAddress">
+            <summary>
+            The ip address
+            </summary>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.HadrData.AvailabilityGroupReplica">
+            <summary>
+            Class representing an AG replica
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrData.AvailabilityGroupReplica.SidConditionFormat">
+            <summary>
+            The format string used in ExistsSID method
+            can move to extension
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrData.AvailabilityGroupReplica.DefaultEndpointName">
+            <summary>
+            The Default Endpoint Name
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrData.AvailabilityGroupReplica.DefaultEndpointPortNumber">
+            <summary>
+            Default endpoint port number
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrData.AvailabilityGroupReplica.GetServerSleepTime">
+            <summary>
+            Server sleep time
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrData.AvailabilityGroupReplica.DefaultBackupPriority">
+            <summary>
+            The default backup priority
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrData.AvailabilityGroupReplica.#ctor(Microsoft.SqlServer.Management.HadrData.AvailabilityGroupReplicaData)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="availabilityGroupReplicaData">The replica data</param>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrData.AvailabilityGroupReplica.AvailabilityGroupReplicaData">
+            <summary>
+            The AvailabilityGroupReplicaData Object
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrData.AvailabilityGroupReplica.BackupPriority">
+            <summary>
+            Property for availabilityGroupReplicaData.backupPriority
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrData.AvailabilityGroupReplica.InitialRoleString">
+            <summary>
+            Localizable String for InitialRole enum
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrData.AvailabilityGroupReplica.EndpointName">
+            <summary>
+            Endpoint name
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrData.AvailabilityGroupReplica.ReadableSecondaryRole">
+            <summary>
+            Readable secondary role of the availability replica
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrData.AvailabilityGroupReplica.EndpointPortNumber">
+            <summary>
+            Endpoint port address
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrData.AvailabilityGroupReplica.ConnectedAs">
+            <summary>
+            Returns the login with which the replicas are connected
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrData.AvailabilityGroupReplica.EndpointEncryptionAlgorithm">
+            <summary>
+            internal class for get/set EndpointEncryptionAlgorithm, since encryptionAlgorithm need a initial value, we have to write get/set 
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrData.AvailabilityGroupReplica.IsEndpointEncrypted">
+            <summary>
+            True if the endpoint is encrypted
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrData.AvailabilityGroupReplica.IsValidDomainUserForWinAuthentication">
+            <summary>
+            Use the EndpointPresent in place of (endpoint==null).
+            When a replica does not have the database mirroring endpoint and users navigate to the 
+            summary page and click the script button, the script action runs the whole process  
+            to configure the endpoint in capture mode to generate the scripts and assigns a memory
+            endpoint objects to the endpoint variable. After navigating back to replicate page and forward
+            to the summary page again, the endpoint is not null this time and PropertyNotSet exception is
+            thrown by endpoint.Payload.DatabaseMirroring.EndpointAuthenticationOrder 
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrData.AvailabilityGroupReplica.EndpointEncryption">
+            <summary>
+            property for this.availabilityGroupReplicaData.encryption, since encryption need a initial value, we have to write get/set 
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrData.AvailabilityGroupReplica.GetServer">
+            <summary>
+            Get the Server object
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrData.AvailabilityGroupReplica.AddGrantServiceAccount(System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Grant the connect right to a set of users
+            </summary>
+            <param name="loginNames"></param>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrData.AvailabilityGroupReplica.GetLoginsForRemoteReplicas(System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.Byte[],System.String}})">
+            <summary>
+            Retrieve a list of pairs of a login name and if it exists in the replica
+            KeyValuePair contains a localServiceAccount and a flag for the existance of sid
+            </summary>
+            <param name="sidServiceAccountPairCollection"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrData.AvailabilityGroupReplica.AdjustEndpointEncryption(Microsoft.SqlServer.Management.HadrData.AvailabilityGroupReplica)">
+            <summary>
+            will use the primary replica endpoint encryption setting to adjust this replica endpoint encryption setting
+            </summary>
+            <param name="primaryReplica">primary replica</param>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrData.AvailabilityGroupReplica.IsValidEndpoint">
+            <summary>
+            method to determine if it is a valid endpoint
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrData.AvailabilityGroupReplica.ConfigureEndpoint">
+            <summary>
+            Configure Endpoint of this replica
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrData.AvailabilityGroupReplica.AlterEndpoint">
+            <summary>
+            method for altering the endpoint used by ConfigureEndpoint()
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrData.AvailabilityGroupReplica.SetEndpointUrl">
+            <summary>
+            Set Endpoint URL method
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrData.AvailabilityGroupReplica.ValidDomainUserFormat(System.String)">
+            <summary>
+            Check if the service account has the valid format.
+            </summary>
+            <param name="serviceAccount"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrData.AvailabilityGroupReplica.ExistsSID(Microsoft.SqlServer.Management.Smo.Server,System.Byte[],System.String@)">
+            <summary>
+            Determine if a login name exists in an server instance given its SID.
+            If the login name already exists, a true value is returned and the local login name also
+            output; otherwise, it returns false and the output of login name is empty.
+            </summary>
+            <param name="server"></param>
+            <param name="sid"></param>
+            <param name="loginName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrData.AvailabilityGroupReplica.ByteArrayToString(System.Byte[])">
+            <summary>
+            Transfer a byte array to the hex string
+            </summary>
+            <param name="ba"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrData.AvailabilityGroupReplica.CreateLogins(System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Create logins for the service accounts of other replicas, which do not exist.
+            </summary>
+            <param name="loginNames"></param>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrData.AvailabilityGroupReplica.GetServiceAccountSid(Microsoft.SqlServer.Management.Smo.Server)">
+            <summary>
+            Get the Sid of the service account 
+            </summary>
+            <param name="server"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrData.AvailabilityGroupReplica.CreateEndpoint">
+            <summary>
+            method for creating the endpoint used by ConfigureEndpoint()
+            </summary>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.HadrData.AvailabilityGroupReplicaCollection">
+            <summary>
+            The Replica Collection Data contains a BindingList of AvailabilityGroupReplica
+            </summary>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.HadrData.AvailabilityGroupReplicaData">
+            <summary>
+            Shared Data for AG Replicas
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrData.AvailabilityGroupReplicaData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrData.AvailabilityGroupReplicaData.Connection">
+            <summary>
+            The connection to the replica server
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrData.AvailabilityGroupReplicaData.ReplicaName">
+            <summary>
+            ReplicaName
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrData.AvailabilityGroupReplicaData.InitialRole">
+            <summary>
+            Initial role of the replica
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrData.AvailabilityGroupReplicaData.AutomaticFailover">
+            <summary>
+            flag to determine if the replica is set to automatic failover
+            Returns true if the replica is set to automatic failover, otherwise false
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrData.AvailabilityGroupReplicaData.AvailabilityMode">
+            <summary>
+            Availability mode of the availability replica
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrData.AvailabilityGroupReplicaData.ReadableSecondaryRole">
+            <summary>
+            Readable secondary role of the availability replica
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrData.AvailabilityGroupReplicaData.ReadOnlyRoutingList">
+            <summary>
+            The read-only routing list
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrData.AvailabilityGroupReplicaData.ReadOnlyRoutingUrl">
+            <summary>
+            The read-only routing URL
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrData.AvailabilityGroupReplicaData.GetFailoverMode(Microsoft.SqlServer.Management.Smo.AvailabilityGroupClusterType)">
+            <summary>
+            Gets the actual failover mode by cluster type
+            </summary>
+            <param name="clusterType">cluster type</param>
+            <returns>Failover mode</returns>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrData.AvailabilityGroupReplicaData.EndpointUrl">
+            <summary>
+            Property for Url for the endpoint
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrData.AvailabilityGroupReplicaData.EndpointPortNumber">
+            <summary>
+            Endpoint port number
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrData.AvailabilityGroupReplicaData.EndpointName">
+            <summary>
+            Endpoint name
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrData.AvailabilityGroupReplicaData.EndpointEncryption">
+            <summary>
+            EndpointEncryption flag based on EndpointEncryption enum
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrData.AvailabilityGroupReplicaData.EndpointEncryptionAlgorithm">
+            <summary>
+            The endpoint encryption algorithm
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrData.AvailabilityGroupReplicaData.EndpointServiceAccount">
+            <summary>
+            Endpoint service account
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrData.AvailabilityGroupReplicaData.EndpointServiceAccountSid">
+            <summary>
+            The Service Account Sid
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrData.AvailabilityGroupReplicaData.EndpointPresent">
+            <summary>
+            True if the endpoint is already present on the replica
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrData.AvailabilityGroupReplicaData.EndpointCanBeConfigured">
+            <summary>
+            flag to determine if the endpoint can be configured
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrData.AvailabilityGroupReplicaData.Endpoint">
+            <summary>
+            The underlying SMO endpoint object
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrData.AvailabilityGroupReplicaData.BackupPriority">
+            <summary>
+            The back Up Priority for this AGReplica
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrData.AvailabilityGroupReplicaData.State">
+            <summary>
+            Gets the Replica state
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrData.AvailabilityGroupReplicaData.IsClustered">
+            <summary>
+            Determines whether the replica is a Failover Clustered Instance(FCI) or not
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrData.AvailabilityGroupReplicaData.SeedingMode">
+            <summary>
+            Gets or sets the seeding mode
+            </summary>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.HadrData.AvailabilityObjectState">
+            <summary>
+            Enum which tells the state of the AvailabilityGroup object
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrData.AvailabilityObjectState.Unknown">
+            <summary>
+            The object is in unknown state
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrData.AvailabilityObjectState.Creating">
+            <summary>
+            The object is being created on server
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrData.AvailabilityObjectState.Existing">
+            <summary>
+            The object already exists on server
+            </summary>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.HadrData.CollectionsExtensionMethods">
+            <summary>
+            Collection Extension Method Class
+            </summary>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.HadrData.Constants">
+            <summary>
+            Common place to capture all the constants that we use in the HadrData
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrData.Constants.WellKnownSidTypes">
+            <summary>
+            Well known sid types
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrData.Constants.DefaultDatabaseInitFields">
+            <summary>
+            Returns set of fields passed to Server.SetDefaultInitFields for Database object
+            to optimize the data retrieval from SQL server.
+            </summary>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.HadrData.DataSynchronizationOption">
+            <summary>
+            The Database SychronizationOption for an AG 
+            </summary>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.HadrData.FailoverCategory">
+            <summary>
+            Failover Category Enum
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrData.FailoverCategory.FailoverWithDataLoss">
+            <summary>
+            Failover with data loss
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrData.FailoverCategory.FailoverWithoutDataLoss">
+            <summary>
+            Failover without data loss
+            </summary>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.HadrData.FailoverData">
+            <summary>
+            AlwaysOn Failover Cluster Data
+            Three kinds of servers are proposed in the class:
+            EntryPoint Server : the replica from which the wizard starts. It could be a primary or secondary server.
+            Primary Server : the primary replica of an availability group.
+            Target (or new primary) Server : the new primary server after failover. It must be a secondary replica.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrData.FailoverData.EntryPointServerConnection">
+            <summary>
+            Gets or sets the EntryPoint server connection.
+            The connection for the server instance from which the wizard starts.
+            If the wizard starts from the primary replica of an Availability Group in the primary server, 
+            then the connection is for the primary replica; otherwise, it is for the secondary replica. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrData.FailoverData.entryPointServer">
+            EntryPoint Server : the replica from which the wizard starts. It could be a primary or secondary server.
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrData.FailoverData.SetEntryPointServerToNull">
+            <summary>
+            Method to clean EntryPointServer
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrData.FailoverData.PrimaryServerInstanceName">
+            <summary>
+            Primary Server Instance Name
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrData.FailoverData.AvailabilityGroup">
+            <summary>
+            AG Data From the EntryPointServer
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrData.FailoverData.replicas">
+            <summary>
+            Replicas of the AG
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrData.FailoverData.AvailabilityReplicas">
+            <summary>
+            Properties of Replicas of the AG
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrData.FailoverData.PrimaryReplica">
+            <summary>
+            Primary Replica
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrData.FailoverData.AvailabilityGroupName">
+            <summary>
+            Current AG Name
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrData.FailoverData.TargetReplicaFailoverCategory">
+            <summary>
+            Failover Category
+            This property should be determined by viewData
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrData.FailoverData.TargetServer">
+            <summary>
+            Target Server
+            If failover from a Secondary Replica, TargetServer should be set to this.EntryPointServer
+            If failover from a Primary Replica, TargetServer should be new Smo.Server(this.TargetServerConnection)
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrData.FailoverData.PrimaryServer">
+            <summary>
+            Primary Server
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrData.FailoverData.TargetServerConnection">
+            <summary>
+            Target Servcer Connection
+            If failover from a Secondary Replica, TargetServerConnection should be set to this.EntryPointServerConnection
+            If failover from a Primary Replica, TargetServerConnection should be set to selected SecondaryReplica.Connection
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrData.FailoverData.ResetTargetServer">
+            <summary>
+            Method to reset Target Server
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrData.FailoverData.TargetAvailabilityGroup">
+            <summary>
+            Target AG Data
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrData.FailoverData.TargetReplicaName">
+            <summary>
+            Target Replica Name
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrData.FailoverData.TargetAvailabilityReplica">
+            <summary>
+            Target Replica 
+            </summary>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.HadrData.FailoverUtilities">
+            <summary>
+            Failover Utilites For FailoverClusterData
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrData.FailoverUtilities.GetServerWithInitFieldsSetting(Microsoft.SqlServer.Management.Common.ServerConnection)">
+            <summary>
+            Return Server With InitFieldsSetting given ServerConnection
+            </summary>
+            <param name="connection"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrData.FailoverUtilities.TryDecrypt(Microsoft.SqlServer.Management.Smo.Database,System.String)">
+            <summary>
+            validate the password
+            </summary>
+            <param name="database"></param>
+            <param name="pwd"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrData.FailoverUtilities.ProvisionCredential(Microsoft.SqlServer.Management.Smo.Server,System.String,System.String)">
+            <summary>
+            add the credential to the secondary node
+            </summary>
+            <param name="server"></param>
+            <param name="dbName"></param>
+            <param name="pwd"></param>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrData.FailoverUtilities.HasDbNeedToBeDecrypted(Microsoft.SqlServer.Management.Smo.Server,System.Collections.Generic.List{Microsoft.SqlServer.Management.HadrData.PrimaryDatabaseData})">
+            <summary>
+            is there any database in the list contains master key
+            </summary>
+            <param name="server"></param>
+            <param name="databases"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.HadrData.PrimaryDatabaseData">
+            <summary>
+            Primary Database Data
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrData.PrimaryDatabaseData.Name">
+            <summary>
+            Database Name
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrData.PrimaryDatabaseData.DatabaseSize">
+            <summary>
+            Gets the size of the database
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrData.PrimaryDatabaseData.AvailabiliyGroupName">
+            <summary>
+            The availability group to which the database belongs
+            This will be null if the database is not part of an
+            existing availability group
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrData.PrimaryDatabaseData.IsPartOfExistingAvailabilityGroup">
+            <summary>
+            True if the database is already a part of Availability Group
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrData.PrimaryDatabaseData.DatabaseFullBackupFile">
+            <summary>
+            The file where the wizard will take a full-backup of the database
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrData.PrimaryDatabaseData.DatabaseLogBackupFile">
+            <summary>
+            The file where the wizard will take a log-backup of the database
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrData.PrimaryDatabaseData.#ctor(Microsoft.SqlServer.Management.Smo.Database,System.String)">
+            <summary>
+            Constructor to use in case the database is part of an
+            existing availability group
+            </summary>
+            <param name="database">The database</param>
+            <param name="availabilityGroupName">The name of the availability group</param>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrData.PrimaryDatabaseData.#ctor(Microsoft.SqlServer.Management.Smo.Database)">
+            <summary>
+            The constructor to use when the database needs to be added
+            to a new availability group
+            </summary>
+            <param name="database">The database</param>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrData.PrimaryDatabaseData.DBMKPassword">
+            <summary>
+            The password used to encrypt database master key
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrData.ReplicaRole.Primary">
+            <summary>
+            Replica is in primary role
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrData.ReplicaRole.Secondary">
+            <summary>
+            Replica is in secondary role
+            </summary>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.HadrData.Resource">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrData.Resource.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrData.Resource.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrData.Resource.AvailabilityGroupNotExistError">
+            <summary>
+              Looks up a localized string similar to Availability group &apos;{0}&apos; does not exists on server &apos;{1}&apos;..
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrData.Resource.FailoverTargetReplicaNotExistError">
+            <summary>
+              Looks up a localized string similar to The availability group does not contain the selected primary replica candidate..
+            </summary>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.HadrData.SortableBindingList`1">
+            <summary>
+            Binding List that supports sorting
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrData.SortableBindingList`1.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrData.SortableBindingList`1.#ctor(System.Collections.Generic.IList{`0})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.SqlServer.Management.HadrData.SortableBindingList`1"/> class.
+            </summary>
+            <param name="list">An <see cref="T:System.Collections.Generic.IList`1"/> of items to be contained in the <see cref="T:System.ComponentModel.BindingList`1"/>.</param>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrData.SortableBindingList`1.SupportsSortingCore">
+            <summary>
+            Gets a value indicating whether the list supports sorting.
+            </summary>
+            <value></value>
+            <returns>true if the list supports sorting; otherwise, false. The default is false.</returns>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrData.SortableBindingList`1.IsSortedCore">
+            <summary>
+            Gets a value indicating whether the list is sorted.
+            </summary>
+            <value></value>
+            <returns>true if the list is sorted; otherwise, false. The default is false.</returns>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrData.SortableBindingList`1.SortPropertyCore">
+            <summary>
+            Gets the property descriptor that is used for sorting the list if sorting is implemented in a derived class; otherwise, returns null.
+            </summary>
+            <value></value>
+            <returns>The <see cref="T:System.ComponentModel.PropertyDescriptor"/> used for sorting the list.</returns>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.HadrData.SortableBindingList`1.SortDirectionCore">
+            <summary>
+            Gets the direction the list is sorted.
+            </summary>
+            <value></value>
+            <returns>One of the <see cref="T:System.ComponentModel.ListSortDirection"/> values. The default is <see cref="F:System.ComponentModel.ListSortDirection.Ascending"/>. </returns>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrData.SortableBindingList`1.ApplySortCore(System.ComponentModel.PropertyDescriptor,System.ComponentModel.ListSortDirection)">
+            <summary>
+            Sorts the items if overridden in a derived class; otherwise, throws a <see cref="T:System.NotSupportedException"/>.
+            </summary>
+            <param name="prop">A <see cref="T:System.ComponentModel.PropertyDescriptor"/> that specifies the property to sort on.</param>
+            <param name="direction">One of the <see cref="T:System.ComponentModel.ListSortDirection"/>  values.</param>
+            <exception cref="T:System.NotSupportedException">Method is not overridden in a derived class. </exception>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrData.SortableBindingList`1.RemoveSortCore">
+            <summary>
+            Removes any sort applied with <see cref="M:System.ComponentModel.BindingList`1.ApplySortCore(System.ComponentModel.PropertyDescriptor,System.ComponentModel.ListSortDirection)"/> if sorting is implemented in a derived class; otherwise, raises <see cref="T:System.NotSupportedException"/>.
+            </summary>
+            <exception cref="T:System.NotSupportedException">Method is not overridden in a derived class. </exception>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrData.SortableBindingList`1.GetComparisonDelegate(System.ComponentModel.PropertyDescriptor,System.ComponentModel.ListSortDirection)">
+            <summary>
+            Gets the comparison delegate for sorting.
+            </summary>
+            <param name="propertyDescriptor">The property descriptor.</param>
+            <param name="direction">The sortdirection.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.HadrData.UserSecurity.WellKnownSidType">
+            <summary>
+            Well known Sid Types
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrData.UserSecurity.WellKnownSidType.WinNullSid">
+            <summary>
+            Null
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrData.UserSecurity.WellKnownSidType.WinWorldSid">
+            <summary>
+            world
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrData.UserSecurity.WellKnownSidType.WinLocalSid">
+            <summary>
+            local
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrData.UserSecurity.WellKnownSidType.WinCreatorOwnerSid">
+            <summary>
+            creator owner
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrData.UserSecurity.WellKnownSidType.WinCreatorGroupSid">
+            <summary>
+            creator group
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrData.UserSecurity.WellKnownSidType.WinCreatorOwnerServerSid">
+            <summary>
+            creator owner server
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrData.UserSecurity.WellKnownSidType.WinCreatorGroupServerSid">
+            <summary>
+            creator group server
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrData.UserSecurity.WellKnownSidType.WinNtAuthoritySid">
+            <summary>
+            NT AUTHORITY
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrData.UserSecurity.WellKnownSidType.WinDialupSid">
+            <summary>
+            Dialup
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrData.UserSecurity.WellKnownSidType.WinNetworkSid">
+            <summary>
+            NETWORK
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrData.UserSecurity.WellKnownSidType.WinBatchSid">
+            <summary>
+            Batch
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrData.UserSecurity.WellKnownSidType.WinInteractiveSid">
+            <summary>
+            Interactive
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrData.UserSecurity.WellKnownSidType.WinServiceSid">
+            <summary>
+            Service
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrData.UserSecurity.WellKnownSidType.WinAnonymousSid">
+            <summary>
+            Anonymous
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrData.UserSecurity.WellKnownSidType.WinProxySid">
+            <summary>
+            Proxy
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrData.UserSecurity.WellKnownSidType.WinEnterpriseControllersSid">
+            <summary>
+            Enterprise Controllers
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrData.UserSecurity.WellKnownSidType.WinSelfSid">
+            <summary>
+            Self
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrData.UserSecurity.WellKnownSidType.WinAuthenticatedUserSid">
+            <summary>
+            Authenticated User
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrData.UserSecurity.WellKnownSidType.WinRestrictedCodeSid">
+            <summary>
+            Restricted Code
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrData.UserSecurity.WellKnownSidType.WinTerminalServerSid">
+            <summary>
+            Terminal Server
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrData.UserSecurity.WellKnownSidType.WinRemoteLogonIdSid">
+            <summary>
+            Remote Logon Id
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrData.UserSecurity.WellKnownSidType.WinLogonIdsSid">
+            <summary>
+            Logon Ids
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrData.UserSecurity.WellKnownSidType.WinLocalSystemSid">
+            <summary>
+            LOCAL SYSTEM
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrData.UserSecurity.WellKnownSidType.WinLocalServiceSid">
+            <summary>
+            LOCAL SERVICE
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrData.UserSecurity.WellKnownSidType.WinNetworkServiceSid">
+            <summary>
+            NETWORK SERVICE
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrData.UserSecurity.WellKnownSidType.WinBuiltinDomainSid">
+            <summary>
+            BUILTIN Domain
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrData.UserSecurity.WellKnownSidType.WinBuiltinAdministratorsSid">
+            <summary>
+            BUILTIN\Administrators
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrData.UserSecurity.WellKnownSidType.WinBuiltinUsersSid">
+            <summary>
+            BUILTIN Users
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrData.UserSecurity.WellKnownSidType.WinBuiltinGuestsSid">
+            <summary>
+            BUILTIN Guests
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrData.UserSecurity.WellKnownSidType.WinBuiltinPowerUsersSid">
+            <summary>
+            BUILTIN power users
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrData.UserSecurity.WellKnownSidType.WinBuiltinAccountOperatorsSid">
+            <summary>
+            BUILTIN account operators
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrData.UserSecurity.WellKnownSidType.WinBuiltinSystemOperatorsSid">
+            <summary>
+            BUILTIN system operators
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrData.UserSecurity.WellKnownSidType.WinBuiltinPrintOperatorsSid">
+            <summary>
+            BUILTIN print operators
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrData.UserSecurity.WellKnownSidType.WinBuiltinBackupOperatorsSid">
+            <summary>
+            BUILTIN  backup operators
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrData.UserSecurity.WellKnownSidType.WinBuiltinReplicatorSid">
+            <summary>
+            BUILTIN replicator
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrData.UserSecurity.WellKnownSidType.WinBuiltinPreWindows2000CompatibleAccessSid">
+            <summary>
+            BUILTIN Pre Windows 2000 Compatible Access
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrData.UserSecurity.WellKnownSidType.WinBuiltinRemoteDesktopUsersSid">
+            <summary>
+            BUILTIN remote desktop users
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrData.UserSecurity.WellKnownSidType.WinBuiltinNetworkConfigurationOperatorsSid">
+            <summary>
+            BUILTIN network configuration operators
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrData.UserSecurity.WellKnownSidType.WinAccountAdministratorSid">
+            <summary>
+            account administrators
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrData.UserSecurity.WellKnownSidType.WinAccountGuestSid">
+            <summary>
+            account guests
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrData.UserSecurity.WellKnownSidType.WinAccountKrbtgtSid">
+            <summary>
+            account krbtgt
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrData.UserSecurity.WellKnownSidType.WinAccountDomainAdminsSid">
+            <summary>
+            account domain admins
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrData.UserSecurity.WellKnownSidType.WinAccountDomainUsersSid">
+            <summary>
+            account domain users
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrData.UserSecurity.WellKnownSidType.WinAccountDomainGuestsSid">
+            <summary>
+            account domain guests
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrData.UserSecurity.WellKnownSidType.WinAccountComputersSid">
+            <summary>
+            account computers
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrData.UserSecurity.WellKnownSidType.WinAccountControllersSid">
+            <summary>
+            account controllers
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrData.UserSecurity.WellKnownSidType.WinAccountCertAdminsSid">
+            <summary>
+            account cert admins
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrData.UserSecurity.WellKnownSidType.WinAccountSchemaAdminsSid">
+            <summary>
+            account schema admins
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrData.UserSecurity.WellKnownSidType.WinAccountEnterpriseAdminsSid">
+            <summary>
+            account enterprise admins
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrData.UserSecurity.WellKnownSidType.WinAccountPolicyAdminsSid">
+            <summary>
+            account policy admins
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrData.UserSecurity.WellKnownSidType.WinAccountRasAndIasServersSid">
+            <summary>
+            account RAS and IAS servers
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrData.UserSecurity.WellKnownSidType.WinNTLMAuthenticationSid">
+            <summary>
+            NT LM authentication
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrData.UserSecurity.WellKnownSidType.WinDigestAuthenticationSid">
+            <summary>
+            Digest authentication
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrData.UserSecurity.WellKnownSidType.WinSChannelAuthenticationSid">
+            <summary>
+            S Channel Authentication
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrData.UserSecurity.WellKnownSidType.WinThisOrganizationSid">
+            <summary>
+            This organization
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrData.UserSecurity.WellKnownSidType.WinOtherOrganizationSid">
+            <summary>
+            Other organization
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrData.UserSecurity.WellKnownSidType.WinBuiltinIncomingForestTrustBuildersSid">
+            <summary>
+            BUILTIN incoming forest trust builders
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrData.UserSecurity.WellKnownSidType.WinBuiltinPerfMonitoringUsersSid">
+            <summary>
+            BUILTIN perf monitoring users
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrData.UserSecurity.WellKnownSidType.WinBuiltinPerfLoggingUsersSid">
+            <summary>
+            BUILTIN perf logging users
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrData.UserSecurity.WellKnownSidType.WinBuiltinAuthorizationAccessSid">
+            <summary>
+            BUILTIN authorization access
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrData.UserSecurity.WellKnownSidType.WinBuiltinTerminalServerLicenseServersSid">
+            <summary>
+            BUILTIN terminal server license servers
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrData.UserSecurity.WellKnownSidType.WinBuiltinDCOMUsersSid">
+            <summary>
+            BUILTIN DCOM users
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrData.UserSecurity.WellKnownSidType.WinBuiltinIUsersSid">
+            <summary>
+            BUILTIN IUsers
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrData.UserSecurity.WellKnownSidType.WinIUserSid">
+            <summary>
+            IUsers
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrData.UserSecurity.WellKnownSidType.WinBuiltinCryptoOperatorsSid">
+            <summary>
+            BUILTIN crypto operators
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrData.UserSecurity.WellKnownSidType.WinUntrustedLabelSid">
+            <summary>
+            untrusted label
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrData.UserSecurity.WellKnownSidType.WinLowLabelSid">
+            <summary>
+            low label
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrData.UserSecurity.WellKnownSidType.WinMediumLabelSid">
+            <summary>
+            medium label
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrData.UserSecurity.WellKnownSidType.WinHighLabelSid">
+            <summary>
+            high label
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrData.UserSecurity.WellKnownSidType.WinSystemLabelSid">
+            <summary>
+            system label
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrData.UserSecurity.WellKnownSidType.WinWriteRestrictedCodeSid">
+            <summary>
+            write restricted code
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrData.UserSecurity.WellKnownSidType.WinCreatorOwnerRightsSid">
+            <summary>
+            creator owner rights
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrData.UserSecurity.WellKnownSidType.WinCacheablePrincipalsGroupSid">
+            <summary>
+            cacheable principals group
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrData.UserSecurity.WellKnownSidType.WinNonCacheablePrincipalsGroupSid">
+            <summary>
+            cacheable principals group
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrData.UserSecurity.WellKnownSidType.WinEnterpriseReadonlyControllersSid">
+            <summary>
+            enterprise readonly controllers
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrData.UserSecurity.WellKnownSidType.WinAccountReadonlyControllersSid">
+            <summary>
+            readonly controllers
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrData.UserSecurity.WellKnownSidType.WinBuiltinEventLogReadersGroup">
+            <summary>
+            BUILTIN event log readers group
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrData.UserSecurity.WellKnownSidType.WinNewEnterpriseReadonlyControllersSid">
+            <summary>
+            new enterprise readonly controllers
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.HadrData.UserSecurity.WellKnownSidType.WinBuiltinCertSvcDComAccessGroup">
+            <summary>
+            BUILTIN Cert Service DCOM access group
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrData.UserSecurity.LookupAccountName(System.String,System.String,System.IntPtr,System.Int32@,System.Text.StringBuilder,System.Int32@,System.Int32@)">
+            <summary>
+            Win32 API which looks up the sid for an account name
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrData.UserSecurity.IsWellKnownSid(System.IntPtr,System.Int32)">
+            <summary>
+            Win32 API which compares the sid with a sid type
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.HadrData.UserSecurity.IsDomainUserAccount(System.String,System.Collections.Generic.IEnumerable{Microsoft.SqlServer.Management.HadrData.UserSecurity.WellKnownSidType})">
+            <summary>
+            This function will try to determine if a account name is domain user account.
+            1. determines if the account specified by accountName parameter matches
+            any sid from the sidTypeList parameter.
+            2. if we can find it from the domain, LoopupAccountName will try to resolve the name using domain controllers trusted by the local system
+            </summary>
+            <param name="accountName">account name.</param>
+            <param name="sidTypeList">The list of SIDs from which to compare the account to.</param>
+        </member>
+    </members>
+</doc>

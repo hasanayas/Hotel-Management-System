@@ -1,0 +1,167 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.SqlServer.Smo.Notebook</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.SqlServer.Management.Smo.Notebook.CellModel">
+            <summary>
+            Base class for common cell types
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.Smo.Notebook.CellModel.cell_type">
+            <summary>
+            The type of the cell. 
+            Will typically be markdown or code
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.Smo.Notebook.CellModel.source">
+            <summary>
+            The contents of the cell
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.Smo.Notebook.CellModel.metadata">
+            <summary>
+            metadata associated with the cell
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Smo.Notebook.CellModel.#ctor(System.String)">
+            <summary>
+            Constructs a Notebool cell of the given type
+            </summary>
+            <param name="cellType"></param>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.Smo.Notebook.CodeCellModel">
+            <summary>
+            Represents a (simplified) cell in a Jupyter notebook
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.Smo.Notebook.CodeCellModel.outputs">
+            <summary>
+            Outputs from running the cell source
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.Smo.Notebook.CodeCellModel.execution_count">
+            <summary>
+            Number of times the cell source was run
+            </summary>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.Smo.Notebook.MarkdownCellModel">
+            <summary>
+            A cell of type markdown
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Smo.Notebook.MarkdownCellModel.#ctor">
+            <summary>
+            Constructs an empty MarkdownCellModel
+            </summary>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.Smo.Notebook.NotebookFileWriter">
+            <summary>
+            Implementation of SingleFileWriterBase that persists scripts as a Jupyter Notebook
+            The data is flushed to the file during Dispose or Close
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Smo.Notebook.NotebookFileWriter.#ctor(System.String)">
+            <summary>
+            Constructs a new NotebookFileWriter which persists to the given file name.
+            Any existing file with that name will be overwritten.
+            </summary>
+            <param name="filePath"></param>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Smo.Notebook.NotebookFileWriter.Close">
+            <summary>
+            Flushes data to disk.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Smo.Notebook.NotebookFileWriter.DemarkUrn(Microsoft.SqlServer.Management.Sdk.Sfc.Urn)">
+            <summary>
+            If the urn is different from the current urn, inject a markdown cell
+            with the name of the object being scripted
+            </summary>
+            <param name="urn"></param>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Smo.Notebook.LineFeedExtension.WithLineFeeds(System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Adds Environment.NewLine to each string if it is not already there
+            </summary>
+            <param name="lines"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.Smo.Notebook.NotebookModel">
+            <summary>
+            Minimal class to represent core features of Jupyter notebooks. 
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.Smo.Notebook.NotebookModel.metadata">
+            <summary>
+            Metadata object for the notebook. 
+            Will typically contain kernelspec and language_info data
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.Smo.Notebook.NotebookModel.nbformat">
+            <summary>
+            Notebook format major version number
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.Smo.Notebook.NotebookModel.nbformat_minor">
+            <summary>
+            Notebook format minor version number
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.Smo.Notebook.NotebookModel.cells">
+            <summary>
+            The contents of the Notebook
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Smo.Notebook.NotebookModel.#ctor(System.Int32,System.Int32)">
+            <summary>
+            Constructs a new NotebookModel with an empty list of cells
+            </summary>
+            <param name="majorVersion"></param>
+            <param name="minorVersion"></param>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.Smo.Notebook.SmoNotebook">
+            <summary>
+            Enables creation and saving of a simple Jupyter notebook
+            using the SQL kernel.
+            Each code cell corresponds to one object URN. 
+            Code for one URN can span multiple cells.
+            Cells are saved in the order written.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Smo.Notebook.SmoNotebook.AddCodeCell(System.Collections.Generic.IEnumerable{System.String},Microsoft.SqlServer.Management.Sdk.Sfc.Urn)">
+            <summary>
+            Adds a code cell to the notebook
+            </summary>
+            <param name="content"></param>
+            <param name="urn">Optional Urn to add as metadata to the cell</param>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Smo.Notebook.SmoNotebook.AddMarkdownCell(System.Collections.Generic.IEnumerable{System.String},Microsoft.SqlServer.Management.Sdk.Sfc.Urn)">
+            <summary>
+            Adds a markdown cell to the notebook
+            </summary>
+            <param name="content"></param>
+            <param name="urn">Optional Urn to add as metadata to the cell</param>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Smo.Notebook.SmoNotebook.Save(System.IO.Stream,System.Boolean)">
+            <summary>
+            Saves the complete Jupyter Notebook to the given stream in UTF8 encoding
+            </summary>
+            <param name="stream"></param>
+            <param name="prettyPrint"></param>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.Smo.Notebook.NotebookMetadata.kernel_spec">
+            <summary>
+            which kernel to run cells with
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Smo.Notebook.EncodeExtensions.WithJsonNewLines(System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            JsonSerializer does not escape newlines in string values 
+            </summary>
+            <param name="lines"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

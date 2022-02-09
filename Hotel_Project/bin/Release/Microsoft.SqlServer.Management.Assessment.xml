@@ -1,0 +1,288 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.SqlServer.Management.Assessment</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.SqlServer.Management.Assessment.SqlAssessmentExtensions">
+            <summary>
+            Provides a set of <see langword="static" /> (<see langword="Shared" /> in Visual Basic) methods for checking SMO objects for best practice compliance.
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.Assessment.SqlAssessmentExtensions.Engine">
+            <summary>
+            An assessment engine used by all extension methods. Use Configuration property of this object to customize configuration.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Assessment.SqlAssessmentExtensions.GetAssessmentItems(Microsoft.SqlServer.Management.Smo.SqlSmoObject,System.String[])">
+            <summary>
+            Finds all available checks for given <paramref name="smoObject"/>. 
+            </summary>
+            <param name="smoObject">Returned checks are applicable to this target <see cref="T:Microsoft.SqlServer.Management.Smo.SqlSmoObject"/>.</param>
+            <param name="checkIdsOrTags">Optional array of <see cref="T:System.String"/> check ids or tags to select only specific checks.</param>
+            <returns>Returns an <see cref="T:System.Collections.Generic.IEnumerable`1"/> for target <see cref="T:Microsoft.SqlServer.Management.Smo.SqlSmoObject"/>.</returns>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Assessment.SqlAssessmentExtensions.GetAssessmentResultsList(Microsoft.SqlServer.Management.Smo.SqlSmoObject,System.String[])">
+            <summary>
+            Asynchronously runs assessment for given <paramref name="smoObject"/> and gives a <see cref="T:System.Collections.Generic.List`1"/> describing discovered issues. 
+            </summary>
+            <param name="smoObject">Target <see cref="T:Microsoft.SqlServer.Management.Smo.SqlSmoObject"/>.</param>
+            <param name="checkIdsOrTags">Optional array of <see cref="T:System.String"/> check ids or tags to perform only selected checks.</param>
+            <returns>
+            Returns an <see cref="T:System.Collections.Generic.List`1"/> for target <see cref="T:Microsoft.SqlServer.Management.Smo.SqlSmoObject"/>.
+            Returns an empty <see cref="T:System.Collections.Generic.List`1"/> if no issues detected.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Assessment.SqlAssessmentExtensions.GetAssessmentResultsList(Microsoft.SqlServer.Management.Smo.SqlSmoObject,System.Collections.Generic.IEnumerable{Microsoft.SqlServer.Management.Assessment.Checks.ICheck})">
+            <summary>
+            Asynchronously runs assessment for given <paramref name="smoObject"/> and gives a <see cref="T:System.Collections.Generic.List`1"/> describing discovered issues.
+            This method performs only given checks from <paramref name="checks"/>.
+            </summary>
+            <param name="smoObject">Target <see cref="T:Microsoft.SqlServer.Management.Smo.SqlSmoObject"/>.</param>
+            <param name="checks">Optional <see cref="T:System.Collections.Generic.IEnumerable`1"/> to perform only selected checks.</param>
+            <returns>
+            Returns an <see cref="T:System.Collections.Generic.List`1"/> for target <see cref="T:Microsoft.SqlServer.Management.Smo.SqlSmoObject"/>.
+            Returns an empty <see cref="T:System.Collections.Generic.List`1"/> if no issues detected.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Assessment.SqlAssessmentExtensions.GetAssessmentResults(Microsoft.SqlServer.Management.Smo.SqlSmoObject,System.String[])">
+            <summary>
+            Synchronously runs assessment for given <paramref name="smoObject"/> and gives a <see cref="T:System.Collections.Generic.IEnumerable`1"/> describing discovered issues. 
+            </summary>
+            <param name="smoObject">Target <see cref="T:Microsoft.SqlServer.Management.Smo.SqlSmoObject"/>.</param>
+            <param name="checkIdsOrTags">Optional array of <see cref="T:System.String"/> check ids or tags to perform only selected checks.</param>
+            <returns>
+            Returns an <see cref="T:System.Collections.Generic.IEnumerable`1"/> for target <see cref="T:Microsoft.SqlServer.Management.Smo.SqlSmoObject"/>.
+            Returns an empty <see cref="T:System.Collections.Generic.IEnumerable`1"/> if no issues detected.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Assessment.SqlAssessmentExtensions.GetAssessmentResults(Microsoft.SqlServer.Management.Smo.SqlSmoObject,System.Collections.Generic.IEnumerable{Microsoft.SqlServer.Management.Assessment.Checks.ICheck})">
+            <summary>
+            Synchronously runs assessment for given <paramref name="smoObject"/> and gives a <see cref="T:System.Collections.Generic.IEnumerable`1"/> describing discovered issues.
+            This method performs only given checks from <paramref name="checks"/>.
+            </summary>
+            <param name="smoObject">Target <see cref="T:Microsoft.SqlServer.Management.Smo.SqlSmoObject"/>.</param>
+            <param name="checks">Optional <see cref="T:System.Collections.Generic.IEnumerable`1"/> to perform only selected checks.</param>
+            <returns>
+            Returns an <see cref="T:System.Collections.Generic.IEnumerable`1"/> for target <see cref="T:Microsoft.SqlServer.Management.Smo.SqlSmoObject"/>.
+            Returns an empty <see cref="T:System.Collections.Generic.IEnumerable`1"/> if no issues detected.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Assessment.SqlAssessmentExtensions.GetAssessmentResults(Microsoft.SqlServer.Management.Smo.AvailabilityGroup,System.String[])">
+            <summary>
+            Synchronously runs assessment for given <paramref name="availabilityGroup"/> and gives a <see cref="T:System.Collections.Generic.IEnumerable`1"/> describing discovered issues. 
+            </summary>
+            <param name="availabilityGroup">Target <see cref="T:Microsoft.SqlServer.Management.Smo.AvailabilityGroup"/>.</param>
+            <param name="checkIdsOrTags">Optional array of <see cref="T:System.String"/> check ids or tags to perform only selected checks.</param>
+            <returns>
+            Returns an <see cref="T:System.Collections.Generic.IEnumerable`1"/> for target <see cref="T:Microsoft.SqlServer.Management.Smo.SqlSmoObject"/>.
+            Returns an empty <see cref="T:System.Collections.Generic.IEnumerable`1"/> if no issues detected.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Assessment.SqlAssessmentExtensions.GetAssessmentResults(Microsoft.SqlServer.Management.Smo.AvailabilityGroup,System.Collections.Generic.IEnumerable{Microsoft.SqlServer.Management.Assessment.Checks.ICheck})">
+            <summary>
+            Synchronously runs assessment for given <paramref name="availabilityGroup"/> and gives a <see cref="T:System.Collections.Generic.IEnumerable`1"/> describing discovered issues.
+            This method performs only given checks from <paramref name="checks"/>.
+            </summary>
+            <param name="availabilityGroup">Target <see cref="T:Microsoft.SqlServer.Management.Smo.AvailabilityGroup"/>.</param>
+            <param name="checks">Optional <see cref="T:System.Collections.Generic.IEnumerable`1"/> to perform only selected checks.</param>
+            <returns>
+            Returns an <see cref="T:System.Collections.Generic.IEnumerable`1"/> for target <see cref="T:Microsoft.SqlServer.Management.Smo.SqlSmoObject"/>.
+            Returns an empty <see cref="T:System.Collections.Generic.IEnumerable`1"/> if no issues detected.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Assessment.SqlAssessmentExtensions.GetAssessmentItems(Microsoft.SqlServer.Management.Smo.AvailabilityGroup,System.String[])">
+            <summary>
+            Finds all available checks for given <paramref name="availabilityGroup"/>. 
+            </summary>
+            <param name="availabilityGroup">Returned checks are applicable to this target <see cref="T:Microsoft.SqlServer.Management.Smo.AvailabilityGroup"/>.</param>
+            <param name="checkIdsOrTags">Optional array of <see cref="T:System.String"/> check ids or tags to select only specific checks.</param>
+            <returns>Returns an <see cref="T:System.Collections.Generic.IEnumerable`1"/> for target <see cref="T:Microsoft.SqlServer.Management.Smo.SqlSmoObject"/>.</returns>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Assessment.SqlAssessmentExtensions.GetAssessmentResultsList(Microsoft.SqlServer.Management.Smo.AvailabilityGroup,System.String[])">
+            <summary>
+            Asynchronously runs assessment for given <paramref name="availabilityGroup"/> and gives a <see cref="T:System.Collections.Generic.List`1"/> describing discovered issues. 
+            </summary>
+            <param name="availabilityGroup">Target <see cref="T:Microsoft.SqlServer.Management.Smo.AvailabilityGroup"/>.</param>
+            <param name="checkIdsOrTags">Optional array of <see cref="T:System.String"/> check ids or tags to perform only selected checks.</param>
+            <returns>
+            Returns an <see cref="T:System.Collections.Generic.List`1"/> for target <see cref="T:Microsoft.SqlServer.Management.Smo.SqlSmoObject"/>.
+            Returns an empty <see cref="T:System.Collections.Generic.List`1"/> if no issues detected.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Assessment.SqlAssessmentExtensions.GetAssessmentResultsList(Microsoft.SqlServer.Management.Smo.AvailabilityGroup,System.Collections.Generic.IEnumerable{Microsoft.SqlServer.Management.Assessment.Checks.ICheck})">
+            <summary>
+            Synchronously runs assessment for given <paramref name="availabilityGroup"/> and gives a <see cref="T:System.Collections.Generic.IEnumerable`1"/> describing discovered issues.
+            This method performs only given checks from <paramref name="checks"/>.
+            </summary>
+            <param name="availabilityGroup">Target <see cref="T:Microsoft.SqlServer.Management.Smo.AvailabilityGroup"/>.</param>
+            <param name="checks">Optional <see cref="T:System.Collections.Generic.IEnumerable`1"/> to perform only selected checks.</param>
+            <returns>
+            Returns an <see cref="T:System.Collections.Generic.IEnumerable`1"/> for target <see cref="T:Microsoft.SqlServer.Management.Smo.SqlSmoObject"/>.
+            Returns an empty <see cref="T:System.Collections.Generic.IEnumerable`1"/> if no issues detected.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Assessment.SqlAssessmentExtensions.GetAssessmentResults(Microsoft.SqlServer.Management.Smo.Database,System.String[])">
+            <summary>
+            Synchronously runs assessment for given <paramref name="database"/> and gives a <see cref="T:System.Collections.Generic.IEnumerable`1"/> describing discovered issues. 
+            </summary>
+            <param name="database">Target <see cref="T:Microsoft.SqlServer.Management.Smo.Database"/>.</param>
+            <param name="checkIdsOrTags">Optional array of <see cref="T:System.String"/> check ids or tags to perform only selected checks.</param>
+            <returns>
+            Returns an <see cref="T:System.Collections.Generic.IEnumerable`1"/> for target <see cref="T:Microsoft.SqlServer.Management.Smo.SqlSmoObject"/>.
+            Returns an empty <see cref="T:System.Collections.Generic.IEnumerable`1"/> if no issues detected.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Assessment.SqlAssessmentExtensions.GetAssessmentResults(Microsoft.SqlServer.Management.Smo.Database,System.Collections.Generic.IEnumerable{Microsoft.SqlServer.Management.Assessment.Checks.ICheck})">
+            <summary>
+            Synchronously runs assessment for given <paramref name="database"/> and gives a <see cref="T:System.Collections.Generic.IEnumerable`1"/> describing discovered issues.
+            This method performs only given checks from <paramref name="checks"/>.
+            </summary>
+            <param name="database">Target <see cref="T:Microsoft.SqlServer.Management.Smo.Database"/>.</param>
+            <param name="checks">Optional <see cref="T:System.Collections.Generic.IEnumerable`1"/> to perform only selected checks.</param>
+            <returns>
+            Returns an <see cref="T:System.Collections.Generic.IEnumerable`1"/> for target <see cref="T:Microsoft.SqlServer.Management.Smo.SqlSmoObject"/>.
+            Returns an empty <see cref="T:System.Collections.Generic.IEnumerable`1"/> if no issues detected.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Assessment.SqlAssessmentExtensions.GetAssessmentItems(Microsoft.SqlServer.Management.Smo.Database,System.String[])">
+            <summary>
+            Finds all available checks for given <paramref name="database"/>. 
+            </summary>
+            <param name="database">Returned checks are applicable to this target <see cref="T:Microsoft.SqlServer.Management.Smo.Database"/>.</param>
+            <param name="checkIdsOrTags">Optional array of <see cref="T:System.String"/> check ids or tags to select only specific checks.</param>
+            <returns>Returns an <see cref="T:System.Collections.Generic.IEnumerable`1"/> for target <see cref="T:Microsoft.SqlServer.Management.Smo.SqlSmoObject"/>.</returns>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Assessment.SqlAssessmentExtensions.GetAssessmentResultsList(Microsoft.SqlServer.Management.Smo.Database,System.String[])">
+            <summary>
+            Asynchronously runs assessment for given <paramref name="database"/> and gives a <see cref="T:System.Collections.Generic.List`1"/> describing discovered issues. 
+            </summary>
+            <param name="database">Target <see cref="T:Microsoft.SqlServer.Management.Smo.Database"/>.</param>
+            <param name="checkIdsOrTags">Optional array of <see cref="T:System.String"/> check ids or tags to perform only selected checks.</param>
+            <returns>
+            Returns an <see cref="T:System.Collections.Generic.List`1"/> for target <see cref="T:Microsoft.SqlServer.Management.Smo.SqlSmoObject"/>.
+            Returns an empty <see cref="T:System.Collections.Generic.List`1"/> if no issues detected.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Assessment.SqlAssessmentExtensions.GetAssessmentResultsList(Microsoft.SqlServer.Management.Smo.Database,System.Collections.Generic.IEnumerable{Microsoft.SqlServer.Management.Assessment.Checks.ICheck})">
+            <summary>
+            Synchronously runs assessment for given <paramref name="database"/> and gives a <see cref="T:System.Collections.Generic.IEnumerable`1"/> describing discovered issues.
+            This method performs only given checks from <paramref name="checks"/>.
+            </summary>
+            <param name="database">Target <see cref="T:Microsoft.SqlServer.Management.Smo.Database"/>.</param>
+            <param name="checks">Optional <see cref="T:System.Collections.Generic.IEnumerable`1"/> to perform only selected checks.</param>
+            <returns>
+            Returns an <see cref="T:System.Collections.Generic.IEnumerable`1"/> for target <see cref="T:Microsoft.SqlServer.Management.Smo.SqlSmoObject"/>.
+            Returns an empty <see cref="T:System.Collections.Generic.IEnumerable`1"/> if no issues detected.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Assessment.SqlAssessmentExtensions.GetAssessmentResults(Microsoft.SqlServer.Management.Smo.FileGroup,System.String[])">
+            <summary>
+            Synchronously runs assessment for given <paramref name="fileGroup"/> and gives a <see cref="T:System.Collections.Generic.IEnumerable`1"/> describing discovered issues. 
+            </summary>
+            <param name="fileGroup">Target <see cref="T:Microsoft.SqlServer.Management.Smo.FileGroup"/>.</param>
+            <param name="checkIdsOrTags">Optional array of <see cref="T:System.String"/> check ids or tags to perform only selected checks.</param>
+            <returns>
+            Returns an <see cref="T:System.Collections.Generic.IEnumerable`1"/> for target <see cref="T:Microsoft.SqlServer.Management.Smo.SqlSmoObject"/>.
+            Returns an empty <see cref="T:System.Collections.Generic.IEnumerable`1"/> if no issues detected.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Assessment.SqlAssessmentExtensions.GetAssessmentResults(Microsoft.SqlServer.Management.Smo.FileGroup,System.Collections.Generic.IEnumerable{Microsoft.SqlServer.Management.Assessment.Checks.ICheck})">
+            <summary>
+            Synchronously runs assessment for given <paramref name="fileGroup"/> and gives a <see cref="T:System.Collections.Generic.IEnumerable`1"/> describing discovered issues.
+            This method performs only given checks from <paramref name="checks"/>.
+            </summary>
+            <param name="fileGroup">Target <see cref="T:Microsoft.SqlServer.Management.Smo.FileGroup"/>.</param>
+            <param name="checks">Optional <see cref="T:System.Collections.Generic.IEnumerable`1"/> to perform only selected checks.</param>
+            <returns>
+            Returns an <see cref="T:System.Collections.Generic.IEnumerable`1"/> for target <see cref="T:Microsoft.SqlServer.Management.Smo.SqlSmoObject"/>.
+            Returns an empty <see cref="T:System.Collections.Generic.IEnumerable`1"/> if no issues detected.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Assessment.SqlAssessmentExtensions.GetAssessmentItems(Microsoft.SqlServer.Management.Smo.FileGroup,System.String[])">
+            <summary>
+            Finds all available checks for given <paramref name="fileGroup"/>. 
+            </summary>
+            <param name="fileGroup">Returned checks are applicable to this target <see cref="T:Microsoft.SqlServer.Management.Smo.FileGroup"/>.</param>
+            <param name="checkIdsOrTags">Optional array of <see cref="T:System.String"/> check ids or tags to select only specific checks.</param>
+            <returns>Returns an <see cref="T:System.Collections.Generic.IEnumerable`1"/> for target <see cref="T:Microsoft.SqlServer.Management.Smo.SqlSmoObject"/>.</returns>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Assessment.SqlAssessmentExtensions.GetAssessmentResultsList(Microsoft.SqlServer.Management.Smo.FileGroup,System.String[])">
+            <summary>
+            Asynchronously runs assessment for given <paramref name="fileGroup"/> and gives a <see cref="T:System.Collections.Generic.List`1"/> describing discovered issues. 
+            </summary>
+            <param name="fileGroup">Target <see cref="T:Microsoft.SqlServer.Management.Smo.FileGroup"/>.</param>
+            <param name="checkIdsOrTags">Optional array of <see cref="T:System.String"/> check ids or tags to perform only selected checks.</param>
+            <returns>
+            Returns an <see cref="T:System.Collections.Generic.List`1"/> for target <see cref="T:Microsoft.SqlServer.Management.Smo.SqlSmoObject"/>.
+            Returns an empty <see cref="T:System.Collections.Generic.List`1"/> if no issues detected.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Assessment.SqlAssessmentExtensions.GetAssessmentResultsList(Microsoft.SqlServer.Management.Smo.FileGroup,System.Collections.Generic.IEnumerable{Microsoft.SqlServer.Management.Assessment.Checks.ICheck})">
+            <summary>
+            Synchronously runs assessment for given <paramref name="fileGroup"/> and gives a <see cref="T:System.Collections.Generic.IEnumerable`1"/> describing discovered issues.
+            This method performs only given checks from <paramref name="checks"/>.
+            </summary>
+            <param name="fileGroup">Target <see cref="T:Microsoft.SqlServer.Management.Smo.FileGroup"/>.</param>
+            <param name="checks">Optional <see cref="T:System.Collections.Generic.IEnumerable`1"/> to perform only selected checks.</param>
+            <returns>
+            Returns an <see cref="T:System.Collections.Generic.IEnumerable`1"/> for target <see cref="T:Microsoft.SqlServer.Management.Smo.SqlSmoObject"/>.
+            Returns an empty <see cref="T:System.Collections.Generic.IEnumerable`1"/> if no issues detected.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Assessment.SqlAssessmentExtensions.GetAssessmentResults(Microsoft.SqlServer.Management.Smo.Server,System.String[])">
+            <summary>
+            Synchronously runs assessment for given <paramref name="server"/> and gives a <see cref="T:System.Collections.Generic.IEnumerable`1"/> describing discovered issues. 
+            </summary>
+            <param name="server">Target <see cref="T:Microsoft.SqlServer.Management.Smo.Server"/>.</param>
+            <param name="checkIdsOrTags">Optional array of <see cref="T:System.String"/> check ids or tags to perform only selected checks.</param>
+            <returns>
+            Returns an <see cref="T:System.Collections.Generic.IEnumerable`1"/> for target <see cref="T:Microsoft.SqlServer.Management.Smo.SqlSmoObject"/>.
+            Returns an empty <see cref="T:System.Collections.Generic.IEnumerable`1"/> if no issues detected.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Assessment.SqlAssessmentExtensions.GetAssessmentResults(Microsoft.SqlServer.Management.Smo.Server,System.Collections.Generic.IEnumerable{Microsoft.SqlServer.Management.Assessment.Checks.ICheck})">
+            <summary>
+            Synchronously runs assessment for given <paramref name="server"/> and gives a <see cref="T:System.Collections.Generic.IEnumerable`1"/> describing discovered issues.
+            This method performs only given checks from <paramref name="checks"/>.
+            </summary>
+            <param name="server">Target <see cref="T:Microsoft.SqlServer.Management.Smo.Server"/>.</param>
+            <param name="checks">Optional <see cref="T:System.Collections.Generic.IEnumerable`1"/> to perform only selected checks.</param>
+            <returns>
+            Returns an <see cref="T:System.Collections.Generic.IEnumerable`1"/> for target <see cref="T:Microsoft.SqlServer.Management.Smo.SqlSmoObject"/>.
+            Returns an empty <see cref="T:System.Collections.Generic.IEnumerable`1"/> if no issues detected.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Assessment.SqlAssessmentExtensions.GetAssessmentItems(Microsoft.SqlServer.Management.Smo.Server,System.String[])">
+            <summary>
+            Finds all available checks for given <paramref name="server"/>. 
+            </summary>
+            <param name="server">Returned checks are applicable to this target <see cref="T:Microsoft.SqlServer.Management.Smo.Server"/>.</param>
+            <param name="checkIdsOrTags">Optional array of <see cref="T:System.String"/> check ids or tags to select only specific checks.</param>
+            <returns>Returns an <see cref="T:System.Collections.Generic.IEnumerable`1"/> for target <see cref="T:Microsoft.SqlServer.Management.Smo.SqlSmoObject"/>.</returns>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Assessment.SqlAssessmentExtensions.GetAssessmentResultsList(Microsoft.SqlServer.Management.Smo.Server,System.String[])">
+            <summary>
+            Asynchronously runs assessment for given <paramref name="server"/> and gives a <see cref="T:System.Collections.Generic.List`1"/> describing discovered issues. 
+            </summary>
+            <param name="server">Target <see cref="T:Microsoft.SqlServer.Management.Smo.Server"/>.</param>
+            <param name="checkIdsOrTags">Optional array of <see cref="T:System.String"/> check ids or tags to perform only selected checks.</param>
+            <returns>
+            Returns an <see cref="T:System.Collections.Generic.List`1"/> for target <see cref="T:Microsoft.SqlServer.Management.Smo.SqlSmoObject"/>.
+            Returns an empty <see cref="T:System.Collections.Generic.List`1"/> if no issues detected.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Assessment.SqlAssessmentExtensions.GetAssessmentResultsList(Microsoft.SqlServer.Management.Smo.Server,System.Collections.Generic.IEnumerable{Microsoft.SqlServer.Management.Assessment.Checks.ICheck})">
+            <summary>
+            Synchronously runs assessment for given <paramref name="server"/> and gives a <see cref="T:System.Collections.Generic.IEnumerable`1"/> describing discovered issues.
+            This method performs only given checks from <paramref name="checks"/>.
+            </summary>
+            <param name="server">Target <see cref="T:Microsoft.SqlServer.Management.Smo.Server"/>.</param>
+            <param name="checks">Optional <see cref="T:System.Collections.Generic.IEnumerable`1"/> to perform only selected checks.</param>
+            <returns>
+            Returns an <see cref="T:System.Collections.Generic.IEnumerable`1"/> for target <see cref="T:Microsoft.SqlServer.Management.Smo.SqlSmoObject"/>.
+            Returns an empty <see cref="T:System.Collections.Generic.IEnumerable`1"/> if no issues detected.
+            </returns>
+        </member>
+    </members>
+</doc>

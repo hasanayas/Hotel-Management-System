@@ -1,0 +1,525 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.SqlServer.Management.SqlScriptPublish</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.SqlServer.Management.SqlScriptPublish.IScriptPublishOptions">
+            <summary>
+            Defines settings that control the formatting of scripts and which types of objects are included
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.SqlScriptPublish.IScriptPublishOptions.GetSmoScriptingOptions">
+            <summary>
+            Returns the SMO ScriptingOptions represented by the current IScriptPublishOptions properties
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.SqlScriptPublish.IScriptPublishOptions.TargetSourceServer">
+            <summary>
+            Returns a value indicating that script target settings should be based on the version of the source SQL Server
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.SqlScriptPublish.IScriptPublishOptions.GetSmoScriptingOptions(System.Object)">
+            <summary>
+            Returns the SMO ScriptingOptions derived from combining the current IScriptPublishOptions properties with the version of SQL Server instance associated with the sourceObject
+            </summary>
+            <param name="sourceObject"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.SqlScriptPublish.SqlQueryHandler">
+            <summary>
+            Helper class for database type and database metadata query
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.SqlScriptPublish.SqlQueryHandler.#cctor">
+            <summary>
+            Static constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.SqlScriptPublish.SqlQueryHandler.#ctor(Microsoft.SqlServer.Management.SqlScriptPublish.SqlScriptPublishModel)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="model"></param>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.SqlScriptPublish.SqlQueryHandler.GetDatabaseObjectTypes">
+            <summary>
+            Returns database object types currently existing in the database
+            If the type does not have any object, we do not want to show the object type.
+            </summary>
+            <returns>Database type names whose objects exist</returns>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.SqlScriptPublish.SqlQueryHandler.EnumChildrenForDatabaseObjectType(Microsoft.SqlServer.Management.SqlScriptPublish.DatabaseObjectType)">
+            <summary>
+            Returns all children's object names and urns for the object type.
+            </summary>
+            <param name="objectType">Object type such as tables, views, etc</param>
+            <returns>Object names and urns for the object type</returns>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.SqlScriptPublish.SqlQueryHandler.InvalidObjectTypesForAzure(Microsoft.SqlServer.Management.Common.DatabaseEngineEdition)">
+            <summary>
+            Returns an enumeration of DatabaseObjectType that are NOT valid for the passed
+            in SMO cloud engine edition
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.SqlScriptPublish.SqlQueryHandler.ValidObjectType(Microsoft.SqlServer.Management.SqlScriptPublish.SqlQueryHandler.QueryInfo)">
+            <summary>
+            Check if the passed in QueryInfo for the ObjectType is valid for the current server
+            </summary>
+            <param name="info"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.SqlScriptPublish.SqlQueryHandler.InitializeSupportedObjectTypes">
+            <summary>
+            Build up the list of object types and the engine types that they are supported on.
+            This list is used to validate the list of objects returned from the EnumObjects call in the model
+            </summary>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.SqlScriptPublish.SqlQueryHandler.QueryInfoCollection">
+            <summary>
+            A simple keyed collection
+            </summary>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.SqlScriptPublish.SqlQueryHandler.QueryInfo">
+            <summary>
+            Internal class used to hold each the Query's for each of the possible Object Types
+            </summary>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.SqlScriptPublish.SqlQueryHandler.QueryInfo.EngineType">
+            <summary>
+            A [Flag] represenation of engine types for easy checking
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.SqlScriptPublish.SqlQueryHandler.QueryInfo.Editions">
+            <summary>
+            When supported by Azure engine type, which editions it's supported for
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.SqlScriptPublish.SqlQueryHandler.QueryInfo.SmoType">
+            <summary>
+            The Type to pass to Server.IsSupportedObject
+            </summary>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.SqlScriptPublish.SqlScriptGenerator">
+            <summary>
+            Class that implements script generation based on a SqlScriptPublishModel
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.SqlScriptPublish.SqlScriptGenerator.#ctor(Microsoft.SqlServer.Management.SqlScriptPublish.SqlScriptPublishModel)">
+            <summary>
+            SqlScriptGenerator Constructor
+            </summary>
+            <param name="model">model data object</param>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.SqlScriptPublish.SqlScriptGenerator.GetUrnList">
+            <summary>
+            GetUrnList builds up the URN list based on the values set in this object.
+            It will either use the Transfer object to determine the list or will enumerate.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.SqlScriptPublish.SqlScriptGenerator.SetScriptingOptions(Microsoft.SqlServer.Management.Smo.ScriptingOptions)">
+             <summary>
+             Sets the scription options from the Options object to the passed in Smo scripting options object
+            
+             If the Transfer scripting options and the Scripter scripting options diverge too much then this
+             function should move into the Options class set and made virtual so that each class can update the
+             scripting options as necessary. This function really belongs there but not moving it at this time
+             to reduce unecessary code churn.
+             </summary>
+             <param name="scriptingOptions"></param>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.SqlScriptPublish.SqlScriptOptions">
+            <summary>
+            Designer-friendly class that defines the options that can be set for publishing SQL scripts using SqlScriptPublishModel
+            </summary>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.SqlScriptPublish.SqlScriptOptions.ScriptCompatibilityOptions">
+            <summary>
+            Defines the compatibility level of the script feature set
+            </summary>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.SqlScriptPublish.SqlScriptOptions.ScriptDatabaseEngineType">
+            <summary>
+            Defines whether the script will be for on-premises SQL Server or for Azure SQL Database
+            </summary>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.SqlScriptPublish.SqlScriptOptions.ScriptDatabaseEngineEdition">
+            <summary>
+            Defines the edition of SQL Server for the script
+            </summary>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.SqlScriptPublish.SqlScriptOptions.ScriptStatisticsOptions">
+            <summary>
+            Defines options for scripting statistics
+            </summary>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.SqlScriptPublish.SqlScriptOptions.BooleanTypeOptions">
+            <summary>
+            Defines potential values for boolean property types
+            </summary>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.SqlScriptPublish.SqlScriptOptions.ScriptCreateDropOptions">
+            <summary>
+            Defines options for scripting Create, Drop, or Drop and Create
+            </summary>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.SqlScriptPublish.SqlScriptOptions.TypeOfDataToScriptOptions">
+            <summary>
+            Defines options for scripting schema, data, or both
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.SqlScriptPublish.SqlScriptOptions.#ctor(System.Version)">
+            <summary>
+            Constructions a SqlScriptOptions object whose destination settings are for the given SQL Server version
+            </summary>
+            <param name="version"></param>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.SqlScriptPublish.SqlScriptOptions.Copy(Microsoft.SqlServer.Management.SqlScriptPublish.SqlScriptOptions)">
+            <summary>
+            Copies current properties to another SqlScriptOptions instance
+            </summary>
+            <param name="source"></param>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.SqlScriptPublish.SqlScriptOptions.ConvertBooleanTypeOptionToBoolean(Microsoft.SqlServer.Management.SqlScriptPublish.SqlScriptOptions.BooleanTypeOptions)">
+            <summary>
+            Converts BooleanTypeOptions type to boolean type
+            </summary>
+            <param name="option"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.SqlScriptPublish.SqlScriptOptions.ConvertBooleanToBooleanTypeOption(System.Boolean)">
+            <summary>
+            Converts boolean type to BooleanTypeOptions type
+            </summary>
+            <param name="boolValue"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.SqlScriptPublish.OutputType">
+            <summary>
+            The type of output to create. Only one type is allowed, this enumeration exists for backward compatibility.
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.SqlScriptPublish.OutputType.GenerateScript">
+            <summary>
+            Generate script as text whose destination can be a file, a set of files, or the clipboard
+            </summary>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.SqlScriptPublish.ScriptDestination">
+            <summary>
+            Generate script output destination
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.SqlScriptPublish.ScriptDestination.ToSingleFile">
+            <summary>
+            Put all scripts in one file
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.SqlScriptPublish.ScriptDestination.ToClipboard">
+            <summary>
+            Put all scripts on the clipboard as one string
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.SqlScriptPublish.ScriptDestination.ToEditor">
+            <summary>
+            Open the scripts in an editor window
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.SqlScriptPublish.ScriptDestination.ToFilePerObject">
+            <summary>
+            Create one file per database object
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.SqlScriptPublish.ScriptDestination.ToNotebook">
+            <summary>
+            Create a Jupyter Notebook with one code cell per object
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.SqlScriptPublish.ScriptDestination.ToCustomWriter">
+            <summary>
+            Hands persistence responsibility to a custom ISmoScriptWriter implementation provided by the caller
+            </summary>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.SqlScriptPublish.ScriptFileType">
+            <summary>
+            Generate script unicode, ansi, and explicit utf8 type
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.SqlScriptPublish.ScriptFileType.Unicode">
+            <summary>
+            Encode in UTF-16
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.SqlScriptPublish.ScriptFileType.Ansi">
+            <summary>
+            Encode in ANSI using the default code page
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.SqlScriptPublish.ScriptFileType.Utf8">
+            <summary>
+            Encode in UTF-8
+            </summary>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.SqlScriptPublish.ScriptFileMode">
+            <summary>
+            Generate script file overwrite option
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.SqlScriptPublish.ScriptFileMode.Overwrite">
+            <summary>
+            Overwrite existing files
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.SqlScriptPublish.ScriptFileMode.Append">
+            <summary>
+            Append contents to existing files
+            </summary>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.SqlScriptPublish.DatabaseObjectType">
+            <summary>
+            Enum for database object types
+            To support localized description, it uses LocalizedEnumConverter.
+            </summary>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.SqlScriptPublish.ResultType">
+            <summary>
+            Result enum type
+            To support localized description, it uses LocalizedEnumConverter.
+            </summary>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.SqlScriptPublish.LocalizedEnumConverter">
+            <summary>
+            Convert enum string to localized display string
+            </summary>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.SqlScriptPublish.SqlScriptPublishException">
+            <summary>
+            Exception that is raised when script generation fails
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.SqlScriptPublish.SqlScriptPublishException.#ctor(System.String)">
+            <summary>
+            Constructs a new SqlScriptPublishException with the given message
+            </summary>
+            <param name="message"/>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.SqlScriptPublish.SqlScriptPublishException.#ctor(System.String,System.Exception)">
+            <summary>
+            Constructs a new SqlScriptPublishException with the given message and inner exception
+            </summary>
+            <param name="message" />
+            <param name="innerException" />
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.SqlScriptPublish.SqlScriptPublishModel">
+            <summary>
+            Class for describing the set of database objects to script and how to script them
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.SqlScriptPublish.SqlScriptPublishModel.#ctor(Microsoft.SqlServer.Management.Common.SqlConnectionInfo,System.String,Microsoft.SqlServer.Management.SqlScriptPublish.IScriptPublishOptions)">
+            <summary>
+            Constructor for SSMS context.
+            </summary>
+            <param name="sqlConnectionInfo">SQL connection info</param>
+            <param name="databaseName">database name</param>
+            <param name="shellScriptingOptions">Default shell scripting options</param>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.SqlScriptPublish.SqlScriptPublishModel.#ctor(System.String)">
+            <summary>
+            Constructor with connection string (VS/Powershell)
+            </summary>
+            <param name="connectionString">connection string</param>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.SqlScriptPublish.SqlScriptPublishModel.ServerName">
+            <summary>
+            Server name
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.SqlScriptPublish.SqlScriptPublishModel.DatabaseName">
+            <summary>
+            Currently selected database name
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.SqlScriptPublish.SqlScriptPublishModel.SelectedObjects">
+            <summary>
+            Object list for scripting that user selected
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.SqlScriptPublish.SqlScriptPublishModel.ScriptAllObjects">
+            <summary>
+            Flag indicating if we should script the entire database
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.SqlScriptPublish.SqlScriptPublishModel.SkipCreateDatabase">
+            <summary>
+            Flag indicating if we should skip the create database statement
+            Normally this is set based on scriptAllObjects and EngineType
+            but there are cases where it isn't desired, mostly testing.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.SqlScriptPublish.SqlScriptPublishModel.OutputType">
+            <summary>
+            Type for generate/publish script
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.SqlScriptPublish.SqlScriptPublishModel.AdvancedOptions">
+            <summary>
+            Advanced scripting/publishing options
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.SqlScriptPublish.SqlScriptPublishModel.RawScript">
+            <summary>
+            Get/sets raw script content which is used for clipboard/editor.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.SqlScriptPublish.SqlScriptPublishModel.AllowSystemObjects">
+            <summary>
+            Gets/sets the option to script system objects
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.SqlScriptPublish.SqlScriptPublishModel.GenerateScript(Microsoft.SqlServer.Management.SqlScriptPublish.ScriptOutputOptions)">
+            <summary>
+            Generate scripts to file, clipboard, or query window.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.SqlScriptPublish.SqlScriptPublishModel.GetDatabaseObjectTypes">
+            <summary>
+            Returns eligible database object type names.
+            </summary>
+            <returns>Database object type names</returns>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.SqlScriptPublish.SqlScriptPublishModel.EnumChildrenForDatabaseObjectType(Microsoft.SqlServer.Management.SqlScriptPublish.DatabaseObjectType)">
+            <summary>
+            Returns all children's object names and urns for the object type.
+            </summary>
+            <param name="objectType">Object type such as tables, views, etc</param>
+            <returns>Object names and urns for the object type</returns>
+        </member>
+        <member name="E:Microsoft.SqlServer.Management.SqlScriptPublish.SqlScriptPublishModel.ScriptProgress">
+            <summary>
+            Progress event for generate or publish script
+            </summary>
+        </member>
+        <member name="E:Microsoft.SqlServer.Management.SqlScriptPublish.SqlScriptPublishModel.ScriptError">
+            <summary>
+            Error event for generate or publish script
+            </summary>
+        </member>
+        <member name="E:Microsoft.SqlServer.Management.SqlScriptPublish.SqlScriptPublishModel.ScriptItemsCollected">
+            <summary>
+            Database object items are all discovered
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.SqlScriptPublish.SqlScriptPublishModel.Server">
+            <summary>
+            SMO server object
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.SqlScriptPublish.SqlScriptPublishModel.ShellScriptingOptions">
+            <summary>
+            Shell scripting options
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.SqlScriptPublish.SqlScriptPublishModel.RefreshDatabaseCache">
+            <summary>
+            Refresh database object containers (such as Tables, Views, etc.)
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.SqlScriptPublish.SqlScriptPublishModel.ValidateUrnList(System.Collections.Generic.IEnumerable{Microsoft.SqlServer.Management.Sdk.Sfc.Urn})">
+            <summary>
+            Checks the passed in URN list to make sure it is valid for the target server
+            if not it throws an exception
+            </summary>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.SqlScriptPublish.ScriptOutputOptions">
+            <summary>
+            Output options for Scripting
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.SqlScriptPublish.ScriptOutputOptions.ScriptDestination">
+            <summary>
+            Generate script output destination
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.SqlScriptPublish.ScriptOutputOptions.SaveFileType">
+            <summary>
+            Generate script unicode/ansi type
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.SqlScriptPublish.ScriptOutputOptions.SaveFileMode">
+            <summary>
+            Generate script file overwrite option. If ScriptDestination is set to ToNotebook, this
+            property is ignored and any existing file will be overwritten.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.SqlScriptPublish.ScriptOutputOptions.SaveFileName">
+            <summary>
+            Output file name for save file option
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.SqlScriptPublish.ScriptOutputOptions.Indented">
+            <summary>
+            For file types that support it, whether to emit 
+            human-friendly formatting instead of compacted text
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.SqlScriptPublish.ScriptOutputOptions.CustomSmoScriptWriter">
+            <summary>
+            When ScriptDestination is set to ToCustomWriter, provides the ISmoScriptWriter implementation.
+            </summary>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.SqlScriptPublish.ScriptEventArgs">
+            <summary>
+            Script event args for progress and error events
+            </summary>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.SqlScriptPublish.ScriptItemsArgs">
+            <summary>
+            Script Urn items args
+            </summary>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.SqlScriptPublish.SqlTransferOptions">
+            <summary>
+            TransferOptions is the set of options that are unique to the ScriptTransfer task in SMO
+            It is derived from the SqlScriptOptions for all common options and behavior
+            </summary>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.SqlScriptPublish.TableSelectStatement">
+            <summary>
+            Gets select statement for a table
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.SqlScriptPublish.TableSelectStatement.#ctor(Microsoft.SqlServer.Management.Smo.Table)">
+            <summary>
+            Creates an instance of TableSelect
+            </summary>
+            <param name="table">Table whose data is to be enumerated as INSERT strings</param>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.SqlScriptPublish.TableSelectStatement.HasUserDefinedType">
+            <summary>
+            Returns whether or not we have a user defined type.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.SqlScriptPublish.TableSelectStatement.HasWritableColumns">
+            <summary>
+            Returns whether or not there's anything to be scripted from this table.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.SqlScriptPublish.TableSelectStatement.TableName">
+            <summary>
+            Returns the table name
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.SqlScriptPublish.TableSelectStatement.GetSelectStatement">
+            <summary>
+            Returns a SqlBulkCopy object representing the data
+            for the table.
+            </summary>
+            <returns></returns>
+            <exception cref="T:System.InvalidOperationException">
+            If there are no Writable column in the table
+            </exception>
+            
+        </member>
+    </members>
+</doc>
